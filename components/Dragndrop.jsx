@@ -70,12 +70,12 @@ export const Dragndrop = () => {
       console.log(phoneNumber)
       formData.append("email", email);
       formData.append("phoneNumber", phoneNumber); // Include the phone number
-
+      console.log("running before post request")
       const response = await fetch("/api/upload", {
         method: "POST",
         body: formData,
       });
-
+      console.log("running after post request")
       if (response.ok) {
         console.log("Files uploaded successfully");
       } else {

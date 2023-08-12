@@ -47,18 +47,40 @@ export const services =  [{
 ];
 
 export const blogs = [
-  { id: 1, title: 'Blog Post 1', image: client, description: 'Description of Blog Post 1' },
-  { id: 2, title: 'Blog Post 2', image: rating, description: 'Description of Blog Post 2' },
-  { id: 3, title: 'Blog Post 3', image: rating, description: 'Description of Blog Post 2' },
-  // { id: 5, title: 'Blog Post 4', image: rating, description: 'Description of Blog Post 2' },
-  { id: 5, title: 'Blog Post 4', image: rating, description: 'Description of Blog Post 2' },
-  { id: 6, title: 'Blog Post 5', image: rating, description: 'Description of Blog Post 2' },
-  { id: 7, title: 'Blog Post 6', image: rating, description: 'Description of Blog Post 2' },
-  { id: 8, title: 'Blog Post 7', image: rating, description: 'Description of Blog Post 2' },
-  { id: 9, title: 'Blog Post 8', image: rating, description: 'Description of Blog Post 2' },
-  // Add more blog entries here...
-];
+  {
+    slug: 'post1',
+    title: 'Sample Blog Posts',
+    description: 'This is the first sample blog post.',
+    image: client,
+    date: '8/12/2023',
 
+  },
+  {
+    slug: 'post2',
+    title: 'Sample Blog Posts 2',
+    description: 'This is the second sample blog post.',
+    image: client
+  },
+  {
+    slug: 'post-3',
+    title: 'Sample Blog Post 2',
+    description: 'This is the second sample blog post.',
+    image: client
+  },
+  {
+    slug: 'post-4',
+    title: 'Sample Blog Post 2',
+    description: 'This is the second sample blog post.',
+    image: client
+  },
+  {
+    slug: 'post-5',
+    title: 'Sample Blog Post 2',
+    description: 'This is the second sample blog post.',
+    image: client
+  },
+  // Add more blog posts here
+];
 
 // export const features = [
 //   {
