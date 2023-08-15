@@ -82,6 +82,63 @@ export const blogs = [
   // Add more blog posts here
 ];
 
+export const reviews = [
+  {
+    userid: 123,
+    review: 'service was very good',
+    value: 5,
+    date: '13th august 2023'
+  },
+  {
+    userid: 123,
+    review: 'service was very good',
+    value: 5,
+    date: '13th august 2023'
+  },
+  {
+    userid: 123,
+    review: 'service was very good',
+    value: 5,
+    date: '13th august 2023'
+  },
+  {
+    userid: 123,
+    review: 'service was very good',
+    value: 5,
+    date: '13th august 2023'
+  },
+  {
+    userid: 123,
+    review: 'service was very good',
+    value: 5,
+    date: '13th august 2023'
+  },
+  {
+    userid: 123,
+    review: 'service was very good',
+    value: 5,
+    date: '13th august 2023'
+  },
+  {
+    userid: 123,
+    review: 'service was very good',
+    value: 5,
+    date: '13th august 2023'
+  },
+  {
+    userid: 123,
+    review: 'service was very good',
+    value: 5,
+    date: '13th august 2023'
+  },
+  {
+    userid: 123,
+    review: 'service was very good',
+    value: 5,
+    date: '13th august 2023'
+  },
+]
+
 // export const features = [
 //   {
 //     id: "feature-1",

@@ -1,5 +1,3 @@
-import { Navbar } from "@/components/Navbar";
-
 const page = () => {
   return (
     <div className="flex justify-center text-center container  mt-32 h-auto mx-auto p-18 px-10">

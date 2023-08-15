@@ -19,18 +19,17 @@ const upload = multer({ storage: storage }).array("files", 5);
 export const POST = async (req, res) => {
   upload(req, res, async (err) => {
     if (err) {
-      return res.status(500).json({ error: "Error uploading files" });
-      return new Response("Error uploading files",{status: 500});
+      return new Response("Error uploading files", { status: 500 });
     }
 
     const { email, phoneNumber } = req.body;
     const files = req.files; // Use req.files for multiple file uploads
     if (!files || files.length === 0) {
-      return new Response("No files uploaded.",{status: 400});
+      return new Response("No files uploaded.", { status: 400 });
     }
 
     console.log("Received email:", email);
-    console.log("Received phone number:", phoneNumber); 
+    console.log("Received phone number:", phoneNumber);
 
     // Your email address where you want to receive the files
     const toEmail = "rafayj34@gmail.com"; // Replace with the actual recipient email

@@ -6,8 +6,8 @@ import Image from "next/image";
 const Counter = () => {
   return (
 <section>
-<div className="mx-8 sm:mx-16 mt-10 p-3  grid lg:grid-cols-3  grid-cols-1 gap-10 ">
-  <div className=" max-w-3xl space-y-4 mx-auto sm:mx-0 md:col-span-2 col-span-1">
+<div className="mx-8 sm:mx-16 mt-10 p-3  grid lg:grid-cols-3  grid-cols-1 gap-10">
+  <div className="  space-y-4 mx-auto sm:mx-0 md:col-span-2 col-span-1">
     <h1 className="text-2xl mt-5 flex justify-center font-semibold mb-2 ">
       <span className="text-slate-800">Let the</span>
       <span className="text-orange-400">&nbsp;numbers </span>
@@ -15,19 +15,19 @@ const Counter = () => {
     </h1>
     <div className="flex md:flex-row  flex-wrap items-center justify-center gap-4 my-6">
 
-      <div className="flex flex-col w-60 items-center p-6 border-b-4 border-r-2 shadow-xl border-r-orange-400 border-orange-400 hover:scale-105 transition-all">
+      <div className="flex flex-col w-[270px] items-center p-6 border-b-4 border-r-2 shadow-xl border-r-orange-400 border-orange-400 hover:scale-105 transition-all">
         <Image src={assignment} alt="assignment" height={101} width={101}/>
         <p className="text-lg font-semibold mt-2">Assignments delivered</p>
         <CountUp className="text-orange-500 font-bold" end={8320} suffix="+" delay={0.75} duration={3} enableScrollSpy/>
       </div>
       
-      <div className="flex flex-col w-60 items-center p-6 shadow-xl border-r-2 border-r-orange-400 border-b-4 border-orange-400 hover:scale-105 transition-all">
+      <div className="flex flex-col w-[270px] items-center p-6 shadow-xl border-r-2 border-r-orange-400 border-b-4 border-orange-400 hover:scale-105 transition-all">
         <Image src={client} alt="client" width={150} height={150} />
         <p className="text-lg font-semibold mt-2">Clients served</p>
         <CountUp className="text-orange-500 font-bold" end={6300} suffix="+" delay={0.75} duration={3} enableScrollSpy/>
       </div>
       
-      <div className="flex flex-col w-60 items-center p-6 shadow-xl border-r-2 border-r-orange-400 border-b-4 border-orange-400 hover:scale-105 transition-all">
+      <div className="flex flex-col w-[270px] items-center p-6 shadow-xl border-r-2 border-r-orange-400 border-b-4 border-orange-400 hover:scale-105 transition-all">
       <Image src={rating} alt="rating" width={150} height={150}/>
         <p className="text-lg font-semibold mt-2">Client ratings</p>
         <CountUp className="text-orange-500 font-bold" end={4.8} decimal="." decimals={1} suffix="/5" delay={0.75} duration={5} enableScrollSpy/>

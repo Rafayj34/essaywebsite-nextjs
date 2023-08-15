@@ -28,7 +28,7 @@ import feedback from './Feedback.gif';
 import sitejabber from './sitejabber.svg';
 import trustpilot from './trustpilot.svg';
 import stars from './stars.webp';
-
+import userpfp from './user-pfp.png'
 export {
     unilogo1,
     unilogo2,
@@ -59,6 +59,7 @@ export {
     feedback,
     sitejabber,
     trustpilot,
-    stars
+    stars,
+    userpfp
 
 }
