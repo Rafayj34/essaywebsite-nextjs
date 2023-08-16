@@ -1,33 +1,35 @@
 import fs from "fs/promises";
 import path from "path";
+import { reviews as existingReviews } from "@/constants/reviews"; // Import the existing reviews array
 
-let userIdCounter = 1;
+
+function generateToken(length) {
+  const charset = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+  let token = "";
+  for (let i = 0; i < length; i++) {
+    const randomIndex = Math.floor(Math.random() * charset.length);
+    token += charset[randomIndex];
+  }
+  return token;
+}
 
 export const POST = async (req, res) => {
-    const { value, review } = await req.json();
+  const { value, review } = await req.json();
 
-    const newReview = {
-        userid: userIdCounter++, // Increment the counter and assign it to userid
-        review: review,
-        value: value,
-        date: new Date().toLocaleDateString(),
-      };
+  // Create a new review object
+  const newReview = {
+    userid: generateToken(7), // Assign a new ID based on the number of existing reviews
+    value,
+    review,
+    date: new Date().toLocaleDateString(), // Set the current date
+  };
 
-      const reviewsFilePath = path.join(process.cwd(), "/constants/index.js"); // Update the filename
-      const existingReviewsModule = await import(reviewsFilePath); // Import the module
+  // Add the new review to the existing reviews array
+  existingReviews.unshift(newReview);
 
-      const updatedReviews = [
-        ...existingReviewsModule.reviews, // Get existing reviews from the module
-        newReview, // Append the new review
-      ];
-  
-      // Create a new version of the module with updated reviews
-      const updatedReviewsModule = `export const reviews = ${JSON.stringify(
-        updatedReviews,
-        null,
-        2
-      )};`;
-  
-      await fs.writeFile(reviewsFilePath, updatedReviewsModule);
+  // Write the updated reviews array back to the JSON file
+  const reviewsFilePath = path.join(process.cwd(),"constants","reviews.js");
+  await fs.writeFile(reviewsFilePath, `export const reviews = ${JSON.stringify(existingReviews)}`);
 
-}
+  return new Response("Review submitted successfully", { status: 200 });
+};

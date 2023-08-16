@@ -174,26 +174,7 @@
 
 /* CSS for the dropdown */
 /* CSS for the dropdown */
-.dropdown {
-  opacity: 0;
-  visibility: hidden;
-  transform: translateY(-10px);
-  transition: opacity 0.3s ease, transform 0.3s ease;
-}
 
-/* Dropdown is visible */
-.dropdown-enter {
-  opacity: 1;
-  visibility: visible;
-  transform: translateY(0);
-}
-
-/* Dropdown is about to be hidden */
-.dropdown-exit {
-  opacity: 0;
-  visibility: hidden;
-  transform: translateY(-10px);
-}
 
 /* Add these styles to your CSS file */
 .accordion-description-open {
@@ -232,9 +213,87 @@
   transform: translateY(-100%);
 }
 
+
 body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+}
+
+.dropdown {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: opacity .3s ease, transform .3s ease;
+}
+
+/* Dropdown is visible */
+.dropdown-enter {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* Dropdown is about to be hidden */
+.dropdown-exit {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+}
+/* Add appropriate positioning styles to the sub-dropdown */
+.sub-dropdown {
+  position: absolute;
+  top: 0;
+  left: 100%;
+  margin-top: 0px;
+  margin-left: 0px; /* Adjust as needed */
+}
+
+.sub-dropdown2 {
+  position: absolute;
+  top: 0;
+  left: 100%;
+  margin-top: 0px;
+  margin-left: 0px; /* Adjust as needed */
+}
+
+.dropdown li:hover > .sub-dropdown {
+  display: block;
+  animation: slideleft .3s
+}
+
+.sub-dropdown li:hover > .sub-dropdown2 {
+  display: block;
+  animation: slideleft .3s
+}
+
+/* Adjust the positioning of the submenu */
+.sub-dropdown .dropdown-menu {
+  margin-top: 0; /* Adjust as needed */
+}
+
+
+
+@keyframes slideup {
+  0% {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+
+  100%{
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes slideleft {
+  0% {
+    opacity: 0;
+    transform: translateX(18px);
+  }
+
+  100%{
+    opacity: 1;
+    transform: none;
+  }
 }
 

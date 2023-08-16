@@ -29,6 +29,7 @@
     "react-slick": "^0.29.0",
     "sharp": "^0.32.4",
     "slick-carousel": "^1.8.1",
-    "tailwindcss": "3.3.3"
+    "tailwindcss": "3.3.3",
+    "uuid": "^9.0.0"
   }
 }

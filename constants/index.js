@@ -1,5 +1,5 @@
 // import { people01, people02, people03, facebook, instagram, linkedin, twitter, airbnb, binance, coinbase, dropbox, send, shield, star  } from "../assets";
-import { client,rating } from "../assets";
+import { client, rating } from "../assets";
 export const navLinks = [
   {
     id: "home",
@@ -24,294 +24,102 @@ export const navLinks = [
   {
     id: "Contact Us",
     title: "Contact Us",
-  }
+  },
 ];
 
-export const services =  [{
-  id: 1,
-  name: "Service 1",
-  subMenuItems: [
-    "Sub-menu Item 1",
-    "Sub-menu Item 2",
-    "Sub-menu Item 3",
-  ],
-},
-{
-  id: 2,
-  name: "Service 2",
-  isDropdownVisible: false,
-  subMenuItems: [
-  ]
-},
-// Add more services here
+export const services = [
+  {
+    id: 1,
+    name: "Essay",
+    subMenuItems: ["Essay Editing", "Buy an Essay", "Nursing Essay","Master's Essay", "Law Essay", "MBA Essay", "University Essay", "Write My Essay","Make My Essay","Do My Essay","Narrative Essay","Argumentative Essay","Expository Essay","Descriptive Essay","Custom Essay", "Admission Essay","Urgent Essay","Critical Essay","Scholarship Essay","Student Essay","Persuasive Essay","Process Essay","Literature Essay","Informal Essay","Classification Essay",
+  "Cause and Effect Essay","Compare and Contrast Essay",],
+  },
+  {
+    id: 2,
+    name: "Assignment",
+    isDropdownVisible: false,
+    subMenuItems: ["Assignment Writing","Cookery","Law","Management","Managerial Economics","Managerial Accounting"],
+  },
+  {
+    id: 3,
+    name: "Case Study",
+    isDropdownVisible: false,
+    subMenuItems: ["Best Case Study Writing Service"],
+  },
+  {
+    id: 4,
+    name: "Coursework",
+    isDropdownVisible: false,
+    subMenuItems: ["Best Coursework Writing Service"],
+  },
+  {
+    id: 5,
+    name: "Dissertation",
+    isDropdownVisible: false,
+    subMenuItems: ["Best Dissertation Writing Service"],
+  },
+  {
+    id: 6,
+    name: "Report",
+    isDropdownVisible: false,
+    subMenuItems: ["Best Report Writing Service"],
+  },
+  {
+    id: 7,
+    name: "Proofreading",
+    isDropdownVisible: false,
+    subMenuItems: [],
+  },
+  {
+    id: 8,
+    name: "Referencing Styles",
+    isDropdownVisible: false,
+    subMenuItems: [],
+  },
+  {
+    id: 9,
+    name: "PhD Thesis Writing",
+    isDropdownVisible: false,
+    subMenuItems: [],
+  },
+  {
+    id: 10,
+    name: "Term Paper Writing",
+    isDropdownVisible: false,
+    subMenuItems: [],
+  },
+
 ];
 
 export const blogs = [
   {
-    slug: 'post1',
-    title: 'Sample Blog Posts',
-    description: 'This is the first sample blog post.',
+    id: 1,
+    slug: "post1",
+    title: "Sample Blog Posts",
+    description: "This is the first sample blog post.",
     image: client,
-    date: '8/12/2023',
-
+    date: "8/12/2023",
+    read: "12",
+    author: "John Doe",
   },
   {
-    slug: 'post2',
-    title: 'Sample Blog Posts 2',
-    description: 'This is the second sample blog post.',
-    image: client
+    id: 2,
+    slug: "post2",
+    title: "Blog  2",
+    description: "This is the first sample blog post.",
+    image: client,
+    date: "8/12/2023",
+    read: "12",
+    author: "John Doe",
   },
   {
-    slug: 'post-3',
-    title: 'Sample Blog Post 2',
-    description: 'This is the second sample blog post.',
-    image: client
+    id: 3,
+    slug: "post3",
+    title: "Working 3",
+    description: "This is the first sample blog post.",
+    image: client,
+    date: "8/12/2023",
+    read: "12",
+    author: "John Doe",
   },
-  {
-    slug: 'post-4',
-    title: 'Sample Blog Post 2',
-    description: 'This is the second sample blog post.',
-    image: client
-  },
-  {
-    slug: 'post-5',
-    title: 'Sample Blog Post 2',
-    description: 'This is the second sample blog post.',
-    image: client
-  },
-  // Add more blog posts here
 ];
-
-export const reviews = [
-  {
-    userid: 123,
-    review: 'service was very good',
-    value: 5,
-    date: '13th august 2023'
-  },
-  {
-    userid: 123,
-    review: 'service was very good',
-    value: 5,
-    date: '13th august 2023'
-  },
-  {
-    userid: 123,
-    review: 'service was very good',
-    value: 5,
-    date: '13th august 2023'
-  },
-  {
-    userid: 123,
-    review: 'service was very good',
-    value: 5,
-    date: '13th august 2023'
-  },
-  {
-    userid: 123,
-    review: 'service was very good',
-    value: 5,
-    date: '13th august 2023'
-  },
-  {
-    userid: 123,
-    review: 'service was very good',
-    value: 5,
-    date: '13th august 2023'
-  },
-  {
-    userid: 123,
-    review: 'service was very good',
-    value: 5,
-    date: '13th august 2023'
-  },
-  {
-    userid: 123,
-    review: 'service was very good',
-    value: 5,
-    date: '13th august 2023'
-  },
-  {
-    userid: 123,
-    review: 'service was very good',
-    value: 5,
-    date: '13th august 2023'
-  },
-]
-
-// export const features = [
-//   {
-//     id: "feature-1",
-//     icon: star,
-//     title: "Rewards",
-//     content:
-//       "The best credit cards offer some tantalizing combinations of promotions and prizes",
-//   },
-//   {
-//     id: "feature-2",
-//     icon: shield,
-//     title: "100% Secured",
-//     content:
-//       "We take proactive steps make sure your information and transactions are secure.",
-//   },
-//   {
-//     id: "feature-3",
-//     icon: send,
-//     title: "Balance Transfer",
-//     content:
-//       "A balance transfer credit card can save you a lot of money in interest charges.",
-//   },
-// ];
-
-// export const feedback = [
-//   {
-//     id: "feedback-1",
-//     content:
-//       "Money is only a tool. It will take you wherever you wish, but it will not replace you as the driver.",
-//     name: "Herman Jensen",
-//     title: "Founder & Leader",
-//     img: people01,
-//   },
-//   {
-//     id: "feedback-2",
-//     content:
-//       "Money makes your life easier. If you're lucky to have it, you're lucky.",
-//     name: "Steve Mark",
-//     title: "Founder & Leader",
-//     img: people02,
-//   },
-//   {
-//     id: "feedback-3",
-//     content:
-//       "It is usually people in the money business, finance, and international trade that are really rich.",
-//     name: "Kenn Gallagher",
-//     title: "Founder & Leader",
-//     img: people03,
-//   },
-// ];
-
-// export const stats = [
-//   {
-//     id: "stats-1",
-//     title: "User Active",
-//     value: "3800+",
-//   },
-//   {
-//     id: "stats-2",
-//     title: "Trusted by Company",
-//     value: "230+",
-//   },
-//   {
-//     id: "stats-3",
-//     title: "Transaction",
-//     value: "$230M+",
-//   },
-// ];
-
-// export const footerLinks = [
-//   {
-//     title: "Useful Links",
-//     links: [
-//       {
-//         name: "Content",
-//         link: "https://www.hoobank.com/content/",
-//       },
-//       {
-//         name: "How it Works",
-//         link: "https://www.hoobank.com/how-it-works/",
-//       },
-//       {
-//         name: "Create",
-//         link: "https://www.hoobank.com/create/",
-//       },
-//       {
-//         name: "Explore",
-//         link: "https://www.hoobank.com/explore/",
-//       },
-//       {
-//         name: "Terms & Services",
-//         link: "https://www.hoobank.com/terms-and-services/",
-//       },
-//     ],
-//   },
-//   {
-//     title: "Community",
-//     links: [
-//       {
-//         name: "Help Center",
-//         link: "https://www.hoobank.com/help-center/",
-//       },
-//       {
-//         name: "Partners",
-//         link: "https://www.hoobank.com/partners/",
-//       },
-//       {
-//         name: "Suggestions",
-//         link: "https://www.hoobank.com/suggestions/",
-//       },
-//       {
-//         name: "Blog",
-//         link: "https://www.hoobank.com/blog/",
-//       },
-//       {
-//         name: "Newsletters",
-//         link: "https://www.hoobank.com/newsletters/",
-//       },
-//     ],
-//   },
-//   {
-//     title: "Partner",
-//     links: [
-//       {
-//         name: "Our Partner",
-//         link: "https://www.hoobank.com/our-partner/",
-//       },
-//       {
-//         name: "Become a Partner",
-//         link: "https://www.hoobank.com/become-a-partner/",
-//       },
-//     ],
-//   },
-// ];
-
-// export const socialMedia = [
-//   {
-//     id: "social-media-1",
-//     icon: instagram,
-//     link: "https://www.instagram.com/",
-//   },
-//   {
-//     id: "social-media-2",
-//     icon: facebook,
-//     link: "https://www.facebook.com/",
-//   },
-//   {
-//     id: "social-media-3",
-//     icon: twitter,
-//     link: "https://www.twitter.com/",
-//   },
-//   {
-//     id: "social-media-4",
-//     icon: linkedin,
-//     link: "https://www.linkedin.com/",
-//   },
-// ];
-
-// export const clients = [
-//   {
-//     id: "client-1",
-//     logo: airbnb,
-//   },
-//   {
-//     id: "client-2",
-//     logo: binance,
-//   },
-//   {
-//     id: "client-3",
-//     logo: coinbase,
-//   },
-//   {
-//     id: "client-4",
-//     logo: dropbox,
-//   },
-// ];

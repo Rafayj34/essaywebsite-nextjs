@@ -3,7 +3,7 @@ import { useState } from "react";
 
 import Box from "@mui/material/Box";
 import Rating from "@mui/material/Rating";
-import { reviews } from "@/constants";
+import { reviews } from "@/constants/reviews";
 import Image from "next/image";
 import { userpfp } from "@/assets";
 
@@ -19,29 +19,27 @@ const page = () => {
     setReviewForm({ ...reviewForm, rating: newValue });
   };
 
-  const handleReviewChange = (event) => {
-    const newReview = event.target.value.slice(0, 50); // Limit to 50 characters
+  const handleReviewLimit = (event) => {
+    const newReview = event.target.value.slice(0, 150); // Limit to 150 characters
     setReviewForm({ ...reviewForm, review: newReview });
   };
 
-  const handleSubmit = async(event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
-    console.log(reviewForm.rating)
+
     try {
-        const response = await fetch("/api/review/new", {
-          method: "POST",
-          headers: {
-              "Content-Type": "application/json",
-            },
-          body: JSON.stringify(
-              {
-                  'review':reviewForm.review,
-                  'value':reviewForm.rating
-              }
-          ),
-        })
-    }catch(error){
-        console.log(error)
+      const response = await fetch("/api/review/new", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          review: reviewForm.review,
+          value: reviewForm.rating,
+        }),
+      });
+    } catch (error) {
+      console.log(error);
     }
   };
   return (
@@ -75,7 +73,7 @@ const page = () => {
             <form onSubmit={handleSubmit} className="mt-4">
               <textarea
                 value={reviewForm.review}
-                onChange={handleReviewChange}
+                onChange={handleReviewLimit}
                 placeholder="Write your review here (max 150 characters)"
                 rows="4"
                 maxLength="150" // Add maxLength attribute
@@ -117,26 +115,22 @@ const page = () => {
 const Reviewcard = ({ userid, review, value, date }) => {
   return (
     <div className="mt-8 min-w-lg w-[330px] mobile:w-[500px] sm:w-[650px] md:w-[750px] p-5 border-2 rounded-lg bg-slate-100 border-slate-800 shadow-lg">
-      <div className="flex flex-col mobile:flex-row mobile:justify-between items-start">
-        <div className="hidden sm:block">
-          <Image
-            src={userpfp}
-            width={60}
-            height={60}
-            alt="user profile picture"
-          />
+      <div className="flex flex-col mobile:flex-row mobile:items-start"> {/* Remove justifyContent */}
+
+        <div className="flex-grow ms-5 mt-2 md:mt-0"> {/* Add margin-top to adjust alignment */}
+          <h1 className="text-slate-700 text-lg font-semibold">USER_ID: {userid}</h1>
+          <p className="text-slate-700 mt-2 line-clamp-4">{review}</p> {/* Adjust text color and margin */}
         </div>
-        <div className="flex-grow ms-5">
-          <h1>userid: {userid}</h1>
-          <p>{review}</p>
-        </div>
-        <Box>
-          <Rating name="read-only" value={value} readOnly />
+        <div className="flex flex-col justify-center items-end"> {/* Center the Rating and date */}
+          <Box>
+            <Rating name="read-only" value={value} readOnly />
+          </Box>
           <p className="mt-2 text-slate-500 text-sm">{date}</p>
-        </Box>
+        </div>
       </div>
     </div>
   );
 };
+
 
 export default page;
