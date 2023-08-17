@@ -83,16 +83,21 @@ body {
   position: absolute;
   top: 0;
   left: 100%;
-  margin-top: 0px;
-  margin-left: 0px; /* Adjust as needed */
+
+  /* Adjust as needed */
 }
 
 .sub-dropdown2 {
   position: absolute;
-  top: 0;
+  bottom: 30%;
   left: 100%;
-  margin-top: 0px;
-  margin-left: 0px; /* Adjust as needed */
+ /* Adjust as needed */
+}
+.sub-dropdown3 {
+  position: absolute;
+  top: 30%;
+  left: 100%;
+ /* Adjust as needed */
 }
 
 .dropdown li:hover > .sub-dropdown {
@@ -100,7 +105,11 @@ body {
   animation: slideleft .3s
 }
 
-.sub-dropdown li:hover > .sub-dropdown2 {
+.dropdown li:hover > .sub-dropdown2 {
+  display: block;
+  animation: slideleft .3s
+}
+.dropdown li:hover > .sub-dropdown3 {
   display: block;
   animation: slideleft .3s
 }

@@ -31,64 +31,67 @@ export const services = [
   {
     id: 1,
     name: "Essay",
-    subMenuItems: ["Essay Editing", "Buy an Essay", "Nursing Essay","Master's Essay", "Law Essay", "MBA Essay", "University Essay", "Write My Essay","Make My Essay","Do My Essay","Narrative Essay","Argumentative Essay","Expository Essay","Descriptive Essay","Custom Essay", "Admission Essay","Urgent Essay","Critical Essay","Scholarship Essay","Student Essay","Persuasive Essay","Process Essay","Literature Essay","Informal Essay","Classification Essay",
-  "Cause and Effect Essay","Compare and Contrast Essay",],
+    subMenuItems: {"Essay Editing":"#", "Buy an Essay":"#", "Nursing Essay":"#","Master's Essay":"#", "Law Essay":"#", "MBA Essay":"#", "University Essay":"#", "Write My Essay":"#","Make My Essay":"#","Do My Essay":"#","Narrative Essay":"#","Argumentative Essay":"#","Expository Essay":"#","Descriptive Essay":"#","Custom Essay":"#", "Admission Essay":"#","Urgent Essay":"#","Critical Essay":"#","Scholarship Essay":"#","Student Essay":"#","Persuasive Essay":"#","Process Essay":"#","Literature Essay":"#","Informal Essay":"#","Classification Essay":"#", "Cause and Effect Essay":"#","Compare and Contrast Essay":"#"},
   },
   {
     id: 2,
     name: "Assignment",
     isDropdownVisible: false,
-    subMenuItems: ["Assignment Writing","Cookery","Law","Management","Managerial Economics","Managerial Accounting"],
+    subMenuItems: {"Assignment Writing":"#","Cookery":"#", "Law": {
+      // Nested navigation within "Law"
+      "Criminal Law": "#",
+      "Contract Law": "#",
+      // ... other items
+    },"Management":"#","Managerial Economics":"#","Managerial Accounting":"#"},
   },
   {
     id: 3,
     name: "Case Study",
     isDropdownVisible: false,
-    subMenuItems: ["Best Case Study Writing Service"],
+    subMenuItems: {"Best Case Study Writing Service":"#"},
   },
   {
     id: 4,
     name: "Coursework",
     isDropdownVisible: false,
-    subMenuItems: ["Best Coursework Writing Service"],
+    subMenuItems: {"Best Coursework Writing Service":"#"},
   },
   {
     id: 5,
     name: "Dissertation",
     isDropdownVisible: false,
-    subMenuItems: ["Best Dissertation Writing Service"],
+    subMenuItems: {"Best Dissertation Writing Service":"#"},
   },
   {
     id: 6,
     name: "Report",
     isDropdownVisible: false,
-    subMenuItems: ["Best Report Writing Service"],
+    subMenuItems: {"Best Report Writing Service":"#"},
   },
   {
     id: 7,
     name: "Proofreading",
     isDropdownVisible: false,
-    subMenuItems: [],
+    subMenuItems: {},
   },
   {
     id: 8,
     name: "Referencing Styles",
     isDropdownVisible: false,
-    subMenuItems: [],
+    subMenuItems: {},
   },
   {
     id: 9,
     name: "PhD Thesis Writing",
     isDropdownVisible: false,
-    subMenuItems: [],
+    subMenuItems: {},
   },
   {
     id: 10,
     name: "Term Paper Writing",
     isDropdownVisible: false,
-    subMenuItems: [],
+    subMenuItems: {},
   },
-
 ];
 
 export const blogs = [

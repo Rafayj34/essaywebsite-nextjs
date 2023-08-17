@@ -12,7 +12,7 @@ import customersupporticon from './customersupport-icon.png';
 import timeicon from './time-icon.png';
 import close from './close.svg';
 import arrowUp from './arrow-up.svg';
-import  menu from './menu.svg';
+import menu from './menu.svg';
 import arrowdown from './arrow-down.svg';
 import logo from './logo.webp';
 import assignment from './assignment.webp';
@@ -61,5 +61,4 @@ export {
     trustpilot,
     stars,
     userpfp
-
 }
