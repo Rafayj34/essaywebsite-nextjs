@@ -7,9 +7,10 @@ import Image from "next/image";
 
 const Navbar = () => {
   // Hooks
+  
   const [subDropdownVisibility, setSubDropdownVisibility] = useState({});
   const [isFixedNavbar, setIsFixedNavbar] = useState(false);
-  const [active, setActive] = useState("Home");
+  const [liActive, setLiActive] = useState("Home");
   const [sidebarToggle, setSidebarToggle] = useState(false);
   const [isServicesDropdownVisible, setIsServicesDropdownVisible] =
     useState(false);
@@ -77,7 +78,7 @@ const Navbar = () => {
             <ul className="menu flex me-50 items-center space-x-6 justify-center">
               <li
                 className="font-poppins text-white font-semibold cursor-pointer text-[17px] hover:text-orange-400 transition-all rounded-lg p-2 mr-10"
-                onClick={() => setActive("Home")}
+                onClick={() => setLiActive("Home")}
               >
                 <button>
                   <a href="#home">Home</a>
@@ -88,11 +89,11 @@ const Navbar = () => {
               <li
                 className="relative"
                 onMouseEnter={() => {
-                  // setActive("Services");
+                  // setLiActive("Services");
                   setIsServicesDropdownVisible(true);
                 }}
                 onMouseLeave={() => {
-                  // setActive("Services");
+                  // setLiActive("Services");
                   setIsServicesDropdownVisible(false);
                 }}
               >
@@ -480,7 +481,7 @@ const Navbar = () => {
               <li className="relative">
                 <button
                   className="font-poppins text-white font-semibold cursor-pointer text-[17px] hover:text-orange-400 transition-all rounded-lg p-2"
-                  onClick={() => setActive("Countries")}
+                  onClick={() => setLiActive("Countries")}
                 >
                   <a href="#blogs">Countries</a>
                 </button>
@@ -488,7 +489,7 @@ const Navbar = () => {
               <li className="relative">
                 <button
                   className={`font-poppins text-white font-semibold cursor-pointer text-[17px] hover:text-orange-400 transition-all rounded-lg p-2 mr-10`}
-                  onClick={() => setActive("Blogs")}
+                  onClick={() => setLiActive("Blogs")}
                 >
                   <a href="#blogs">Blogs</a>
                 </button>
@@ -496,7 +497,7 @@ const Navbar = () => {
               <li className="relative">
                 <button
                   className="font-poppins text-white font-semibold cursor-pointer text-[17px] hover:text-orange-400 transition-all rounded-lg p-2"
-                  onClick={() => setActive("About us")}
+                  onClick={() => setLiActive("About us")}
                 >
                   <a href="#blogs">About us</a>
                 </button>
@@ -504,7 +505,7 @@ const Navbar = () => {
               <li className="relative">
                 <button
                   className="font-poppins text-white font-semibold cursor-pointer text-[17px] hover:text-orange-400 transition-all rounded-lg p-2"
-                  onClick={() => setActive("Contact us")}
+                  onClick={() => setLiActive("Contact us")}
                 >
                   <a href="#blogs">Contact us</a>
                 </button>
@@ -560,10 +561,10 @@ const Navbar = () => {
                 <ul className="list-none mt-10 flex flex-col">
                   <li
                     className={`font-poppins font-medium cursor-pointer text-[12px]   hover:text-orange-400 transition-all p-2 ${
-                      active === "Home" ? "text-white" : "text-dimWhite"
+                      liActive === "Home" ? "text-white" : "text-dimWhite"
                     } mb-4`}
                     onClick={() => {
-                      setActive("Home");
+                      setLiActive("Home");
                       setSidebarToggle(false); // Close the sidebar when a link is clicked
                     }}
                   >
@@ -572,10 +573,10 @@ const Navbar = () => {
 
                   <li
                     className={`font-poppins font-medium cursor-pointer text-[12px] hover:text-orange-400 transition-all p-2 ${
-                      active === "Services" ? "text-white" : "text-dimWhite"
+                      liActive === "Services" ? "text-white" : "text-dimWhite"
                     } mb-4`}
                     onClick={() => {
-                      setActive("Services");
+                      setLiActive("Services");
                       setIsServicesDropdownVisible(!isServicesDropdownVisible);
                     }}
                   >
@@ -613,12 +614,12 @@ const Navbar = () => {
                               <li
                                 key={service.id}
                                 className={`font-poppins font-medium cursor-pointer text-[12px] p-2 ${
-                                  active === service.name
+                                  liActive === service.name
                                     ? "text-white"
                                     : "text-dimWhite"
                                 } mb-2 ml-2`}
                                 onClick={() => {
-                                  setActive(service.name);
+                                  setLiActive(service.name);
                                   setSubDropdownVisibility((prevState) => {
                                     const newState = {};
                                     for (const key in prevState) {
@@ -656,13 +657,13 @@ const Navbar = () => {
                                   )}
                                 </a>
 
-                                {active === service.name &&
+                                {liActive === service.name &&
                                   subDropdownVisibility[service.name] && (
-                                    <ul className="space-y-2 mt-2 space-x-0 ml-4">
+                                    <ul className="space-y-3 mt-4 ml-4 sidebar-subdropdown">
                                       {service.subMenuItems.map(
                                         (subService) => (
                                           <li
-                                            className="hover:text-orange-400"
+                                            className="hover:text-orange-400 "
                                             key={subService}
                                           >
                                             {subService}
@@ -680,10 +681,10 @@ const Navbar = () => {
 
                   <li
                     className={`font-poppins font-medium cursor-pointer text-[12px] hover:text-orange-400 transition-all p-2 ${
-                      active === "Countries" ? "text-white" : "text-dimWhite"
+                      liActive === "Countries" ? "text-white" : "text-dimWhite"
                     } mb-4`}
                     onClick={() => {
-                      setActive("Countries");
+                      setLiActive("Countries");
                     }}
                   >
                     <a href="#Countries" className="flex items-center">
@@ -693,10 +694,10 @@ const Navbar = () => {
 
                   <li
                     className={`font-poppins font-medium cursor-pointer text-[12px] hover:text-orange-400 transition-all p-2 ${
-                      active === "Blogs" ? "text-white" : "text-dimWhite"
+                      liActive === "Blogs" ? "text-white" : "text-dimWhite"
                     } mb-4`}
                     onClick={() => {
-                      setActive("Blogs");
+                      setLiActive("Blogs");
                     }}
                   >
                     <a href="#Blogs" className="flex items-center">
@@ -706,20 +707,20 @@ const Navbar = () => {
 
                   <li
                     className={`font-poppins font-medium cursor-pointer text-[12px]   hover:text-orange-400 transition-all p-2 ${
-                      active === "about" ? "text-white" : "text-dimWhite"
+                      liActive === "about" ? "text-white" : "text-dimWhite"
                     } mb-4`}
                     onClick={() => {
-                      setActive("about");
+                      setLiActive("about");
                     }}
                   >
                     <a href="#about">About us</a>
                   </li>
                   <li
                     className={`font-poppins font-medium cursor-pointer text-[12px]   hover:text-orange-400 transition-all p-2 ${
-                      active === "About us" ? "text-white" : "text-dimWhite"
+                      liActive === "About us" ? "text-white" : "text-dimWhite"
                     } mb-4`}
                     onClick={() => {
-                      setActive("Contact us");
+                      setLiActive("Contact us");
                     }}
                   >
                     <a href="#contactus">Contact us</a>
