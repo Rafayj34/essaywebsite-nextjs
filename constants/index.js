@@ -126,3 +126,25 @@ export const blogs = [
     author: "John Doe",
   },
 ];
+
+export const contentData = [
+  {
+    slug: 'essay-editing-service',
+    path: 'content/essay-editing-service',
+    title: 'Top Rated Essay Editing Services by Top UK Nartive Essay Writers',
+    description: "Get your Essay edited and proofread by UK's top Essay Editing Service. Our Top Rated Essay Writers provide 110% satisfaction guaranteed.",
+    image: client,
+    alt: 'essay editing image',
+    last_modified: '17/8/2023'
+  },
+  {
+    slug: 'buy-an-essay',
+    path: 'content/buy-an-essay.html',
+    title: 'Buying Essay Editing Service',
+    description: 'Essay editing services',
+    image: client,
+    alt: 'other alt',
+    last_modified: '17/8/2023'
+  },
+];
+

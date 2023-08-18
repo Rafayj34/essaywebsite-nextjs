@@ -38,7 +38,7 @@ const GuaranteeCard = ({ name, image, alt }) => {
 
   return (
     <div
-      className={`mt-8 p-6 bg-white border border-gray-300 rounded-lg shadow-md w-56 
+      className={`mt-8 p-6 bg-white border h-64 border-gray-300 rounded-lg shadow-md w-56 
      hover:bg-orange-400 hover:scale-105 transition-all ${
        isHovered ? "hovered" : ""
      }`}

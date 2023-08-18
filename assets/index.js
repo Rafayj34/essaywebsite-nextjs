@@ -28,7 +28,8 @@ import feedback from './Feedback.gif';
 import sitejabber from './sitejabber.svg';
 import trustpilot from './trustpilot.svg';
 import stars from './stars.webp';
-import userpfp from './user-pfp.png'
+import userpfp from './user-pfp.png';
+import whatsapp from './whatsapp.png';
 export {
     unilogo1,
     unilogo2,
@@ -60,5 +61,6 @@ export {
     sitejabber,
     trustpilot,
     stars,
-    userpfp
+    userpfp,
+    whatsapp
 }

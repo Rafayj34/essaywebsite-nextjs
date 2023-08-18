@@ -2,7 +2,9 @@ import Navbar from "@/components/Navbar";
 
 import { Footer } from "@/components/Footer";
 import TawkToMessenger from "@/components/Tawkto";
+import ScrollTopButton from '@/components/Scrolltotop';
 import { Poppins } from "next/font/google";
+import Whatsapp from "@/components/Whatsapp";
 import "./globals.css";
 
 const poppins = Poppins({
@@ -18,14 +20,16 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={poppins.className}>
-        <div className="flex">
+      <body className={`${poppins.className} `}>
+        <div className="flex ">
           <Navbar />
         </div>
 
         {children}
+        <ScrollTopButton />
         <Footer />
         <TawkToMessenger />
+        <Whatsapp />
       </body>
     </html>
   );

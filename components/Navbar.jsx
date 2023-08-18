@@ -678,7 +678,7 @@ const Navbar = () => {
                       setSidebarToggle(false); // Close the sidebar when a link is clicked
                     }}
                   >
-                    <a href="#home">Home</a>
+                    <Link href="#home">Home</Link>
                   </li>
 
                   <li
@@ -690,7 +690,7 @@ const Navbar = () => {
                       setIsServicesDropdownVisible(!isServicesDropdownVisible);
                     }}
                   >
-                    <a href="#Services" className="flex items-center">
+                    <Link href="#Services" className="flex items-center">
                       Services
                       {services.some(
                         (service) =>
@@ -710,7 +710,7 @@ const Navbar = () => {
                           />
                         </div>
                       )}
-                    </a>
+                    </Link>
                   </li>
 
                   {isServicesDropdownVisible && (
@@ -746,7 +746,7 @@ const Navbar = () => {
                               }
                             }}
                           >
-                            <a
+                            <Link
                               href={`#${service.name}`}
                               className="flex items-center"
                             >
@@ -770,109 +770,77 @@ const Navbar = () => {
                                   />
                                 </div>
                               )}
-                            </a>
+                            </Link>
 
                             {liActive === service.name &&
                               subDropdownVisibility[service.name] &&
                               Object.keys(service.subMenuItems).length > 0 && (
-                                <ul className="space-y-2 mt-4 ml-4 sidebar-subdropdown">
-                                  {Object.entries(service.subMenuItems).map(
-                                    ([subServiceName, subServiceValue]) => (
-                                      <li
-                                        className={`hover:text-orange-400 bg-black`}
-                                        key={subServiceName}
-                                        onClick={(e) => {
-                                          e.stopPropagation(); // Prevent the click event from propagating to parent elements
-                                          setNestedDropdownVisibility(
-                                            (prevState) => ({
-                                              ...prevState,
-                                              [subServiceName]:
-                                                !prevState[subServiceName],
-                                            })
-                                          );
-                                        }}
-                                      >
-                                        {typeof subServiceValue === "object" &&
-                                          subServiceValue !== null && (
-                                            <div className="ml-2 mt-1">
-                                              <Image
-                                                src={
-                                                  nestedDropdownVisibility[
-                                                    subServiceName
-                                                  ]
-                                                    ? arrowUp
-                                                    : arrowdown
-                                                }
-                                                alt="Arrow Icon"
-                                                className={`w-[11px] h-[11px] object-contain ${
-                                                  nestedDropdownVisibility[
-                                                    subServiceName
-                                                  ]
-                                                    ? "arrow-up"
-                                                    : "arrow-down"
-                                                } transition-transform duration-300`}
-                                              />
-                                            </div>
-                                          )}
-                                        {typeof subServiceValue === "object" &&
-                                        subServiceValue !== null ? (
-                                          <a>{subServiceName}</a>
-                                        ) : (
-                                          <a href={subServiceValue}>
-                                            {subServiceName}
-                                          </a>
+                                <ul className="space-y-2 mt-4 ml-4 sidebar-subdropdown ">
+                                  {Object.entries(service.subMenuItems).map(([subServiceName, subServiceValue]) => (
+                                    <li
+                                    
+                                      key={subServiceName}
+                                      onClick={(e) => {
+                                        e.stopPropagation();
+                                        setNestedDropdownVisibility((prevState) => ({
+                                          ...prevState,
+                                          [subServiceName]: !prevState[subServiceName],
+                                        }));
+                                      }}
+                                    >
+                                      <div className={`flex items-center hover:text-orange-400`}>
+                                        <Link
+                                          href={subServiceValue}
+                                        >
+                                          {subServiceName}
+                                        </Link>
+                                        {typeof subServiceValue === "object" && subServiceValue !== null && (
+                                          <div className="ml-2 mt-1">
+                                            <Image
+                                              src={
+                                                nestedDropdownVisibility[subServiceName]
+                                                  ? arrowUp
+                                                  : arrowdown
+                                              }
+                                              alt="Arrow Icon"
+                                              className={`w-[11px] h-[11px] object-contain ${
+                                                nestedDropdownVisibility[subServiceName]
+                                                  ? "arrow-up"
+                                                  : "arrow-down"
+                                              } transition-transform duration-300`}
+                                            />
+                                          </div>
                                         )}
-                                        {/* Check if the current subMenu item has nested items */}
-                                        {typeof subServiceValue === "object" &&
-                                          subServiceValue !== null && (
-                                            <ul
-                                              className={`pl-4 space-y-2 mt-2  ${
-                                                nestedDropdownVisibility[
-                                                  subServiceName
-                                                ]
-                                                  ? "block"
-                                                  : "hidden"
-                                              }`}
+                                      </div>
+                                      {typeof subServiceValue === "object" && subServiceValue !== null && (
+                                        <ul
+                                          className={`pl-4 space-y-2 mt-2 sidebar-subdropdown ${
+                                            nestedDropdownVisibility[subServiceName]
+                                              ? "block"
+                                              : "hidden"
+                                          }`}
+                                        >
+                                          {Object.entries(subServiceValue).map(([nestedSubServiceName, nestedSubServiceHref]) => (
+                                            <li
+                                              key={nestedSubServiceName}
+                                              onClick={(e) => {
+                                                e.stopPropagation();
+                                                setNestedDropdownVisibility((prevState) => ({
+                                                  ...prevState,
+                                                  [nestedSubServiceName]: !prevState[nestedSubServiceName],
+                                                }));
+                                              }}
                                             >
-                                              {Object.entries(
-                                                subServiceValue
-                                              ).map(
-                                                ([
-                                                  nestedSubServiceName,
-                                                  nestedSubServiceHref,
-                                                ]) => (
-                                                  <li
-                                                    className={`hover:text-orange-400 `}
-                                                    key={nestedSubServiceName}
-                                                    onClick={(e) => {
-                                                      e.stopPropagation(); // Prevent the click event from propagating to parent elements
-                                                      setNestedDropdownVisibility(
-                                                        (prevState) => ({
-                                                          ...prevState,
-                                                          [nestedSubServiceName]:
-                                                            !prevState[
-                                                              nestedSubServiceName
-                                                            ],
-                                                        })
-                                                      );
-                                                    }}
-                                                  >
-                                                    <a
-                                                      href={
-                                                        nestedSubServiceHref
-                                                      }
-                                                    >
-                                                      {nestedSubServiceName}
-                                                    </a>
-                                                  </li>
-                                                )
-                                              )}
-                                            </ul>
-                                          )}
-                                      </li>
-                                    )
-                                  )}
+                                              <Link href={nestedSubServiceHref}>{nestedSubServiceName}</Link>
+                                            </li>
+                                          ))}
+                                        </ul>
+                                      )}
+                                    </li>
+                                  ))}
                                 </ul>
+
+
                               )}
                           </li>
                         ))}
@@ -888,9 +856,9 @@ const Navbar = () => {
                       setLiActive("Countries");
                     }}
                   >
-                    <a href="#Countries" className="flex items-center">
+                    <Link href="#Countries" className="flex items-center">
                       Countries
-                    </a>
+                    </Link>
                   </li>
 
                   <li
@@ -901,9 +869,9 @@ const Navbar = () => {
                       setLiActive("Blogs");
                     }}
                   >
-                    <a href="#Blogs" className="flex items-center">
+                    <Link href="#Blogs" className="flex items-center">
                       Blogs
-                    </a>
+                    </Link>
                   </li>
 
                   <li
@@ -914,7 +882,7 @@ const Navbar = () => {
                       setLiActive("about");
                     }}
                   >
-                    <a href="#about">About us</a>
+                    <Link href="#about">About us</Link>
                   </li>
                   <li
                     className={`font-poppins font-medium cursor-pointer text-[12px]   hover:text-orange-400 transition-all p-2 ${
@@ -924,7 +892,7 @@ const Navbar = () => {
                       setLiActive("Contact us");
                     }}
                   >
-                    <a href="#contactus">Contact us</a>
+                    <Link href="#contactus">Contact us</Link>
                   </li>
                 </ul>
               </div>
