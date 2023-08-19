@@ -170,6 +170,21 @@ body {
   transition: transform 0.3s;
 }
 
+.content-list {
+  list-style: none;
+  margin-left: 2.5rem;
+  padding-left: 20px;
+}
+
+.content-list li::marker {
+  content: "➔  "; /* Use a right arrow character */
+  color: rgb(194 65 12 / var(--tw-bg-opacity));
+  font-weight: bold; /* Increase the font weight for thicker bullets */
+  margin-right: 5px;
+  --tw-bg-opacity: 1; 
+ 
+}
+
 @keyframes slideup {
   0% {
     opacity: 0;

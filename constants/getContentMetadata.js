@@ -1,13 +1,14 @@
 import fs from "fs";
 import { contentData } from "@/constants";
+import { log } from "console";
 
 const getContentMetadata = () => {
     const folder = "content/";
     const files = fs.readdirSync(folder);
-    const htmlPosts = files.filter((file) => file.endsWith(".html"));
+    const jsxPosts = files.filter((file) => file.endsWith(".jsx"));
 
-    const ContentMetadata = htmlPosts.map((htmlFile) => {
-        const slug = htmlFile.replace(".html", "");
+    const ContentMetadata = jsxPosts.map((htmlFile) => {
+        const slug = htmlFile.replace(".jsx", "");
         const content = contentData.find((contentdata) => contentdata.slug === slug);
         if (content) {
           return {
@@ -20,7 +21,7 @@ const getContentMetadata = () => {
             last_modified: content.last_modified
           };
         } else {
-          console.error(`Content not found for HTML file: ${htmlFile}`);
+          console.error(`Content not found for jsx file: ${htmlFile}`);
           return null;
         }
       }).filter(Boolean); // Remove any null values from the mapping

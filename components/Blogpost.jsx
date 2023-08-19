@@ -1,11 +1,9 @@
 import React from 'react';
-// import { useRouter } from 'next/router';
 import fs from 'fs/promises';
 import path from 'path';
 
 function BlogPost({ content }) {
-  const router = useRouter();
-  const { slug } = router.query;
+
   
   return (
     <div className="container mt-10">

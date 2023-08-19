@@ -28,10 +28,12 @@
     "react-icons": "^4.10.1",
     "react-simple-typewriter": "^5.0.1",
     "react-slick": "^0.29.0",
-    "react-whatsapp": "^0.3.0",
     "sharp": "^0.32.4",
     "slick-carousel": "^1.8.1",
     "tailwindcss": "3.3.3",
     "uuid": "^9.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "20.5.0"
   }
 }

@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { logo, menu, close, arrowdown, arrowUp } from "../assets";
+import { logo, menu, close, arrowdown, arrowUp } from "../public/assets";
 import { services } from "@/constants";
 import Image from "next/image";
 import Link from "next/link";
@@ -70,9 +70,9 @@ const Navbar = () => {
           }`}
         >
           <Image
-            layout="fixed"
+            
             src={logo}
-            alt="hoobank"
+            alt="logo"
             height={90}
             width={90}
           />
@@ -87,7 +87,7 @@ const Navbar = () => {
           <div className="ml-10 relative hidden normal-screen:flex justify-center">
             <ul className="flex me-50 items-center space-x-6 justify-center">
               <li
-                className="font-poppins text-white font-semibold cursor-pointer text-[17px] hover:text-orange-400 transition-all rounded-lg p-2 mr-10"
+                className="font-poppins text-white font-semibold cursor-pointer text-[17px] hover:text-orange-600 transition-all rounded-lg p-2 "
                 onClick={() => setLiActive("Home")}
               >
                 <button>
@@ -108,7 +108,7 @@ const Navbar = () => {
                 }}
               >
                 <button
-                  className={`font-poppins text-white font-semibold cursor-pointer text-[17px] hover:text-orange-400 transition-all rounded-lg  ${
+                  className={`font-poppins text-white font-semibold cursor-pointer text-[17px] hover:text-orange-600 transition-all rounded-lg  ${
                     isServicesDropdownVisible ? "text-white" : "text-dimWhite"
                   } mr-10`}
                 >
@@ -148,7 +148,7 @@ const Navbar = () => {
                     {/* Add your dropdown menu items here */}
                     <ul className="space-y-2 mb-2">
                       <li
-                        className="hover:bg-slate-700 flex justify-center mt-2 hover:text-orange-400"
+                        className="hover:bg-slate-700 flex justify-center mt-2 hover:text-orange-600"
                         onMouseEnter={(e) => {
                           setIsEssaySubDropdownVisible(true);
                           e.stopPropagation();
@@ -184,96 +184,96 @@ const Navbar = () => {
                                   : ""
                               }`}
                             >
-                              <li className="hover:bg-slate-700 hover:text-orange-300 transition-all mt-2 text-left">
+                              <li className="hover:bg-slate-700 hover:text-orange-600 transition-all mt-2 text-left">
                                 <Link href="#subitem1">Essay Editing</Link>
                               </li>
-                              <li className="hover:bg-slate-700 hover:text-orange-300 transition-all text-left">
+                              <li className="hover:bg-slate-700 hover:text-orange-600 transition-all text-left">
                                 <Link href="#subitem2">Buy an Essay</Link>
                               </li>
-                              <li className="hover:bg-slate-700 hover:text-orange-300 transition-all text-left">
+                              <li className="hover:bg-slate-700 hover:text-orange-600 transition-all text-left">
                                 <Link href="#subitem2">Nursing Essay</Link>
                               </li>
-                              <li className="hover:bg-slate-700 hover:text-orange-300 transition-all text-left">
-                                <Link href="#subitem2">Master's Essay</Link>
+                              <li className="hover:bg-slate-700 hover:text-orange-600 transition-all text-left">
+                                <Link href="#subitem2">Master&apos;s Essay</Link>
                               </li>
-                              <li className="hover:bg-slate-700 hover:text-orange-300 transition-all text-left">
+                              <li className="hover:bg-slate-700 hover:text-orange-600 transition-all text-left">
                                 <Link href="#subitem2">Law Essay</Link>
                               </li>
-                              <li className="hover:bg-slate-700 hover:text-orange-300 transition-all text-left">
+                              <li className="hover:bg-slate-700 hover:text-orange-600 transition-all text-left">
                                 <Link href="#subitem2">MBA Essay</Link>
                               </li>
-                              <li className="hover:bg-slate-700 hover:text-orange-300 transition-all text-left">
+                              <li className="hover:bg-slate-700 hover:text-orange-600 transition-all text-left">
                                 <Link href="#subitem2">University Essay</Link>
                               </li>
-                              <li className="hover:bg-slate-700 hover:text-orange-300 transition-all text-left">
+                              <li className="hover:bg-slate-700 hover:text-orange-600 transition-all text-left">
                                 <Link href="#subitem2">Write My Essay</Link>
                               </li>
-                              <li className="hover:bg-slate-700 hover:text-orange-300 transition-all text-left">
+                              <li className="hover:bg-slate-700 hover:text-orange-600 transition-all text-left">
                                 <Link href="#subitem2">Make My Essay</Link>
                               </li>
-                              <li className="hover:bg-slate-700 hover:text-orange-300 transition-all text-left">
+                              <li className="hover:bg-slate-700 hover:text-orange-600 transition-all text-left">
                                 <Link href="#subitem2">Do My Essay</Link>
                               </li>
-                              <li className="hover:bg-slate-700 hover:text-orange-300 transition-all text-left">
+                              <li className="hover:bg-slate-700 hover:text-orange-600 transition-all text-left">
                                 <Link href="#subitem2">Narrative Essay</Link>
                               </li>
-                              <li className="hover:bg-slate-700 hover:text-orange-300 transition-all text-left">
+                              <li className="hover:bg-slate-700 hover:text-orange-600 transition-all text-left">
                                 <Link href="#subitem2">
                                   Argumentative Essay
                                 </Link>
                               </li>
-                              <li className="hover:bg-slate-700 hover:text-orange-300 transition-all text-left">
+                              <li className="hover:bg-slate-700 hover:text-orange-600 transition-all text-left">
                                 <Link href="#subitem2">Expository Essay</Link>
                               </li>
-                              <li className="hover:bg-slate-700 hover:text-orange-300 transition-all text-left">
+                              <li className="hover:bg-slate-700 hover:text-orange-600 transition-all text-left">
                                 <Link href="#subitem2">Descriptive Essay</Link>
                               </li>
-                              <li className="hover:bg-slate-700 hover:text-orange-300 transition-all text-left">
+                              <li className="hover:bg-slate-700 hover:text-orange-600 transition-all text-left">
                                 <Link href="#subitem2">Custom Essay</Link>
                               </li>
-                              <li className="hover:bg-slate-700 hover:text-orange-300 transition-all text-left">
+                              <li className="hover:bg-slate-700 hover:text-orange-600 transition-all text-left">
                                 <Link href="#subitem2">Admission Essay</Link>
                               </li>
-                              <li className="hover:bg-slate-700 hover:text-orange-300 transition-all text-left">
+                              <li className="hover:bg-slate-700 hover:text-orange-600 transition-all text-left">
                                 <Link href="#subitem2">Urgent Essay</Link>
                               </li>
-                              <li className="hover:bg-slate-700 hover:text-orange-300 transition-all text-left">
+                              <li className="hover:bg-slate-700 hover:text-orange-600 transition-all text-left">
                                 <Link href="#subitem2">Analysis Essay</Link>
                               </li>
 
-                              <li className="hover:bg-slate-700 hover:text-orange-300 transition-all text-left">
+                              <li className="hover:bg-slate-700 hover:text-orange-600 transition-all text-left">
                                 <Link href="#subitem2">Critical Essay</Link>
                               </li>
 
-                              <li className="hover:bg-slate-700 hover:text-orange-300 transition-all text-left">
+                              <li className="hover:bg-slate-700 hover:text-orange-600 transition-all text-left">
                                 <Link href="#subitem2">Scholarship Essay</Link>
                               </li>
-                              <li className="hover:bg-slate-700 hover:text-orange-300 transition-all text-left">
+                              <li className="hover:bg-slate-700 hover:text-orange-600 transition-all text-left">
                                 <Link href="#subitem2">Student Essay</Link>
                               </li>
-                              <li className="hover:bg-slate-700 hover:text-orange-300 transition-all text-left">
+                              <li className="hover:bg-slate-700 hover:text-orange-600 transition-all text-left">
                                 <Link href="#subitem2">Persuasive Essay</Link>
                               </li>
-                              <li className="hover:bg-slate-700 hover:text-orange-300 transition-all text-left">
+                              <li className="hover:bg-slate-700 hover:text-orange-600 transition-all text-left">
                                 <Link href="#subitem2">Process Essay</Link>
                               </li>
-                              <li className="hover:bg-slate-700 hover:text-orange-300 transition-all text-left">
+                              <li className="hover:bg-slate-700 hover:text-orange-600 transition-all text-left">
                                 <Link href="#subitem2">Literature Essay</Link>
                               </li>
-                              <li className="hover:bg-slate-700 hover:text-orange-300 transition-all text-left">
+                              <li className="hover:bg-slate-700 hover:text-orange-600 transition-all text-left">
                                 <Link href="#subitem2">Informal Essay</Link>
                               </li>
-                              <li className="hover:bg-slate-700 hover:text-orange-300 transition-all text-left">
+                              <li className="hover:bg-slate-700 hover:text-orange-600 transition-all text-left">
                                 <Link href="#subitem2">
                                   Classification Essay
                                 </Link>
                               </li>
-                              <li className="hover:bg-slate-700 hover:text-orange-300 transition-all text-left">
+                              <li className="hover:bg-slate-700 hover:text-orange-600 transition-all text-left">
                                 <Link href="#subitem2">
                                   Cause and Effect Essay
                                 </Link>
                               </li>
-                              <li className="hover:bg-slate-700 hover:text-orange-300 transition-all text-left">
+                              <li className="hover:bg-slate-700 hover:text-orange-600 transition-all text-left">
                                 <Link href="#subitem2">
                                   Compare and Contrast Essay
                                 </Link>
@@ -284,7 +284,7 @@ const Navbar = () => {
                       </li>
 
                       <li
-                        className="hover:bg-slate-700 transition-all flex justify-center hover:text-orange-400"
+                        className="hover:bg-slate-700 transition-all flex justify-center hover:text-orange-600"
                         onMouseEnter={(e) => {
                           setIsAssignmentSubDropdownVisible(true);
                           e.stopPropagation();
@@ -314,14 +314,14 @@ const Navbar = () => {
                         {isAssignmentSubDropdownVisible && (
                           <div className="sub-dropdown2 absolute left-full">
                             <ul className=" top-10 pt-1 pb-1 bg-gray-800 rounded-tr-lg rounded-br-lg text-white font-normal space-y-2 min-w-[240px] pl-4">
-                              <li className="hover:bg-slate-700 hover:text-orange-300 transition-all text-left mt-2 ">
+                              <li className="hover:bg-slate-700 hover:text-orange-600 transition-all text-left mt-2 ">
                                 <Link href="#subitem1">Assignment Writing</Link>
                               </li>
-                              <li className="hover:bg-slate-700 hover:text-orange-300 transition-all text-left">
+                              <li className="hover:bg-slate-700 hover:text-orange-600 transition-all text-left">
                                 <Link href="#subitem2">Cookery</Link>
                               </li>
 
-                              <li className="hover:bg-slate-700 hover:text-orange-300 transition-all text-left">
+                              <li className="hover:bg-slate-700 hover:text-orange-600 transition-all text-left">
                                 <Link
                                   href="#subitem2"
                                   className="flex items-center"
@@ -362,50 +362,50 @@ const Navbar = () => {
                                         setIsLawSubDropdownVisible(false);
                                       }}
                                     >
-                                      <li className="hover:bg-slate-700 hover:text-orange-300 transition-all text-left mt-2 ">
+                                      <li className="hover:bg-slate-700 hover:text-orange-600 transition-all text-left mt-2 ">
                                         <Link href="#subitem1">
                                           Property Law
                                         </Link>
                                       </li>
-                                      <li className="hover:bg-slate-700 hover:text-orange-300 transition-all text-left mt-2 ">
+                                      <li className="hover:bg-slate-700 hover:text-orange-600 transition-all text-left mt-2 ">
                                         <Link href="#subitem1">
                                           Constitutional Law
                                         </Link>
                                       </li>
-                                      <li className="hover:bg-slate-700 hover:text-orange-300 transition-all text-left mt-2 ">
+                                      <li className="hover:bg-slate-700 hover:text-orange-600 transition-all text-left mt-2 ">
                                         <Link href="#subitem1">
                                           Administrative Law
                                         </Link>
                                       </li>
-                                      <li className="hover:bg-slate-700 hover:text-orange-300 transition-all text-left mt-2 ">
+                                      <li className="hover:bg-slate-700 hover:text-orange-600 transition-all text-left mt-2 ">
                                         <Link href="#subitem1">
                                           Criminal Law
                                         </Link>
                                       </li>
-                                      <li className="hover:bg-slate-700 hover:text-orange-300 transition-all text-left mt-2 ">
+                                      <li className="hover:bg-slate-700 hover:text-orange-600 transition-all text-left mt-2 ">
                                         <Link href="#subitem1">
                                           Human Right Law
                                         </Link>
                                       </li>
-                                      <li className="hover:bg-slate-700 hover:text-orange-300 transition-all text-left mt-2 ">
+                                      <li className="hover:bg-slate-700 hover:text-orange-600 transition-all text-left mt-2 ">
                                         <Link href="#subitem1">Civil Law</Link>
                                       </li>
-                                      <li className="hover:bg-slate-700 hover:text-orange-300 transition-all text-left mt-2 ">
+                                      <li className="hover:bg-slate-700 hover:text-orange-600 transition-all text-left mt-2 ">
                                         <Link href="#subitem1">Tort Law</Link>
                                       </li>
                                     </ul>
                                   </div>
                                 )}
                               </li>
-                              <li className="hover:bg-slate-700 hover:text-orange-300 transition-all text-left">
+                              <li className="hover:bg-slate-700 hover:text-orange-600 transition-all text-left">
                                 <Link href="#subitem2">Management</Link>
                               </li>
-                              <li className="hover:bg-slate-700 hover:text-orange-300 transition-all text-left">
+                              <li className="hover:bg-slate-700 hover:text-orange-600 transition-all text-left">
                                 <Link href="#subitem2">
                                   Managerial Economics
                                 </Link>
                               </li>
-                              <li className="hover:bg-slate-700 hover:text-orange-300 transition-all text-left">
+                              <li className="hover:bg-slate-700 hover:text-orange-600 transition-all text-left">
                                 <Link href="#subitem2">
                                   Managerial Accounting
                                 </Link>
@@ -415,7 +415,7 @@ const Navbar = () => {
                         )}
                       </li>
                       <li
-                        className="hover:bg-slate-700 transition-all flex justify-center hover:text-orange-400"
+                        className="hover:bg-slate-700 transition-all flex justify-center hover:text-orange-600"
                         onMouseEnter={(e) => {
                           setIsCaseStudySubDropdownVisible(true);
                           e.stopPropagation();
@@ -445,7 +445,7 @@ const Navbar = () => {
                         {isCaseStudySubDropdownVisible && (
                           <div className="sub-dropdown absolute mt-[63px]">
                             <ul className="top-10 bg-gray-800 rounded-tr-lg rounded-br-lg text-white font-normal space-y-2 min-w-[240px] items-center pt-1 pb-2 pl-2">
-                              <li className="hover:bg-slate-700 hover:text-orange-300 transition-all text-left mt-2 ">
+                              <li className="hover:bg-slate-700 hover:text-orange-600 transition-all text-left mt-2 ">
                                 <Link href="#subitem1">Case Study Writing</Link>
                               </li>
                             </ul>
@@ -453,7 +453,7 @@ const Navbar = () => {
                         )}
                       </li>
                       <li
-                        className="hover:bg-slate-700 transition-all flex justify-center hover:text-orange-400"
+                        className="hover:bg-slate-700 transition-all flex justify-center hover:text-orange-600"
                         onMouseEnter={(e) => {
                           setisCourseworkSubDropdownVisible(true);
                           e.stopPropagation();
@@ -483,7 +483,7 @@ const Navbar = () => {
                         {isCourseworkSubDropdownVisible && (
                           <div className="sub-dropdown absolute mt-[92px]">
                             <ul className="top-10 bg-gray-800 rounded-tr-lg rounded-br-lg text-white font-normal space-y-2 min-w-[240px] pb-2 pt-2 pl-2">
-                              <li className="hover:bg-slate-700 hover:text-orange-300 transition-all text-left mt-2 ">
+                              <li className="hover:bg-slate-700 hover:text-orange-600 transition-all text-left mt-2 ">
                                 <Link href="#subitem1">Coursework Writing</Link>
                               </li>
                             </ul>
@@ -491,7 +491,7 @@ const Navbar = () => {
                         )}
                       </li>
                       <li
-                        className="hover:bg-slate-700 transition-all flex justify-center hover:text-orange-400"
+                        className="hover:bg-slate-700 transition-all flex justify-center hover:text-orange-600"
                         onMouseEnter={(e) => {
                           setisDissertationSubDropdownVisible(true);
                           e.stopPropagation();
@@ -521,7 +521,7 @@ const Navbar = () => {
                         {isDissertationSubDropdownVisible && (
                           <div className="sub-dropdown absolute mt-32">
                             <ul className="top-10 bg-gray-800 rounded-tr-lg rounded-br-lg text-white font-normal space-y-2 min-w-[240px] pb-2 pt-2 pl-2">
-                              <li className="hover:bg-slate-700 hover:text-orange-300 transition-all text-left mt-2 ">
+                              <li className="hover:bg-slate-700 hover:text-orange-600 transition-all text-left mt-2 ">
                                 <Link href="#subitem1">
                                   Best Dissertation Writing
                                 </Link>
@@ -531,7 +531,7 @@ const Navbar = () => {
                         )}
                       </li>
                       <li
-                        className="hover:bg-slate-700 transition-all flex justify-center hover:text-orange-400"
+                        className="hover:bg-slate-700 transition-all flex justify-center hover:text-orange-600"
                         onMouseEnter={(e) => {
                           setisReportSubDropdownVisible(true);
                           e.stopPropagation();
@@ -561,7 +561,7 @@ const Navbar = () => {
                         {isReportSubDropdownVisible && (
                           <div className="sub-dropdown absolute mt-40">
                             <ul className="top-10 bg-gray-800 rounded-tr-lg rounded-br-lg text-white font-normal space-y-2 min-w-[240px] pb-2 pt-2 pl-2">
-                              <li className="hover:bg-slate-700 hover:text-orange-300 transition-all text-left mt-2 ">
+                              <li className="hover:bg-slate-700 hover:text-orange-600 transition-all text-left mt-2 ">
                                 <Link href="#subitem1">
                                   Best Report Writing
                                 </Link>
@@ -570,16 +570,16 @@ const Navbar = () => {
                           </div>
                         )}
                       </li>
-                      <li className="hover:bg-slate-700 transition-all hover:text-orange-400">
+                      <li className="hover:bg-slate-700 transition-all hover:text-orange-600">
                         <Link href="#item4">Proofreading</Link>
                       </li>
-                      <li className="hover:bg-slate-700 transition-all hover:text-orange-400">
+                      <li className="hover:bg-slate-700 transition-all hover:text-orange-600">
                         <Link href="#item4">Referencing Styles</Link>
                       </li>
-                      <li className="hover:bg-slate-700 transition-all hover:text-orange-400">
+                      <li className="hover:bg-slate-700 transition-all hover:text-orange-600">
                         <Link href="#item4">PHD Thesis Writing</Link>
                       </li>
-                      <li className="hover:bg-slate-700 transition-all hover:text-orange-400">
+                      <li className="hover:bg-slate-700 transition-all hover:text-orange-600">
                         <Link href="#item4">Team Paper Writing</Link>
                       </li>
                       {/* Add more items here */}
@@ -588,17 +588,10 @@ const Navbar = () => {
                 </button>
               </li>
 
+    
               <li className="relative">
                 <button
-                  className="font-poppins text-white font-semibold cursor-pointer text-[17px] hover:text-orange-400 transition-all rounded-lg p-2"
-                  onClick={() => setLiActive("Countries")}
-                >
-                  <Link href="#blogs">Countries</Link>
-                </button>
-              </li>
-              <li className="relative">
-                <button
-                  className={`font-poppins text-white font-semibold cursor-pointer text-[17px] hover:text-orange-400 transition-all rounded-lg p-2 mr-10`}
+                  className={`font-poppins text-white font-semibold cursor-pointer text-[17px] hover:text-orange-600 transition-all rounded-lg p-2 `}
                   onClick={() => setLiActive("Blogs")}
                 >
                   <Link href="#blogs">Blogs</Link>
@@ -606,18 +599,18 @@ const Navbar = () => {
               </li>
               <li className="relative">
                 <button
-                  className="font-poppins text-white font-semibold cursor-pointer text-[17px] hover:text-orange-400 transition-all rounded-lg p-2"
+                  className="font-poppins text-white font-semibold cursor-pointer text-[17px] hover:text-orange-600 transition-all rounded-lg p-2"
                   onClick={() => setLiActive("About us")}
                 >
-                  <Link href="#blogs">About us</Link>
+                  <Link href="reviews">Reviews</Link>
                 </button>
               </li>
               <li className="relative">
                 <button
-                  className="font-poppins text-white font-semibold cursor-pointer text-[17px] hover:text-orange-400 transition-all rounded-lg p-2"
+                  className="font-poppins text-white font-semibold cursor-pointer text-[17px] hover:text-orange-600 transition-all rounded-lg p-2"
                   onClick={() => setLiActive("Contact us")}
                 >
-                  <Link href="#blogs">Contact us</Link>
+                  <Link href="contact">Contact us</Link>
                 </button>
               </li>
             </ul>
@@ -670,7 +663,7 @@ const Navbar = () => {
               <div className="flex flex-col h-full overflow-y-auto">
                 <ul className="list-none mt-10 flex flex-col">
                   <li
-                    className={`font-poppins font-medium cursor-pointer text-[12px]   hover:text-orange-400 transition-all p-2 ${
+                    className={`font-poppins font-medium cursor-pointer text-[12px]   hover:text-orange-600 transition-all p-2 ${
                       liActive === "Home" ? "text-white" : "text-dimWhite"
                     } mb-4`}
                     onClick={() => {
@@ -682,7 +675,7 @@ const Navbar = () => {
                   </li>
 
                   <li
-                    className={`font-poppins font-medium cursor-pointer text-[12px] hover:text-orange-400 transition-all p-2 ${
+                    className={`font-poppins font-medium cursor-pointer text-[12px] hover:text-orange-600 transition-all p-2 ${
                       liActive === "Services" ? "text-white" : "text-dimWhite"
                     } mb-4`}
                     onClick={() => {
@@ -750,7 +743,7 @@ const Navbar = () => {
                               href={`#${service.name}`}
                               className="flex items-center"
                             >
-                              <p className="hover:text-orange-400">
+                              <p className="hover:text-orange-600">
                                 {service.name}
                               </p>
                               {Object.keys(service.subMenuItems).length > 0 && (
@@ -788,7 +781,7 @@ const Navbar = () => {
                                         }));
                                       }}
                                     >
-                                      <div className={`flex items-center hover:text-orange-400`}>
+                                      <div className={`flex items-center hover:text-orange-600`}>
                                         <Link
                                           href={subServiceValue}
                                         >
@@ -849,7 +842,7 @@ const Navbar = () => {
                   )}
 
                   <li
-                    className={`font-poppins font-medium cursor-pointer text-[12px] hover:text-orange-400 transition-all p-2 ${
+                    className={`font-poppins font-medium cursor-pointer text-[12px] hover:text-orange-600 transition-all p-2 ${
                       liActive === "Countries" ? "text-white" : "text-dimWhite"
                     } mb-4`}
                     onClick={() => {
@@ -862,7 +855,7 @@ const Navbar = () => {
                   </li>
 
                   <li
-                    className={`font-poppins font-medium cursor-pointer text-[12px] hover:text-orange-400 transition-all p-2 ${
+                    className={`font-poppins font-medium cursor-pointer text-[12px] hover:text-orange-600 transition-all p-2 ${
                       liActive === "Blogs" ? "text-white" : "text-dimWhite"
                     } mb-4`}
                     onClick={() => {
@@ -875,7 +868,7 @@ const Navbar = () => {
                   </li>
 
                   <li
-                    className={`font-poppins font-medium cursor-pointer text-[12px]   hover:text-orange-400 transition-all p-2 ${
+                    className={`font-poppins font-medium cursor-pointer text-[12px]   hover:text-orange-600 transition-all p-2 ${
                       liActive === "about" ? "text-white" : "text-dimWhite"
                     } mb-4`}
                     onClick={() => {
@@ -885,7 +878,7 @@ const Navbar = () => {
                     <Link href="#about">About us</Link>
                   </li>
                   <li
-                    className={`font-poppins font-medium cursor-pointer text-[12px]   hover:text-orange-400 transition-all p-2 ${
+                    className={`font-poppins font-medium cursor-pointer text-[12px]   hover:text-orange-600 transition-all p-2 ${
                       liActive === "About us" ? "text-white" : "text-dimWhite"
                     } mb-4`}
                     onClick={() => {

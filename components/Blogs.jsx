@@ -1,10 +1,10 @@
 import React from "react";
-import { blogs } from "@/constants";
+import { blogData } from "@/constants";
 import Image from "next/image";
 import Link from "next/link";
 
 const Blogs = () => {
-    const LimitedBlogs = blogs.slice(0, 6);
+    const LimitedBlogs = blogData.slice(0, 6);
 
     return (
         <div id="blogs" className="flex flex-col mx-32 mb-6  items-center justify-center">

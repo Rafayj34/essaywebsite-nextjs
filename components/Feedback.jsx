@@ -1,6 +1,6 @@
 
 import Image from 'next/image';
-import { feedback, sitejabber, trustpilot, stars } from '@/assets';
+import { feedback, sitejabber, trustpilot, stars } from '@/public/assets';
 
 const Feedback = () => {
   return (

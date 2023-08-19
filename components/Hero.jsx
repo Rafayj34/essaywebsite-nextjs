@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import { heroimg } from "../assets";
+import { heroimg } from "../public/assets";
 import { Typewriter } from "react-simple-typewriter";
 
 export function Hero() {
@@ -9,19 +9,19 @@ export function Hero() {
       <div className="relative mt-[-55px] w-full h-[900px] mx-auto shadow-lg bg-slate-100 shadow-slate-400 text-center flex flex-col justify-center object-contain">
         {/* Text Content */}
         <div className="z-10 sm:max-w-4xl lg:max-w-4xl 2xl:max-w-5xl  mt-32 text-left px-8 ">
-          <div className="text-orange-400 text-lg font-bold p-2">
-            Unlock Your Essay&apos;s Potential with Our Expert Writers
+          <div className="text-orange-600 text-lg font-bold p-2">
+          BEST ESSAY WRITING SERVICE UK
           </div>
 
           <h1 className="md:text-6xl sm:text-5xl text-4xl font-bold md:py-6 text-slate-700">
-            Experience Writing Excellence<span className="text-orange-400">.</span>
+          The Top-Rated and Best Essay Writing Service in UK to achieve A+ grade<span className="text-orange-600">.</span>
           </h1>
           <div className="flex">
             <p className="md:text-4xl sm:text-3xl text-xl font-bold py-4 text-slate-700">
-              <span className='text-slate-800'>Fast, flexible financing for</span>
-              <span className='text-orange-400'>
+              <span className='text-slate-800'>Best place to get your</span>
+              <span className='text-orange-600'>
                 <Typewriter
-                  words={[" Eat", " Sleep", " Code", " Repeat"]}
+                  words={[" Essays", " Reports", " Dissertations", " Assignments"]}
                   loop={Infinity}
                   cursor
                   cursorStyle="_"
@@ -38,16 +38,16 @@ export function Hero() {
           </p>
           <div className="flex flex-col mobile:flex-row items-center">
           <button
-            className="bg-orange-400 shadow-lg shadow-orange-500 mx-2 w-[200px] rounded-full font-medium my-2 mobile:my-6 py-3 text-black
-          hover:bg-white transition-all  border-orange-400 hover:shadow-orange-500 hover:shadow-md"
+            className="bg-orange-600 shadow-lg shadow-orange-500 mx-2 w-[200px] rounded-full font-medium my-2 mobile:my-6 py-3 text-black
+          hover:bg-white transition-all  border-orange-600 hover:shadow-orange-500 hover:shadow-md"
           >
-            Get Started Now
+            Place an order
           </button>
           <button
-            className="bg-white border-2 mx-2 border-orange-400 shadow-lg shadow-slate-500 rounded-full w-[200px] font-medium my-2 mobile:my-6 py-3 text-black
-          hover:bg-orange-400 transition-all hover:shadow-md "
+            className="bg-white border-2 mx-2 border-orange-600 shadow-lg shadow-slate-500 rounded-full w-[200px] font-medium my-2 mobile:my-6 py-3 text-black
+          hover:bg-orange-600 transition-all hover:shadow-md "
           >
-            Request a Quote
+            Get consultancy
           </button>
           </div>
         </div>
@@ -58,7 +58,7 @@ export function Hero() {
             className="object-cover lg:min-w-full"
             src= {heroimg}  // Replace with the actual image source
             alt="hero image"
-            layout="fill"
+          fill
             // className="object-cover"
           />
         </div>

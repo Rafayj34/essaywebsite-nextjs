@@ -7,7 +7,7 @@ import {
   priceicon,
   privacyicon,
   formaticon,
-} from "../assets";
+} from "../public/assets";
 import Image from "next/image";
 export const Guarantee = () => {
   return (

@@ -1,5 +1,5 @@
 // import { people01, people02, people03, facebook, instagram, linkedin, twitter, airbnb, binance, coinbase, dropbox, send, shield, star  } from "../assets";
-import { client, rating } from "../assets";
+import { client, rating } from "../public/assets";
 export const navLinks = [
   {
     id: "home",
@@ -94,43 +94,35 @@ export const services = [
   },
 ];
 
-export const blogs = [
+export const blogData = [
   {
     id: 1,
-    slug: "post1",
+    slug: "blog1",
     title: "Sample Blog Posts",
     description: "This is the first sample blog post.",
     image: client,
     date: "8/12/2023",
+    isoDate: new Date("8/12/2023").toISOString(),
     read: "12",
     author: "John Doe",
   },
   {
     id: 2,
-    slug: "post2",
-    title: "Blog  2",
+    slug: "blog2",
+    title: "Blog 2",
     description: "This is the first sample blog post.",
     image: client,
     date: "8/12/2023",
+    isoDate: new Date("12/15/2022").toISOString(),
     read: "12",
     author: "John Doe",
   },
-  {
-    id: 3,
-    slug: "post3",
-    title: "Working 3",
-    description: "This is the first sample blog post.",
-    image: client,
-    date: "8/12/2023",
-    read: "12",
-    author: "John Doe",
-  },
+  
 ];
 
 export const contentData = [
   {
     slug: 'essay-editing-service',
-    path: 'content/essay-editing-service',
     title: 'Top Rated Essay Editing Services by Top UK Nartive Essay Writers',
     description: "Get your Essay edited and proofread by UK's top Essay Editing Service. Our Top Rated Essay Writers provide 110% satisfaction guaranteed.",
     image: client,
@@ -139,7 +131,6 @@ export const contentData = [
   },
   {
     slug: 'buy-an-essay',
-    path: 'content/buy-an-essay.html',
     title: 'Buying Essay Editing Service',
     description: 'Essay editing services',
     image: client,

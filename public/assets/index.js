@@ -20,16 +20,18 @@ import rating from './rating.webp';
 import client from './client.webp';
 import tawktoimg from './tawktoimg.jpg';
 import accordionarrow from './accordionarrow.svg';
-import upload from './upload.gif';
-import experts from './experts.gif';
-import explain from './explain.gif';
-import give from './give.gif';
-import feedback from './Feedback.gif';
+import upload from './upload.svg';
+import experts from './experts.svg';
+import explain from './explain.svg';
+import give from './give.svg';
+import feedback from './feedback.svg';
 import sitejabber from './sitejabber.svg';
 import trustpilot from './trustpilot.svg';
 import stars from './stars.webp';
 import userpfp from './user-pfp.png';
 import whatsapp from './whatsapp.png';
+import blogging from './blogging.webp';
+import essay30off from './essay30off.webp';
 export {
     unilogo1,
     unilogo2,
@@ -62,5 +64,7 @@ export {
     trustpilot,
     stars,
     userpfp,
-    whatsapp
+    whatsapp,
+    blogging,
+    essay30off
 }

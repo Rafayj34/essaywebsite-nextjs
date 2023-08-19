@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import { accordionarrow, arrowdown, upload, experts, explain, give } from "@/assets";
+import { accordionarrow, arrowdown, upload, experts, explain, give } from "@/public/assets";
 import Image from "next/image";
 const Accordion = ({ title, description, imageSrc }) => {
   const [isHovered, setIsHovered] = useState(false);
@@ -41,7 +41,7 @@ const Accordion = ({ title, description, imageSrc }) => {
           </div>
           <div className="w-4/5 col-span-1">
             <div className="max-w-full max-h-full mx-auto">
-              <Image src={imageSrc} layout="responsive" alt="accordion section arrow" />
+              <Image src={imageSrc}  alt="accordion section arrow" />
             </div>
           </div>
         </div>

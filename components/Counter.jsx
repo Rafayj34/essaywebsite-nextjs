@@ -1,6 +1,6 @@
 "use client";
 import CountUp from "react-countup";
-import { assignment,rating,client } from "@/assets";
+import { assignment,rating,client } from "@/public/assets";
 import Image from "next/image";
 
 const Counter = () => {
