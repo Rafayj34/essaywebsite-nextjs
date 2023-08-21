@@ -12,7 +12,7 @@ import customersupporticon from './customersupport-icon.png';
 import timeicon from './time-icon.png';
 import close from './close.svg';
 import arrowUp from './arrow-up.svg';
-import menu from './menu.svg';
+import  menu from './menu.svg';
 import arrowdown from './arrow-down.svg';
 import logo from './logo.webp';
 import assignment from './assignment.webp';
@@ -20,18 +20,27 @@ import rating from './rating.webp';
 import client from './client.webp';
 import tawktoimg from './tawktoimg.jpg';
 import accordionarrow from './accordionarrow.svg';
-import upload from './upload.svg';
-import experts from './experts.svg';
+import upload from './upload.gif';
+import experts from './experts.gif';
 import explain from './explain.svg';
 import give from './give.svg';
-import feedback from './feedback.svg';
+import feedback from './Feedback.svg';
 import sitejabber from './sitejabber.svg';
 import trustpilot from './trustpilot.svg';
-import stars from './stars.webp';
-import userpfp from './user-pfp.png';
-import whatsapp from './whatsapp.png';
+import stars from './stars.png';
 import blogging from './blogging.webp';
 import essay30off from './essay30off.webp';
+import essay30off2 from './big-discount-offer.jpg';
+import Drhenryimage from './DrHenry.jpg';
+import proofreadingimg from './proofreading.webp';
+import referencingstyles from './referencingstyles.webp';
+import termpaperimg from './termpaper.webp';
+import reportimg from './reportwriting.webp';
+import essay30off3 from './essay30off3.webp';
+import casestudyimg from './casestudy.webp'
+import whatsapp from './whatsapp.png';
+
+
 export {
     unilogo1,
     unilogo2,
@@ -63,8 +72,16 @@ export {
     sitejabber,
     trustpilot,
     stars,
-    userpfp,
-    whatsapp,
     blogging,
-    essay30off
+    essay30off,
+    Drhenryimage,
+    essay30off2,
+    proofreadingimg,
+    referencingstyles,
+    termpaperimg,
+    reportimg,
+    essay30off3,
+    casestudyimg,
+    whatsapp
+
 }

@@ -3,9 +3,9 @@ import React from "react";
 const Homecontent = () => {
   return (
     <div className="container mx-auto px-3 sm:px-5  md:px-20 py-5 sm:py-10  md:py-20">
-      <div className="flex flex-col items-center mb-4">
-        <h1 className="text-3xl text-orange-600 font-semibold my-5">
-          Most Authentic and Trusted Criteria to Hire Exceptional Essay Writers
+      <div className="container mx-auto items-center mb-4 max-w-6xl">
+        <h1 className="text-2xl md:text-3xl text-slate-800 font-semibold my-5 border-b-2 border-l-4 border-orange-600 p-2">
+          Most <span className="text-orange-600">Authentic</span> and <span className="text-orange-600">Trusted Criteria</span> to Hire Exceptional Essay Writers
         </h1>
         <p className="my-2">
           Do you want to hire well-qualified and best essay writer for your
@@ -55,7 +55,6 @@ const Homecontent = () => {
           heading="Examining essay writers' work"
           content="We cannot supply essay writing service to our customers without putting in some work; consequently, we devote ourselves to reviewing each essay writing of our essay helpers before offering it to our clients to ensure that all of the requirements are met by the writer or not. We provide the best essay writing service to our customers after we are happy with it."
         />
- 
       </div>
     </div>
   );

@@ -4,6 +4,7 @@ import Link from "next/link";
 import getBlogMetadata from "@/constants/getBlogMetadata";
 import Image from "next/image";
 import { blogData } from "@/constants";
+import UsefulLink from "@/components/UsefulLink";
 
 const getBlogContent = async (slug) => {
   const blogJson = blogData.find((blog) => blog.slug === slug);
@@ -159,15 +160,7 @@ const BlogPage = async (props) => {
   );
 };
 
-const UsefulLink = ({ name, href }) => {
-  return (
-    <li>
-      <Link href={href} className="whitespace-nowrap hover:text-orange-800">
-        {name}
-      </Link>
-    </li>
-  );
-};
+
 
 export const generateStaticParams = async () => {
   const blogs = getBlogMetadata();

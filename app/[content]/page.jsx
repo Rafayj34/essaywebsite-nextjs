@@ -2,6 +2,7 @@ import Link from "next/link";
 import getContentMetadata from "@/constants/getContentMetadata";
 import Image from "next/image";
 import { contentData } from "@/constants";
+import UsefulLink from "@/components/UsefulLink";
 
 const getContent = async (slug) => {
   const contentJson = contentData.find((content) => content.slug === slug);
@@ -70,8 +71,8 @@ const ContentPage = async (props) => {
 
   return (
     <div className="h-auto mt-12">
-      <div className="container mt-20 py-10">
-        <div className="max-w-4xl mx-auto">
+    <div className="grid grid-cols-4 mt-20 py-10 px-3 lg:px-24">
+        <div className="col-span-full lg:col-span-3">
           <div className="flex max-w-fit flex-col space-y-2 p-2 mb-4">
             <Link
               href="/"
@@ -104,6 +105,51 @@ const ContentPage = async (props) => {
             </p>
           </div>
           {content}
+          </div>
+        <div className="hidden lg:block px-10 mt-96 ">
+          <h2 className="text-3xl text-slate-800 font-semibold mb-4 whitespace-nowrap">All Essays</h2>
+          <ul className="space-y-2 content-list mb-20">
+            <UsefulLink name="Custom Essay Help" href="#"/>
+            <UsefulLink name="Admission Essay Help" href="#"/>
+            <UsefulLink name="Exploratory Essay Help" href="#"/>
+            <UsefulLink name="Law Essay Help" href="#"/>
+            <UsefulLink name="Deductive Essay Help" href="#"/>
+            <UsefulLink name="Scholarship Essays Help" href="#"/>
+            <UsefulLink name="Argumentive Essay Help" href="#"/>
+            <UsefulLink name="Urgent Essay Help" href="#"/>
+            <UsefulLink name="Student Essay Writing" href="#"/>
+            <UsefulLink name="Plagiarism Free Essays" href="#"/>
+            <UsefulLink name="Essay Help Online" href="#"/>
+            <UsefulLink name="Essay Homework Help" href="#"/>
+            <UsefulLink name="Need Help Writing Essay" href="#"/>
+            <UsefulLink name="Cheap Essay Writer" href="#"/>
+            <UsefulLink name="Perfect Essay Help" href="#"/>
+            <UsefulLink name="MBA Essay Writing Service" href="#"/>
+            <UsefulLink name="Professional Essay Writer" href="#"/>
+            <UsefulLink name="Cheap Essay Writing Services" href="#"/>
+            <UsefulLink name="Essay Writers Online" href="#"/>
+          </ul>
+          <h2 className="text-3xl text-slate-800 font-semibold mb-4 whitespace-nowrap">Other Services</h2>
+          <ul className="space-y-2 content-list">
+            <UsefulLink name="Assignment Writing" href="#"/>
+            <UsefulLink name="Cookery" href="#"/>
+            <UsefulLink name="Property Law" href="#"/>
+            <UsefulLink name="Constitutional Law" href="#"/>
+            <UsefulLink name="Administrative Law" href="#"/>
+            <UsefulLink name="Criminal Law" href="#"/>
+            <UsefulLink name="Human Rights Law" href="#"/>
+            <UsefulLink name="Civil Law" href="#"/>
+            <UsefulLink name="Tort Law" href="#"/>
+            <UsefulLink name="Management" href="#"/>
+            <UsefulLink name="Managerial Economics" href="#"/>
+            <UsefulLink name="Managerial Accounting" href="#"/>
+            <UsefulLink name="Case Study Writing" href="#"/>
+            <UsefulLink name="Coursework Writing" href="#"/>
+            <UsefulLink name="Best Dissertation Writing" href="#"/>
+            <UsefulLink name="Best Report Writing" href="#"/>
+         
+
+          </ul>
         </div>
       </div>
     </div>

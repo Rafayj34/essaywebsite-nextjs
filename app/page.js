@@ -8,6 +8,7 @@ import Feedback from "@/components/Feedback";
 import { Dragndrop } from "@/components/Dragndrop";
 import Homecontent from "@/components/Homecontent";
 import Homecontent2 from "@/components/Homecontent2";
+import HomeReviews from "@/components/HomeReviews";
 export default function Home() {
   return (
     <div className="bg-primary">
@@ -34,6 +35,7 @@ export default function Home() {
         <Dragndrop />
         </div>
         <Feedback />
+        <HomeReviews />
 
       </div>
     </div>

@@ -8,7 +8,7 @@ const Blogs = () => {
 
     return (
         <div id="blogs" className="flex flex-col mx-32 mb-6  items-center justify-center">
-            <div className="text-3xl pe-3 flex items-center mt-10 w-fit border-b-2 p-2 border-orange-400 border-r-4 justify-center sm:mb-5 mb-10  font-bold">
+            <div className="text-3xl pe-3 flex items-center mt-10 w-fit border-b-2 p-2 border-orange-600 border-r-4 justify-center sm:mb-5 mb-10  font-bold">
                 Explore blogs written by our writers
             </div>
             <div className="flex justify-center items-center mt-3 mb-5 animate-fade-right">
@@ -30,8 +30,8 @@ const Blogs = () => {
                     ))}
                     <Link href={'/blogs'}>
                     <div className="flex justify-center items-center my-6">
-                       <button className="bg-orange-400 w-[200px] font-medium py-2 text-black
-                        hover:bg-white transition-all border-2 hover:border-orange-400 rounded-lg hover:shadow-md">
+                       <button className="bg-orange-600 w-[200px] font-medium py-2 text-black
+                        hover:bg-white transition-all border-2 hover:border-orange-600 rounded-lg hover:shadow-md">
                             View all blogs →
                         </button>
                     </div>

@@ -179,8 +179,8 @@ export const Dragndrop = () => {
     <div className="mx-auto grid mt-10 pt-10 grid-cols-1 sm:grid-cols-2  mb-10">
       <div className="flex flex-col text-center justify-center pb-4 border-r-0 sm:border-r-2 sm:border-b-0 border-orange-500 border-b-2 m-2 p-4">
         <div className="container mx-auto w-fit">
-          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-center text-gray-800 mb-6 border-b-2 border-r-4 border-orange-400 shadow-md p-2">
-            Introducing <span className="text-orange-400">Dropzone</span>
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-center text-gray-800 mb-6 border-b-2 border-r-4 border-orange-600 shadow-md p-2">
+            Introducing <span className="text-orange-600">Dropzone</span>
           </h2>
           <div className="flex flex-col  justify-center items-center ">
             <div className="max-w-xs p-4  border-b-2 border-gray-300  bg-white  text-center">
@@ -221,7 +221,7 @@ export const Dragndrop = () => {
         </h1>
         <div
           {...getRootProps({ style })}
-          className="w-[300px] h-[200px] md:w-[400px] md:h-[300px] lg:w-[500px] lg:h-[400px] xl:w-[600px] xl:h-[450px] border-4 border-dashed border-gray-400 rounded-lg flex items-center justify-center "
+          className="w-[300px] h-[200px] md:w-[350px] md:h-[300px] lg:w-[500px] lg:h-[400px] xl:w-[600px] xl:h-[450px] border-4 border-dashed border-gray-400 rounded-lg flex items-center justify-center "
         >
           <input {...getInputProps()} />
           {fileLimitExceeded ? (
@@ -280,7 +280,7 @@ export const Dragndrop = () => {
 
                 <div className="flex justify-end">
                   <button
-                    className="bg-orange-400 text-white px-4 py-2 mr-2 rounded-md hover:bg-orange-500 transition-colors"
+                    className="bg-orange-600 text-white px-4 py-2 mr-2 rounded-md hover:bg-orange-500 transition-colors"
                     onClick={handleUpload}
                   >
                     Upload

@@ -46,12 +46,12 @@ const Reviews = () => {
         <div className="w-full h-[600px] mx-auto shadow-lg bg-slate-100 shadow-slate-400 text-center flex flex-col justify-center object-contain">
           {/* Text Content */}
           <div className="z-10  mt-32 text-center px-8 ">
-            <div className="text-orange-400 text-lg font-bold p-2">
+            <div className="text-orange-600 text-lg font-bold p-2">
               What our clients say about us
             </div>
   
             <h1 className="md:text-6xl sm:text-5xl text-4xl font-bold md:py-6 text-slate-700">
-              BESTESSAYWRITER REVIEWS<span className="text-orange-400">.</span>
+              BESTESSAYWRITER REVIEWS<span className="text-orange-600">.</span>
             </h1>
           </div>
           {/* Left side content */}
@@ -80,7 +80,7 @@ const Reviews = () => {
                 />
                 <button
                   type="submit"
-                  className="mt-2 px-4 py-2 bg-orange-400 text-white rounded-md hover:bg-orange-600"
+                  className="mt-2 px-4 py-2 bg-orange-600 text-white rounded-md hover:bg-orange-600"
                 >
                   Submit Review
                 </button>

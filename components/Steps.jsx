@@ -14,7 +14,7 @@ const Accordion = ({ title, description, imageSrc }) => {
       <div
         className={`whitespace-nowrap mobile:text-lg sm:text-xl xl:text-2xl p-2 flex border-slate-500 mb-2 border-b-2 rounded-br-lg rounded-tl-lg hover:bg-slate-500 justify-center transition-all hover:text-white font-semibold cursor-pointer ${
           isOpen
-            ? "bg-slate-800 text-white border-l-4 border-r-4 border-r-orange-400 border-l-orange-400"
+            ? "bg-slate-800 text-white border-l-4 border-r-4 border-r-orange-600 border-l-orange-600"
             : ""
         }`}
         onClick={toggleAccordion}
@@ -54,7 +54,7 @@ const Steps = () => {
   return (
     <div className="mb-5 flex flex-col justify-center">
       <div className="flex flex-col items-center">
-        <div className="text-orange-400 mt-10 text-3xl border-l-4 p-2 border-orange-400 mb-2 border-b-2 font-bold">
+        <div className="text-orange-600 mt-10 text-3xl border-l-4 p-2 border-orange-600 mb-2 border-b-2 font-bold">
           <h1>
             How it <span className="text-black">works?</span>
           </h1>

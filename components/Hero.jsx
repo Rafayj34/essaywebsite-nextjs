@@ -38,14 +38,14 @@ export function Hero() {
           </p>
           <div className="flex flex-col mobile:flex-row items-center">
           <button
-            className="bg-orange-600 shadow-lg shadow-orange-500 mx-2 w-[200px] rounded-full font-medium my-2 mobile:my-6 py-3 text-black
-          hover:bg-white transition-all  border-orange-600 hover:shadow-orange-500 hover:shadow-md"
+            className="bg-orange-600 shadow-lg shadow-orange-400 mx-2 w-[200px] rounded-full font-medium my-2 mobile:my-6 py-3 text-white
+          hover:bg-white transition-all hover:text-black border-orange-600 hover:ring-1 hover:ring-orange-600 hover:shadow-orange-500 hover:shadow-md"
           >
             Place an order
           </button>
           <button
-            className="bg-white border-2 mx-2 border-orange-600 shadow-lg shadow-slate-500 rounded-full w-[200px] font-medium my-2 mobile:my-6 py-3 text-black
-          hover:bg-orange-600 transition-all hover:shadow-md "
+            className="bg-white ring-1 mx-2 ring-orange-600 shadow-md shadow-slate-500 rounded-full w-[200px] font-medium my-2 mobile:my-6 py-3 text-black
+          hover:bg-orange-600 transition-all hover:shadow-md hover:shadow-slate-500 hover:text-white "
           >
             Get consultancy
           </button>

@@ -32,6 +32,22 @@ const Navbar = () => {
     useState(false);
   // functions
 
+  const handleDropdownMouseEnter = (...setStateFunctions) => {
+    setStateFunctions.forEach((setStateFunction) => {
+      setStateFunction(true);
+    });
+  };
+
+  const handleDropdownMouseLeave = (...setStateFunctions) => {
+      setStateFunctions.forEach((setStateFunction) => {
+        setStateFunction(false);
+      });
+  };
+
+  const handleParentDropdownMouseLeave = (setStateFunction) => {
+      setStateFunction(false);
+  }
+
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth >= 640) {
@@ -63,31 +79,25 @@ const Navbar = () => {
 
   return (
     <section>
-      <nav className="w-full bg-gray-800 items-center fixed stick z-30">
+      <nav className="w-screen bg-gray-800 items-center fixed stick z-30">
         <div
           className={`w-full py-4 flex justify-center bg-gray-800 items-center absolute ${
             isFixedNavbar ? "hidden" : "stick"
           }`}
         >
-          <Image
-            
-            src={logo}
-            alt="logo"
-            height={90}
-            width={90}
-          />
+          <Image src={logo} alt="logo" height={90} width={90} />
         </div>
         {/* Navbar elements */}
         <nav
-          className={`w-full h-[40px] bg-gray-800 items-center fixed ${
+          className={`w-full pt-1 h-[40px] bg-gray-800 items-center fixed ${
             isFixedNavbar ? "fixed" : "top-24"
           }`}
         >
           {/* Home */}
           <div className="ml-10 relative hidden normal-screen:flex justify-center">
-            <ul className="flex me-50 items-center space-x-6 justify-center">
+            <ul className="flex  items-center justify-center">
               <li
-                className="font-poppins text-white font-semibold cursor-pointer text-[17px] hover:text-orange-600 transition-all rounded-lg p-2 "
+                className="font-poppins text-white font-semibold cursor-pointer text-[17px] hover:text-orange-600 transition-all rounded-lg  px-5"
                 onClick={() => setLiActive("Home")}
               >
                 <button>
@@ -97,30 +107,28 @@ const Navbar = () => {
 
               {/* Services Menu */}
               <li
-                className="relative  "
+                className="relative"
                 onMouseEnter={() => {
-                  // setLiActive("Services");
-                  setIsServicesDropdownVisible(true);
+                  handleDropdownMouseEnter(setIsServicesDropdownVisible);
                 }}
                 onMouseLeave={() => {
-                  // setLiActive("Services");
-                  setIsServicesDropdownVisible(false);
+                  handleParentDropdownMouseLeave(setIsServicesDropdownVisible);
                 }}
               >
                 <button
                   className={`font-poppins text-white font-semibold cursor-pointer text-[17px] hover:text-orange-600 transition-all rounded-lg  ${
                     isServicesDropdownVisible ? "text-white" : "text-dimWhite"
-                  } mr-10`}
+                  } px-5`}
                 >
                   <Link
-                    href="#services"
+                    href="#"
                     onMouseEnter={() => {
                       setIsServicesDropdownVisible(true);
                     }}
                   >
                     Services
                   </Link>
-                  <div className="absolute right-5 top-[21px] transform -translate-y-3.5 pl-3">
+                  <div className="absolute right-1 top-[21px] transform -translate-y-3.5 ">
                     <Image
                       src={isServicesDropdownVisible ? arrowUp : arrowdown}
                       alt="Arrow Icon"
@@ -137,24 +145,23 @@ const Navbar = () => {
                         : "dropdown-exit"
                     } bg-gray-800 text-white font-normal min-w-[220px] z-20 absolute rounded-bl-lg rounded-br-lg  top-full`}
                     onMouseEnter={() => {
-                      setIsServicesDropdownVisible(true);
+                      handleDropdownMouseEnter(setIsServicesDropdownVisible)
                     }}
                     onMouseLeave={() => {
-                      setIsServicesDropdownVisible(false);
-                      setIsEssaySubDropdownVisible(false);
-                      setIsAssignmentSubDropdownVisible(false);
+                      handleDropdownMouseLeave(setIsServicesDropdownVisible,setIsEssaySubDropdownVisible,setIsAssignmentSubDropdownVisible)
                     }}
                   >
                     {/* Add your dropdown menu items here */}
-                    <ul className="space-y-2 mb-2">
+                    <ul className="pb-2">
                       <li
-                        className="hover:bg-slate-700 flex justify-center mt-2 hover:text-orange-600"
+                        className="flex justify-center py-2 hover:text-orange-600"
                         onMouseEnter={(e) => {
-                          setIsEssaySubDropdownVisible(true);
+                          handleDropdownMouseEnter(setIsEssaySubDropdownVisible) ;
                           e.stopPropagation();
                         }}
                         onMouseLeave={() => {
-                          setIsEssaySubDropdownVisible(false);
+                          handleDropdownMouseLeave(setIsEssaySubDropdownVisible)
+                    
                         }}
                       >
                         <Link href="#item1" className="flex items-center">
@@ -178,102 +185,104 @@ const Navbar = () => {
                         {isEssaySubDropdownVisible && (
                           <div className="sub-dropdown">
                             <ul
-                              className={` grid grid-cols-2 pb-2  bg-gray-800 rounded-tr-lg rounded-br-lg rounded-bl-lg text-white font-normal space-y-2 min-w-[570px] px-4 ${
+                              className={` grid grid-cols-2 pb-2  bg-gray-800 rounded-tr-lg rounded-br-lg rounded-bl-lg text-white font-normal min-w-[570px] px-4 ${
                                 isEssaySubDropdownVisible
                                   ? "opacity-100 transition-all delay-700 ease-in-out "
                                   : ""
                               }`}
                             >
-                              <li className="hover:bg-slate-700 hover:text-orange-600 transition-all mt-2 text-left">
+                              <li className="  hover:text-orange-600 transition-all pt-2 text-left">
                                 <Link href="#subitem1">Essay Editing</Link>
                               </li>
-                              <li className="hover:bg-slate-700 hover:text-orange-600 transition-all text-left">
+                              <li className="  hover:text-orange-600 transition-all pt-2  text-left">
                                 <Link href="#subitem2">Buy an Essay</Link>
                               </li>
-                              <li className="hover:bg-slate-700 hover:text-orange-600 transition-all text-left">
+                              <li className="  hover:text-orange-600 transition-all pt-2  text-left">
                                 <Link href="#subitem2">Nursing Essay</Link>
                               </li>
-                              <li className="hover:bg-slate-700 hover:text-orange-600 transition-all text-left">
-                                <Link href="#subitem2">Master&apos;s Essay</Link>
+                              <li className="  hover:text-orange-600 transition-all pt-2  text-left">
+                                <Link href="#subitem2">
+                                  Master&apos;s Essay
+                                </Link>
                               </li>
-                              <li className="hover:bg-slate-700 hover:text-orange-600 transition-all text-left">
+                              <li className="  hover:text-orange-600 transition-all pt-2  text-left">
                                 <Link href="#subitem2">Law Essay</Link>
                               </li>
-                              <li className="hover:bg-slate-700 hover:text-orange-600 transition-all text-left">
+                              <li className="  hover:text-orange-600 transition-all pt-2 text-left">
                                 <Link href="#subitem2">MBA Essay</Link>
                               </li>
-                              <li className="hover:bg-slate-700 hover:text-orange-600 transition-all text-left">
+                              <li className="  hover:text-orange-600 transition-all pt-2 text-left">
                                 <Link href="#subitem2">University Essay</Link>
                               </li>
-                              <li className="hover:bg-slate-700 hover:text-orange-600 transition-all text-left">
+                              <li className="  hover:text-orange-600 transition-all pt-2 text-left">
                                 <Link href="#subitem2">Write My Essay</Link>
                               </li>
-                              <li className="hover:bg-slate-700 hover:text-orange-600 transition-all text-left">
+                              <li className="  hover:text-orange-600 transition-all pt-2 text-left">
                                 <Link href="#subitem2">Make My Essay</Link>
                               </li>
-                              <li className="hover:bg-slate-700 hover:text-orange-600 transition-all text-left">
+                              <li className="  hover:text-orange-600 transition-all pt-2 text-left">
                                 <Link href="#subitem2">Do My Essay</Link>
                               </li>
-                              <li className="hover:bg-slate-700 hover:text-orange-600 transition-all text-left">
+                              <li className="  hover:text-orange-600 transition-all pt-2 text-left">
                                 <Link href="#subitem2">Narrative Essay</Link>
                               </li>
-                              <li className="hover:bg-slate-700 hover:text-orange-600 transition-all text-left">
+                              <li className="  hover:text-orange-600 transition-all pt-2 text-left">
                                 <Link href="#subitem2">
                                   Argumentative Essay
                                 </Link>
                               </li>
-                              <li className="hover:bg-slate-700 hover:text-orange-600 transition-all text-left">
+                              <li className="  hover:text-orange-600 transition-all pt-2 text-left">
                                 <Link href="#subitem2">Expository Essay</Link>
                               </li>
-                              <li className="hover:bg-slate-700 hover:text-orange-600 transition-all text-left">
+                              <li className="  hover:text-orange-600 transition-all pt-2 text-left">
                                 <Link href="#subitem2">Descriptive Essay</Link>
                               </li>
-                              <li className="hover:bg-slate-700 hover:text-orange-600 transition-all text-left">
+                              <li className="  hover:text-orange-600 transition-all pt-2 text-left">
                                 <Link href="#subitem2">Custom Essay</Link>
                               </li>
-                              <li className="hover:bg-slate-700 hover:text-orange-600 transition-all text-left">
+                              <li className="  hover:text-orange-600 transition-all pt-2 text-left">
                                 <Link href="#subitem2">Admission Essay</Link>
                               </li>
-                              <li className="hover:bg-slate-700 hover:text-orange-600 transition-all text-left">
+                              <li className="  hover:text-orange-600 transition-all pt-2 text-left">
                                 <Link href="#subitem2">Urgent Essay</Link>
                               </li>
-                              <li className="hover:bg-slate-700 hover:text-orange-600 transition-all text-left">
+                              <li className="  hover:text-orange-600 transition-all pt-2 text-left">
                                 <Link href="#subitem2">Analysis Essay</Link>
                               </li>
 
-                              <li className="hover:bg-slate-700 hover:text-orange-600 transition-all text-left">
+                              <li className="  hover:text-orange-600 transition-all pt-2 text-left">
                                 <Link href="#subitem2">Critical Essay</Link>
                               </li>
 
-                              <li className="hover:bg-slate-700 hover:text-orange-600 transition-all text-left">
+                              <li className="  hover:text-orange-600 transition-all pt-2 text-left">
                                 <Link href="#subitem2">Scholarship Essay</Link>
                               </li>
-                              <li className="hover:bg-slate-700 hover:text-orange-600 transition-all text-left">
+                              <li className="  hover:text-orange-600 transition-all pt-2 text-left">
                                 <Link href="#subitem2">Student Essay</Link>
                               </li>
-                              <li className="hover:bg-slate-700 hover:text-orange-600 transition-all text-left">
+                              <li className="  hover:text-orange-600 transition-all pt-2 text-left">
                                 <Link href="#subitem2">Persuasive Essay</Link>
                               </li>
-                              <li className="hover:bg-slate-700 hover:text-orange-600 transition-all text-left">
+                              <li className="  hover:text-orange-600 transition-all pt-2 text-left">
                                 <Link href="#subitem2">Process Essay</Link>
                               </li>
-                              <li className="hover:bg-slate-700 hover:text-orange-600 transition-all text-left">
+                              <li className="  hover:text-orange-600 transition-all pt-2 text-left">
                                 <Link href="#subitem2">Literature Essay</Link>
                               </li>
-                              <li className="hover:bg-slate-700 hover:text-orange-600 transition-all text-left">
+                              <li className="  hover:text-orange-600 transition-all pt-2 text-left">
                                 <Link href="#subitem2">Informal Essay</Link>
                               </li>
-                              <li className="hover:bg-slate-700 hover:text-orange-600 transition-all text-left">
+                              <li className="  hover:text-orange-600 transition-all pt-2 text-left">
                                 <Link href="#subitem2">
                                   Classification Essay
                                 </Link>
                               </li>
-                              <li className="hover:bg-slate-700 hover:text-orange-600 transition-all text-left">
+                              <li className="  hover:text-orange-600 transition-all pt-2 text-left">
                                 <Link href="#subitem2">
                                   Cause and Effect Essay
                                 </Link>
                               </li>
-                              <li className="hover:bg-slate-700 hover:text-orange-600 transition-all text-left">
+                              <li className="  hover:text-orange-600 transition-all pt-2 text-left">
                                 <Link href="#subitem2">
                                   Compare and Contrast Essay
                                 </Link>
@@ -284,13 +293,15 @@ const Navbar = () => {
                       </li>
 
                       <li
-                        className="hover:bg-slate-700 transition-all flex justify-center hover:text-orange-600"
+                        className="py-2   transition-all flex justify-center hover:text-orange-600"
                         onMouseEnter={(e) => {
-                          setIsAssignmentSubDropdownVisible(true);
+                          handleDropdownMouseEnter(setIsAssignmentSubDropdownVisible)
+                      
                           e.stopPropagation();
                         }}
                         onMouseLeave={() => {
-                          setIsAssignmentSubDropdownVisible(false);
+                          handleDropdownMouseLeave(setIsAssignmentSubDropdownVisible)
+                          
                         }}
                       >
                         <Link href="#item1" className="flex items-center">
@@ -312,26 +323,29 @@ const Navbar = () => {
                           </svg>
                         </Link>
                         {isAssignmentSubDropdownVisible && (
-                          <div className="sub-dropdown2 absolute left-full">
-                            <ul className=" top-10 pt-1 pb-1 bg-gray-800 rounded-tr-lg rounded-br-lg text-white font-normal space-y-2 min-w-[240px] pl-4">
-                              <li className="hover:bg-slate-700 hover:text-orange-600 transition-all text-left mt-2 ">
+                          <div className="sub-dropdown2 top-9">
+                            <ul className=" pt-1 pb-1 bg-gray-800 rounded-tr-lg rounded-br-lg text-white font-normal min-w-[240px] pl-4">
+                              <li className="  hover:text-orange-600 transition-all text-left pt-2 ">
                                 <Link href="#subitem1">Assignment Writing</Link>
                               </li>
-                              <li className="hover:bg-slate-700 hover:text-orange-600 transition-all text-left">
+                              <li className="  hover:text-orange-600 transition-all text-left pt-2 ">
                                 <Link href="#subitem2">Cookery</Link>
                               </li>
 
-                              <li className="hover:bg-slate-700 hover:text-orange-600 transition-all text-left">
-                                <Link
-                                  href="#subitem2"
-                                  className="flex items-center"
+                              <li className="  hover:text-orange-600 transition-all pt-2 text-left"
                                   onMouseEnter={(e) => {
-                                    setIsLawSubDropdownVisible(true);
+                                    handleDropdownMouseEnter(setIsLawSubDropdownVisible)
+                                   
                                     e.stopPropagation();
                                   }}
                                   onMouseLeave={() => {
-                                    setIsLawSubDropdownVisible(false);
-                                  }}
+                                    handleDropdownMouseLeave(setIsLawSubDropdownVisible)
+                                   
+                                  }}>
+                                <Link
+                                  href="#subitem2"
+                                  className="flex items-center"
+                              
                                 >
                                   Law
                                   <svg
@@ -353,59 +367,61 @@ const Navbar = () => {
                                 {isLawSubDropdownVisible && (
                                   <div className="sub-dropdown3 absolute left-full">
                                     <ul
-                                      className=" top-10 bg-gray-800 text-white rounded-tr-lg rounded-br-lg rounded-bl-lg font-normal space-y-2 min-w-[240px] pl-4 py-2"
+                                      className=" top-10 bg-gray-800 text-white rounded-tr-lg rounded-br-lg rounded-bl-lg font-normal min-w-[240px] pl-4 py-2"
                                       onMouseEnter={(e) => {
-                                        setIsLawSubDropdownVisible(true);
+                                        handleDropdownMouseEnter(setIsLawSubDropdownVisible)
+                                      
                                         e.stopPropagation();
                                       }}
                                       onMouseLeave={() => {
-                                        setIsLawSubDropdownVisible(false);
+                                        handleDropdownMouseLeave(setIsLawSubDropdownVisible)
+                                    
                                       }}
                                     >
-                                      <li className="hover:bg-slate-700 hover:text-orange-600 transition-all text-left mt-2 ">
+                                      <li className="  hover:text-orange-600 transition-all text-left pt-2 ">
                                         <Link href="#subitem1">
                                           Property Law
                                         </Link>
                                       </li>
-                                      <li className="hover:bg-slate-700 hover:text-orange-600 transition-all text-left mt-2 ">
+                                      <li className="  hover:text-orange-600 transition-all text-left pt-2 ">
                                         <Link href="#subitem1">
                                           Constitutional Law
                                         </Link>
                                       </li>
-                                      <li className="hover:bg-slate-700 hover:text-orange-600 transition-all text-left mt-2 ">
+                                      <li className="  hover:text-orange-600 transition-all text-left pt-2 ">
                                         <Link href="#subitem1">
                                           Administrative Law
                                         </Link>
                                       </li>
-                                      <li className="hover:bg-slate-700 hover:text-orange-600 transition-all text-left mt-2 ">
+                                      <li className="  hover:text-orange-600 transition-all text-left pt-2 ">
                                         <Link href="#subitem1">
                                           Criminal Law
                                         </Link>
                                       </li>
-                                      <li className="hover:bg-slate-700 hover:text-orange-600 transition-all text-left mt-2 ">
+                                      <li className="  hover:text-orange-600 transition-all text-left pt-2 ">
                                         <Link href="#subitem1">
                                           Human Right Law
                                         </Link>
                                       </li>
-                                      <li className="hover:bg-slate-700 hover:text-orange-600 transition-all text-left mt-2 ">
+                                      <li className="  hover:text-orange-600 transition-all text-left pt-2 ">
                                         <Link href="#subitem1">Civil Law</Link>
                                       </li>
-                                      <li className="hover:bg-slate-700 hover:text-orange-600 transition-all text-left mt-2 ">
+                                      <li className="  hover:text-orange-600 transition-all text-left pt-2 ">
                                         <Link href="#subitem1">Tort Law</Link>
                                       </li>
                                     </ul>
                                   </div>
                                 )}
                               </li>
-                              <li className="hover:bg-slate-700 hover:text-orange-600 transition-all text-left">
+                              <li className="  hover:text-orange-600 transition-all text-left pt-2 ">
                                 <Link href="#subitem2">Management</Link>
                               </li>
-                              <li className="hover:bg-slate-700 hover:text-orange-600 transition-all text-left">
+                              <li className="  hover:text-orange-600 transition-all pt-2 text-left">
                                 <Link href="#subitem2">
                                   Managerial Economics
                                 </Link>
                               </li>
-                              <li className="hover:bg-slate-700 hover:text-orange-600 transition-all text-left">
+                              <li className="  hover:text-orange-600 transition-all pt-2 text-left">
                                 <Link href="#subitem2">
                                   Managerial Accounting
                                 </Link>
@@ -415,13 +431,15 @@ const Navbar = () => {
                         )}
                       </li>
                       <li
-                        className="hover:bg-slate-700 transition-all flex justify-center hover:text-orange-600"
+                        className="  transition-all flex justify-center py-2 hover:text-orange-600"
                         onMouseEnter={(e) => {
-                          setIsCaseStudySubDropdownVisible(true);
+                          handleDropdownMouseEnter(setIsCaseStudySubDropdownVisible)
+                       
                           e.stopPropagation();
                         }}
                         onMouseLeave={() => {
-                          setIsCaseStudySubDropdownVisible(false);
+                          handleDropdownMouseLeave(setIsCaseStudySubDropdownVisible)
+                        
                         }}
                       >
                         <Link href="#item1" className="flex items-center">
@@ -443,9 +461,9 @@ const Navbar = () => {
                           </svg>
                         </Link>
                         {isCaseStudySubDropdownVisible && (
-                          <div className="sub-dropdown absolute mt-[63px]">
-                            <ul className="top-10 bg-gray-800 rounded-tr-lg rounded-br-lg text-white font-normal space-y-2 min-w-[240px] items-center pt-1 pb-2 pl-2">
-                              <li className="hover:bg-slate-700 hover:text-orange-600 transition-all text-left mt-2 ">
+                          <div className="sub-dropdown2 top-4 mt-[63px]">
+                            <ul className=" bg-gray-800 rounded-tr-lg rounded-br-lg text-white font-normal min-w-[240px] items-center py-2 pl-2">
+                              <li className="  hover:text-orange-600 transition-all text-left py-2 ">
                                 <Link href="#subitem1">Case Study Writing</Link>
                               </li>
                             </ul>
@@ -453,13 +471,14 @@ const Navbar = () => {
                         )}
                       </li>
                       <li
-                        className="hover:bg-slate-700 transition-all flex justify-center hover:text-orange-600"
+                        className="  transition-all flex justify-center hover:text-orange-600 py-2"
                         onMouseEnter={(e) => {
-                          setisCourseworkSubDropdownVisible(true);
+                          handleDropdownMouseEnter(setisCourseworkSubDropdownVisible)
                           e.stopPropagation();
                         }}
                         onMouseLeave={() => {
-                          setisCourseworkSubDropdownVisible(false);
+                          handleDropdownMouseLeave(setisCourseworkSubDropdownVisible)
+                     
                         }}
                       >
                         <Link href="#item1" className="flex items-center">
@@ -481,9 +500,9 @@ const Navbar = () => {
                           </svg>
                         </Link>
                         {isCourseworkSubDropdownVisible && (
-                          <div className="sub-dropdown absolute mt-[92px]">
-                            <ul className="top-10 bg-gray-800 rounded-tr-lg rounded-br-lg text-white font-normal space-y-2 min-w-[240px] pb-2 pt-2 pl-2">
-                              <li className="hover:bg-slate-700 hover:text-orange-600 transition-all text-left mt-2 ">
+                          <div className="sub-dropdown2 top-6 mt-[92px]">
+                            <ul className=" bg-gray-800 rounded-tr-lg rounded-br-lg text-white font-normal  min-w-[240px] py-2 pl-2">
+                              <li className="  hover:text-orange-600 transition-all text-left py-2  ">
                                 <Link href="#subitem1">Coursework Writing</Link>
                               </li>
                             </ul>
@@ -491,13 +510,15 @@ const Navbar = () => {
                         )}
                       </li>
                       <li
-                        className="hover:bg-slate-700 transition-all flex justify-center hover:text-orange-600"
+                        className="  transition-all flex justify-center py-2 hover:text-orange-600"
                         onMouseEnter={(e) => {
-                          setisDissertationSubDropdownVisible(true);
+                          handleDropdownMouseEnter(setisDissertationSubDropdownVisible)
+               
                           e.stopPropagation();
                         }}
                         onMouseLeave={() => {
-                          setisDissertationSubDropdownVisible(false);
+                          handleDropdownMouseLeave(setisDissertationSubDropdownVisible)
+                       
                         }}
                       >
                         <Link href="#item1" className="flex items-center">
@@ -519,9 +540,9 @@ const Navbar = () => {
                           </svg>
                         </Link>
                         {isDissertationSubDropdownVisible && (
-                          <div className="sub-dropdown absolute mt-32">
-                            <ul className="top-10 bg-gray-800 rounded-tr-lg rounded-br-lg text-white font-normal space-y-2 min-w-[240px] pb-2 pt-2 pl-2">
-                              <li className="hover:bg-slate-700 hover:text-orange-600 transition-all text-left mt-2 ">
+                          <div className="sub-dropdown2 top-7 mt-32">
+                            <ul className=" bg-gray-800 rounded-tr-lg rounded-br-lg text-white font-normal min-w-[240px] pb-2 pt-2 pl-2">
+                              <li className="  hover:text-orange-600 transition-all text-left py-2  ">
                                 <Link href="#subitem1">
                                   Best Dissertation Writing
                                 </Link>
@@ -531,13 +552,15 @@ const Navbar = () => {
                         )}
                       </li>
                       <li
-                        className="hover:bg-slate-700 transition-all flex justify-center hover:text-orange-600"
+                        className="  transition-all flex justify-center py-2 hover:text-orange-600"
                         onMouseEnter={(e) => {
-                          setisReportSubDropdownVisible(true);
+                          handleDropdownMouseEnter(setisReportSubDropdownVisible)
+                          
                           e.stopPropagation();
                         }}
                         onMouseLeave={() => {
-                          setisReportSubDropdownVisible(false);
+                          handleDropdownMouseLeave(setisReportSubDropdownVisible)
+                       
                         }}
                       >
                         <Link href="#item1" className="flex items-center">
@@ -559,9 +582,9 @@ const Navbar = () => {
                           </svg>
                         </Link>
                         {isReportSubDropdownVisible && (
-                          <div className="sub-dropdown absolute mt-40">
-                            <ul className="top-10 bg-gray-800 rounded-tr-lg rounded-br-lg text-white font-normal space-y-2 min-w-[240px] pb-2 pt-2 pl-2">
-                              <li className="hover:bg-slate-700 hover:text-orange-600 transition-all text-left mt-2 ">
+                          <div className="sub-dropdown2 top-10 mt-40">
+                            <ul className=" bg-gray-800 rounded-tr-lg rounded-br-lg text-white font-normal  min-w-[240px] pb-2 pt-2 pl-2">
+                              <li className="  hover:text-orange-600 transition-all text-left py-2 ">
                                 <Link href="#subitem1">
                                   Best Report Writing
                                 </Link>
@@ -570,16 +593,16 @@ const Navbar = () => {
                           </div>
                         )}
                       </li>
-                      <li className="hover:bg-slate-700 transition-all hover:text-orange-600">
+                      <li className="  transition-all hover:text-orange-600 py-2">
                         <Link href="#item4">Proofreading</Link>
                       </li>
-                      <li className="hover:bg-slate-700 transition-all hover:text-orange-600">
+                      <li className="  transition-all hover:text-orange-600 py-2">
                         <Link href="#item4">Referencing Styles</Link>
                       </li>
-                      <li className="hover:bg-slate-700 transition-all hover:text-orange-600">
+                      <li className="  transition-all hover:text-orange-600 py-2">
                         <Link href="#item4">PHD Thesis Writing</Link>
                       </li>
-                      <li className="hover:bg-slate-700 transition-all hover:text-orange-600">
+                      <li className="  transition-all hover:text-orange-600 py-2">
                         <Link href="#item4">Team Paper Writing</Link>
                       </li>
                       {/* Add more items here */}
@@ -588,10 +611,9 @@ const Navbar = () => {
                 </button>
               </li>
 
-    
               <li className="relative">
                 <button
-                  className={`font-poppins text-white font-semibold cursor-pointer text-[17px] hover:text-orange-600 transition-all rounded-lg p-2 `}
+                  className={`font-poppins text-white font-semibold cursor-pointer text-[17px] hover:text-orange-600 transition-all rounded-lg px-5 `}
                   onClick={() => setLiActive("Blogs")}
                 >
                   <Link href="#blogs">Blogs</Link>
@@ -599,7 +621,7 @@ const Navbar = () => {
               </li>
               <li className="relative">
                 <button
-                  className="font-poppins text-white font-semibold cursor-pointer text-[17px] hover:text-orange-600 transition-all rounded-lg p-2"
+                  className="font-poppins text-white font-semibold cursor-pointer text-[17px] hover:text-orange-600 transition-all rounded-lg px-5"
                   onClick={() => setLiActive("About us")}
                 >
                   <Link href="reviews">Reviews</Link>
@@ -607,7 +629,7 @@ const Navbar = () => {
               </li>
               <li className="relative">
                 <button
-                  className="font-poppins text-white font-semibold cursor-pointer text-[17px] hover:text-orange-600 transition-all rounded-lg p-2"
+                  className="font-poppins text-white font-semibold cursor-pointer text-[17px] hover:text-orange-600 transition-all rounded-lg px-5"
                   onClick={() => setLiActive("Contact us")}
                 >
                   <Link href="contact">Contact us</Link>
@@ -685,10 +707,7 @@ const Navbar = () => {
                   >
                     <Link href="#Services" className="flex items-center">
                       Services
-                      {services.some(
-                        (service) =>
-                          Object.keys(service.subMenuItems).length > 0
-                      ) && (
+                
                         <div className="ml-2 mt-1">
                           <Image
                             src={
@@ -702,7 +721,7 @@ const Navbar = () => {
                             }`}
                           />
                         </div>
-                      )}
+                    
                     </Link>
                   </li>
 
@@ -769,71 +788,100 @@ const Navbar = () => {
                               subDropdownVisibility[service.name] &&
                               Object.keys(service.subMenuItems).length > 0 && (
                                 <ul className="space-y-2 mt-4 ml-4 sidebar-subdropdown ">
-                                  {Object.entries(service.subMenuItems).map(([subServiceName, subServiceValue]) => (
-                                    <li
-                                    
-                                      key={subServiceName}
-                                      onClick={(e) => {
-                                        e.stopPropagation();
-                                        setNestedDropdownVisibility((prevState) => ({
-                                          ...prevState,
-                                          [subServiceName]: !prevState[subServiceName],
-                                        }));
-                                      }}
-                                    >
-                                      <div className={`flex items-center hover:text-orange-600`}>
-                                        <Link
-                                          href={subServiceValue}
+                                  {Object.entries(service.subMenuItems).map(
+                                    ([subServiceName, subServiceValue]) => (
+                                      <li
+                                        key={subServiceName}
+                                        onClick={(e) => {
+                                          e.stopPropagation();
+                                          setNestedDropdownVisibility(
+                                            (prevState) => ({
+                                              ...prevState,
+                                              [subServiceName]:
+                                                !prevState[subServiceName],
+                                            })
+                                          );
+                                        }}
+                                      >
+                                        <div
+                                          className={`flex items-center hover:text-orange-600`}
                                         >
-                                          {subServiceName}
-                                        </Link>
-                                        {typeof subServiceValue === "object" && subServiceValue !== null && (
-                                          <div className="ml-2 mt-1">
-                                            <Image
-                                              src={
-                                                nestedDropdownVisibility[subServiceName]
-                                                  ? arrowUp
-                                                  : arrowdown
-                                              }
-                                              alt="Arrow Icon"
-                                              className={`w-[11px] h-[11px] object-contain ${
-                                                nestedDropdownVisibility[subServiceName]
-                                                  ? "arrow-up"
-                                                  : "arrow-down"
-                                              } transition-transform duration-300`}
-                                            />
-                                          </div>
-                                        )}
-                                      </div>
-                                      {typeof subServiceValue === "object" && subServiceValue !== null && (
-                                        <ul
-                                          className={`pl-4 space-y-2 mt-2 sidebar-subdropdown ${
-                                            nestedDropdownVisibility[subServiceName]
-                                              ? "block"
-                                              : "hidden"
-                                          }`}
-                                        >
-                                          {Object.entries(subServiceValue).map(([nestedSubServiceName, nestedSubServiceHref]) => (
-                                            <li
-                                              key={nestedSubServiceName}
-                                              onClick={(e) => {
-                                                e.stopPropagation();
-                                                setNestedDropdownVisibility((prevState) => ({
-                                                  ...prevState,
-                                                  [nestedSubServiceName]: !prevState[nestedSubServiceName],
-                                                }));
-                                              }}
+                                          <Link href={subServiceValue}>
+                                            {subServiceName}
+                                          </Link>
+                                          {typeof subServiceValue ===
+                                            "object" &&
+                                            subServiceValue !== null && (
+                                              <div className="ml-2 mt-1">
+                                                <Image
+                                                  src={
+                                                    nestedDropdownVisibility[
+                                                      subServiceName
+                                                    ]
+                                                      ? arrowUp
+                                                      : arrowdown
+                                                  }
+                                                  alt="Arrow Icon"
+                                                  className={`w-[11px] h-[11px] object-contain ${
+                                                    nestedDropdownVisibility[
+                                                      subServiceName
+                                                    ]
+                                                      ? "arrow-up"
+                                                      : "arrow-down"
+                                                  } transition-transform duration-300`}
+                                                />
+                                              </div>
+                                            )}
+                                        </div>
+                                        {typeof subServiceValue === "object" &&
+                                          subServiceValue !== null && (
+                                            <ul
+                                              className={`pl-4 space-y-2 mt-2 sidebar-subdropdown ${
+                                                nestedDropdownVisibility[
+                                                  subServiceName
+                                                ]
+                                                  ? "block"
+                                                  : "hidden"
+                                              }`}
                                             >
-                                              <Link href={nestedSubServiceHref}>{nestedSubServiceName}</Link>
-                                            </li>
-                                          ))}
-                                        </ul>
-                                      )}
-                                    </li>
-                                  ))}
+                                              {Object.entries(
+                                                subServiceValue
+                                              ).map(
+                                                ([
+                                                  nestedSubServiceName,
+                                                  nestedSubServiceHref,
+                                                ]) => (
+                                                  <li
+                                                    key={nestedSubServiceName}
+                                                    onClick={(e) => {
+                                                      e.stopPropagation();
+                                                      setNestedDropdownVisibility(
+                                                        (prevState) => ({
+                                                          ...prevState,
+                                                          [nestedSubServiceName]:
+                                                            !prevState[
+                                                              nestedSubServiceName
+                                                            ],
+                                                        })
+                                                      );
+                                                    }}
+                                                  >
+                                                    <Link
+                                                      href={
+                                                        nestedSubServiceHref
+                                                      }
+                                                    >
+                                                      {nestedSubServiceName}
+                                                    </Link>
+                                                  </li>
+                                                )
+                                              )}
+                                            </ul>
+                                          )}
+                                      </li>
+                                    )
+                                  )}
                                 </ul>
-
-
                               )}
                           </li>
                         ))}
@@ -867,16 +915,7 @@ const Navbar = () => {
                     </Link>
                   </li>
 
-                  <li
-                    className={`font-poppins font-medium cursor-pointer text-[12px]   hover:text-orange-600 transition-all p-2 ${
-                      liActive === "about" ? "text-white" : "text-dimWhite"
-                    } mb-4`}
-                    onClick={() => {
-                      setLiActive("about");
-                    }}
-                  >
-                    <Link href="#about">About us</Link>
-                  </li>
+             
                   <li
                     className={`font-poppins font-medium cursor-pointer text-[12px]   hover:text-orange-600 transition-all p-2 ${
                       liActive === "About us" ? "text-white" : "text-dimWhite"

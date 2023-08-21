@@ -89,7 +89,6 @@ body {
 
 .sub-dropdown2 {
   position: absolute;
-  bottom: 30%;
   left: 100%;
  /* Adjust as needed */
 }
@@ -182,7 +181,21 @@ body {
   font-weight: bold; /* Increase the font weight for thicker bullets */
   margin-right: 5px;
   --tw-bg-opacity: 1; 
- 
+}
+
+.useful-list li::marker {
+  content: "➔  "; /* Use a right arrow character */
+  color: rgb(194 65 12 / var(--tw-bg-opacity));
+  font-weight: bold; /* Increase the font weight for thicker bullets */
+  margin-right: 5px;
+  --tw-bg-opacity: 1; 
+}
+
+
+.useful-list{
+  list-style: none;
+  padding-left: 20px;
+
 }
 
 @keyframes slideup {
