@@ -71,7 +71,7 @@ export const Dragndrop = () => {
       formData.append("email", email);
       formData.append("phoneNumber", phoneNumber); // Include the phone number
       console.log("running before post request")
-      const response = await fetch("/api/upload", {
+      const response = await fetch("http://localhost:8080/api/upload", {
         method: "POST",
         body: formData,
       });

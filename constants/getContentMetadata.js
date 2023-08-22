@@ -1,6 +1,5 @@
 import fs from "fs";
 import { contentData } from "@/constants";
-import { log } from "console";
 
 const getContentMetadata = () => {
     const folder = "content/";

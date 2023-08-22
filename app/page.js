@@ -1,5 +1,5 @@
+'use client'
 import { Hero } from "@/components/Hero";
-import { Logoslider } from "@/components/Logoslider";
 import { Guarantee } from "@/components/Guarantee";
 import Counter from '@/components/Counter';
 import Blogs from "@/components/Blogs";
@@ -19,7 +19,6 @@ export default function Home() {
         <Counter />
         </div>
         <div className="shadow-lg shadow-slate-400">
-        <Logoslider />
         </div>
         <Blogs />
         <div className="shadow-t-lg shadow-slate-400">

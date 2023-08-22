@@ -8,23 +8,25 @@ const TawkToMessenger = () => {
     s.type = 'text/javascript';
     s.async = true;
     s.src = 'https://embed.tawk.to/61472e1d25797d7a89ffbc6c/1ffv0o9r4';
-    // Replace 'YOUR_TAWKTO_WIDGET_CODE' with your actual Tawk.to widget code
+    
+    // Use an id to ensure you don't add multiple scripts to the DOM
+    s.id = 'tawk-to-script';
 
-    // Append the script to the document body instead of head
-    document.body.appendChild(s);
+    // Check if the script already exists before appending it
+    const existingScript = document.getElementById('tawk-to-script');
+    if (!existingScript) {
+      document.body.appendChild(s);
+    }
 
+    // Cleanup function: remove Tawk.to script when the component unmounts
     return () => {
-      // Remove Tawk.to script when the component unmounts
-      document.body.removeChild(s);
+      if (existingScript) {
+        document.body.removeChild(existingScript);
+      }
     };
   }, []);
 
-  return (
-    
-    // This component doesn't render anything, as the Tawk.to widget is loaded externally.
-    // You can add any custom styling or div elements if needed.
-    <></>
-  );
+  return null; // This component doesn't render anything
 };
 
 export default TawkToMessenger;

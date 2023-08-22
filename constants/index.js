@@ -32,66 +32,81 @@ export const services = [
   {
     id: 1,
     name: "Essay",
-    subMenuItems: {"Essay Editing":"#", "Buy an Essay":"#", "Nursing Essay":"#","Master's Essay":"#", "Law Essay":"#", "MBA Essay":"#", "University Essay":"#", "Write My Essay":"#","Make My Essay":"#","Do My Essay":"#","Narrative Essay":"#","Argumentative Essay":"#","Expository Essay":"#","Descriptive Essay":"#","Custom Essay":"#", "Admission Essay":"#","Urgent Essay":"#","Critical Essay":"#","Scholarship Essay":"#","Student Essay":"#","Persuasive Essay":"#","Process Essay":"#","Literature Essay":"#","Informal Essay":"#","Classification Essay":"#", "Cause and Effect Essay":"#","Compare and Contrast Essay":"#"},
+    subMenuItems: {"Essay Editing":"/essay-editing-service", "Buy an Essay":"/essay-editing-service", "Nursing Essay":"/nursing-essay-writing-service","Master's Essay":"/masters-essay-writing-service", "Law Essay":"/best-law-essay-writing-service-uk", "MBA Essay":"/mba-essay-writing-service", "University Essay":"/", "Write My Essay":"/","Make My Essay":"/","Do My Essay":"/","Narrative Essay":"/","Argumentative Essay":"/","Expository Essay":"/","Descriptive Essay":"/","Custom Essay":"/", "Admission Essay":"/","Urgent Essay":"/","Critical Essay":"/","Scholarship Essay":"/","Student Essay":"/","Persuasive Essay":"/","Process Essay":"/","Literature Essay":"/","Informal Essay":"/","Classification Essay":"/", "Cause and Effect Essay":"/","Compare and Contrast Essay":"/"},
+    url: "#"
   },
   {
     id: 2,
     name: "Assignment",
     isDropdownVisible: false,
-    subMenuItems: {"Assignment Writing":"#","Cookery":"#", "Law": {
-      // Nested navigation within "Law"
-      "Criminal Law": "#",
-      "Contract Law": "#",
+    subMenuItems: {"Assignment Writing":"/best-assignment-writing-service","Cookery":"/cookery-assignment-help", "Law": {
+      "Property Law": "/property-law-assignment-help",
+      "Constitutional Law": "/constitutional-law-assignment-help",
+      "Administrative Law": "/administrative-law-assignment-help",
+      "Criminal Law": "/criminal-law-assignment-help",
+      "Human Rights Law": "/human-right-law-assignment-help",
+      "Civil Law": "/civil-law-assignment-help",
+      "Tort Law": "/tort-law-assignment-help",
       // ... other items
-    },"Management":"#","Managerial Economics":"#","Managerial Accounting":"#"},
+    },"Management":"/management-assignment-help","Managerial Economics":"/managerial-economics-assignment-help","Managerial Accounting":"/managerial-accounting-assignment-help"},
+    url: "#"
   },
   {
     id: 3,
     name: "Case Study",
     isDropdownVisible: false,
-    subMenuItems: {"Best Case Study Writing Service":"#"},
+    subMenuItems: {"Best Case Study Writing Service":"/best-case-study-writing-service"},
+    url: "#"
   },
   {
     id: 4,
     name: "Coursework",
     isDropdownVisible: false,
-    subMenuItems: {"Best Coursework Writing Service":"#"},
+    subMenuItems: {"Best Coursework Writing Service":"/best-coursework-writing-service"},
+    url: "#"
   },
   {
     id: 5,
     name: "Dissertation",
     isDropdownVisible: false,
-    subMenuItems: {"Best Dissertation Writing Service":"#"},
+    subMenuItems: {"Best Dissertation Writing Service":"/best-dissertation-writing-service"},
+    url: "#"
   },
   {
     id: 6,
     name: "Report",
     isDropdownVisible: false,
-    subMenuItems: {"Best Report Writing Service":"#"},
+    subMenuItems: {"Best Report Writing Service":"/best-report-writing-service"},
+    url: "#"
   },
   {
     id: 7,
     name: "Proofreading",
     isDropdownVisible: false,
     subMenuItems: {},
+    url: "/best-proofreading-service",
+   
   },
   {
     id: 8,
     name: "Referencing Styles",
     isDropdownVisible: false,
     subMenuItems: {},
+    url: "/academic-referencing-styles"
   },
   {
     id: 9,
     name: "PhD Thesis Writing",
     isDropdownVisible: false,
     subMenuItems: {},
+    url: "/phd-thesis-writing"
   },
   {
     id: 10,
     name: "Term Paper Writing",
     isDropdownVisible: false,
     subMenuItems: {},
+    url:"/term-paper-writing"
   },
 ];
 
@@ -320,6 +335,52 @@ export const contentData = [
     alt: 'other alt',
     last_modified: '23/8/2023'
   },
+  {
+    slug: 'human-right-law-assignment-help',
+    path: '/human-right-law-assignment-help',
+    title: "Avail Best Human Right Law Assignment Help Service @30% OFF | Best Essay Writer",
+    description:"Hire Our Best Human Right Law Assignment Help and Writing Service from BestEssayWriter with @30% OFF 24/7 Live Support.",
+    image: client,
+    alt: 'other alt',
+    last_modified: '23/8/2023'
+  },
+  {
+    slug: 'civil-law-assignment-help',
+    path: '/civil-law-assignment-help',
+    title: "Get Best Civil Law Assignment Help by Our Top Notch Law Experts | Best Essay Writer",
+    description:"Get the best Civil Law Assignment Help and Writing Service from Our Top Notch Law Experts. 110% Guaranteed with 0 plagiarism 24/7 Live.",
+    image: client,
+    alt: 'other alt',
+    last_modified: '23/8/2023'
+  },
+  {
+    slug: 'tort-law-assignment-help',
+    path: '/tort-law-assignment-help',
+    title: "Get Best Tort Law Assignment Help & Writing Service UK-Based | Best Essay Writer",
+    description:"Get the Best Tort Law Assignment Help & Writing Service In the UK from UK's Top Law Experts with round clock Live Chat Support.",
+    image: client,
+    alt: 'other alt',
+    last_modified: '23/8/2023'
+  },
+  {
+    slug: 'law-assignment-help',
+    path: '/law-assignment-help',
+    title: "Most Effective & Best Law Assignment Help by Our Native Experts | Best Essay Writer",
+    description:"Looking for the best law assignment help and writing service? So you are in the right place. Our experts help you with all assignments.",
+    image: client,
+    alt: 'other alt',
+    last_modified: '23/8/2023'
+  },
+  {
+    slug: 'management-assignment-help',
+    path: '/management-assignment-help',
+    title: "Get the most promising management assignment help | Best Essay Writer",
+    description:"Get the most promising management assignment help online",
+    image: client,
+    alt: 'other alt',
+    last_modified: '23/8/2023'
+  },
 ];
+
 
 

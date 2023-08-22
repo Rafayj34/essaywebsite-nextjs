@@ -17,7 +17,7 @@ const BlogListPage = () => {
   return (
     <div className="container mt-24 h-auto mx-auto ml-28 p-5">
       <div className="flex justify-center">
-        <Image src={blogging} height={500} width={500} />
+        <Image src={blogging} alt="blog image" height={500} width={500} />
       </div>
       <Link
         href="/"

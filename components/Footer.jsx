@@ -6,7 +6,7 @@ export const Footer = () => {
     <footer className="mt-auto bg-gray-800 text-white">
       <div className="mx-auto py-8 grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6">
         <div className="logo  flex flex-col xl:items-center xl:text-center  text-white p-10">
-        <Image src={logo} width={150} height={150} />
+        <Image src={logo} alt="logo" width={150} height={150} />
          <h1 className="text-3xl font-bold"> BESTESSAYWRITER </h1>
         </div>
 

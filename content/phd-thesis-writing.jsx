@@ -49,7 +49,6 @@ const PhDthesiswriting = () => {
 </h2>
 <p className="content-p">We can assist you with a variety of different “extras.” Theses, for example, frequently require an abstract, which is a brief synopsis of the full thesis that is not counted against the total word limit. Because designing research instruments can be tough, our writers can help you conduct your research by creating interview questions or sample questionnaires.</p>
 <div className="content-img">
-  <div className="flex justify-center">
       <Image
         src={essay30off}
         alt="Discount on PhD thesis writing service. Whatsapp number also given"
@@ -57,7 +56,7 @@ const PhDthesiswriting = () => {
         width={896}
       />
       </div>
-      </div>
+
       <h1 className="content-h1">Our Expert Writers Provide High-Quality Academic Assistance
 </h1>
 <p className="content-p">Are you having trouble writing your thesis? You’ve come to the correct place; we provide customized thesis writing assistance at a reasonable cost. We can assist you with any aspect of your thesis that you are having trouble with! Take a look at some of the advantages you will receive when you seek phd thesis writing assistance from us if you are wondering what makes our custom writing thesis help unique.</p>

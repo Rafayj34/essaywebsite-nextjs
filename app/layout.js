@@ -1,11 +1,11 @@
 import Navbar from "@/components/Navbar";
-
+import dynamic from "next/dynamic";
 import { Footer } from "@/components/Footer";
-import TawkToMessenger from "@/components/Tawkto";
-import ScrollTopButton from '@/components/Scrolltotop';
+// import TawkToMessenger from "@/components/Tawkto";
 import { Poppins } from "next/font/google";
 import Whatsapp from "@/components/Whatsapp";
 import "./globals.css";
+const TawkToMessenger = dynamic(() => import('@/components/Tawkto'));
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -26,6 +26,18 @@ export const metadata = {
     locale: 'en_US',
     type: 'website',
   },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: false,
+      noimageindex: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
 };
 
 export default function RootLayout({ children }) {
@@ -37,7 +49,7 @@ export default function RootLayout({ children }) {
         </div>
 
         {children}
-        <ScrollTopButton />
+
         <Footer />
         <TawkToMessenger />
         <Whatsapp />

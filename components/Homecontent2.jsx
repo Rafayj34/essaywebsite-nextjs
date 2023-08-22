@@ -1,5 +1,3 @@
-import React from "react";
-
 const Homecontent2 = () => {
   return (
     <div className="container mx-auto px-5 sm:px-10 md:px-20 py-5 sm:py-10  md:py-20">

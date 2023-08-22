@@ -1,4 +1,3 @@
-import React from "react";
 import { reviews } from "@/constants/reviews";
 import Box from "@mui/material/Box";
 import Rating from "@mui/material/Rating";

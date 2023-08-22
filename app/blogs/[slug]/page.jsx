@@ -1,5 +1,4 @@
 import React from "react";
-import fs from "fs";
 import Link from "next/link";
 import getBlogMetadata from "@/constants/getBlogMetadata";
 import Image from "next/image";
@@ -26,8 +25,8 @@ const getBlogContent = async (slug) => {
   } else {
     try {
       const { slug } = blogJson;
-      const module = await import(`../../../blogs/${slug}`);
-      const ContentComponent = module.default;
+      const Mymodule = await import(`../../../blogs/${slug}`);
+      const ContentComponent = Mymodule.default;
       return <ContentComponent />;
     } catch (error) {
       console.log(error);

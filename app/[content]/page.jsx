@@ -24,8 +24,8 @@ const getContent = async (slug) => {
   } else {
     try {
       const { slug } = contentJson;
-      const module = await import(`../../content/${slug}`);
-      const ContentComponent = module.default;
+      const Mymodule = await import(`../../content/${slug}`);
+      const ContentComponent = Mymodule.default;
       return <ContentComponent />;
     } catch (error) {
       console.log(error);
@@ -54,7 +54,7 @@ const ContentPage = async (props) => {
   const content_json = contentData.find((content) => content.slug === slug);
   if (!content_json) {
     return (
-      <div className="flex mt-52 flex-col items-center justify-center min-h-[500px] bg-gray-100">
+      <div className="flex mt-52 flex-col items-center justify-center min-h-[500px] ">
         <h1 className="text-4xl font-semibold text-gray-800">
           Oops! Page not found
         </h1>
@@ -80,12 +80,7 @@ const ContentPage = async (props) => {
             >
               &larr; Back to Home
             </Link>
-            <Link
-              href="/blogs"
-              className="text-orange-500 transition-all hover:text-orange-700 font-bold"
-            >
-              &larr; Back to Blogs
-            </Link>
+        
           </div>
           <div className="mt-5 flex justify-center">
             <Image

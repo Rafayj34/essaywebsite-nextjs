@@ -164,7 +164,7 @@ const Navbar = () => {
                     
                         }}
                       >
-                        <Link href="#item1" className="flex items-center">
+                        <Link href="#" className="flex items-center">
                           Essay
                           <svg
                             className="w-2.5 h-2.5 ml-2.5"
@@ -192,24 +192,24 @@ const Navbar = () => {
                               }`}
                             >
                               <li className="  hover:text-orange-600 transition-all pt-2 text-left">
-                                <Link href="#subitem1">Essay Editing</Link>
+                                <Link href="/essay-editing-service">Essay Editing</Link>
                               </li>
                               <li className="  hover:text-orange-600 transition-all pt-2  text-left">
-                                <Link href="#subitem2">Buy an Essay</Link>
+                                <Link href="/essay-editing-service">Buy an Essay</Link>
                               </li>
                               <li className="  hover:text-orange-600 transition-all pt-2  text-left">
-                                <Link href="#subitem2">Nursing Essay</Link>
+                                <Link href="/nursing-essay-writing-service">Nursing Essay</Link>
                               </li>
                               <li className="  hover:text-orange-600 transition-all pt-2  text-left">
-                                <Link href="#subitem2">
+                                <Link href="/masters-essay-writing-service">
                                   Master&apos;s Essay
                                 </Link>
                               </li>
                               <li className="  hover:text-orange-600 transition-all pt-2  text-left">
-                                <Link href="#subitem2">Law Essay</Link>
+                                <Link href="/best-law-essay-writing-service-uk">Law Essay</Link>
                               </li>
                               <li className="  hover:text-orange-600 transition-all pt-2 text-left">
-                                <Link href="#subitem2">MBA Essay</Link>
+                                <Link href="/mba-essay-writing-service">MBA Essay</Link>
                               </li>
                               <li className="  hover:text-orange-600 transition-all pt-2 text-left">
                                 <Link href="#subitem2">University Essay</Link>
@@ -304,7 +304,7 @@ const Navbar = () => {
                           
                         }}
                       >
-                        <Link href="#item1" className="flex items-center">
+                        <Link href="#" className="flex items-center">
                           Assignment
                           <svg
                             className="w-2.5 h-2.5 ml-2.5"
@@ -326,10 +326,10 @@ const Navbar = () => {
                           <div className="sub-dropdown2 top-9">
                             <ul className=" pt-1 pb-1 bg-gray-800 rounded-tr-lg rounded-br-lg text-white font-normal min-w-[240px] pl-4">
                               <li className="  hover:text-orange-600 transition-all text-left pt-2 ">
-                                <Link href="#subitem1">Assignment Writing</Link>
+                                <Link href="/best-assignment-writing-service">Assignment Writing</Link>
                               </li>
                               <li className="  hover:text-orange-600 transition-all text-left pt-2 ">
-                                <Link href="#subitem2">Cookery</Link>
+                                <Link href="/cookery-assignment-help">Cookery</Link>
                               </li>
 
                               <li className="  hover:text-orange-600 transition-all pt-2 text-left"
@@ -343,7 +343,7 @@ const Navbar = () => {
                                    
                                   }}>
                                 <Link
-                                  href="#subitem2"
+                                  href="/law-assignment-help"
                                   className="flex items-center"
                               
                                 >
@@ -379,50 +379,50 @@ const Navbar = () => {
                                       }}
                                     >
                                       <li className="  hover:text-orange-600 transition-all text-left pt-2 ">
-                                        <Link href="#subitem1">
+                                        <Link href="/property-law-assignment-help">
                                           Property Law
                                         </Link>
                                       </li>
                                       <li className="  hover:text-orange-600 transition-all text-left pt-2 ">
-                                        <Link href="#subitem1">
+                                        <Link href="/constitutional-law-assignment-help">
                                           Constitutional Law
                                         </Link>
                                       </li>
                                       <li className="  hover:text-orange-600 transition-all text-left pt-2 ">
-                                        <Link href="#subitem1">
+                                        <Link href="/administrative-law-assignment-help">
                                           Administrative Law
                                         </Link>
                                       </li>
                                       <li className="  hover:text-orange-600 transition-all text-left pt-2 ">
-                                        <Link href="#subitem1">
+                                        <Link href="/criminal-law-assignment-help">
                                           Criminal Law
                                         </Link>
                                       </li>
                                       <li className="  hover:text-orange-600 transition-all text-left pt-2 ">
-                                        <Link href="#subitem1">
+                                        <Link href="/human-right-law-assignment-help">
                                           Human Right Law
                                         </Link>
                                       </li>
                                       <li className="  hover:text-orange-600 transition-all text-left pt-2 ">
-                                        <Link href="#subitem1">Civil Law</Link>
+                                        <Link href="/civil-law-assignment-help">Civil Law</Link>
                                       </li>
                                       <li className="  hover:text-orange-600 transition-all text-left pt-2 ">
-                                        <Link href="#subitem1">Tort Law</Link>
+                                        <Link href="/tort-law-assignment-help">Tort Law</Link>
                                       </li>
                                     </ul>
                                   </div>
                                 )}
                               </li>
                               <li className="  hover:text-orange-600 transition-all text-left pt-2 ">
-                                <Link href="#subitem2">Management</Link>
+                                <Link href="/management-assignment-help">Management</Link>
                               </li>
                               <li className="  hover:text-orange-600 transition-all pt-2 text-left">
-                                <Link href="#subitem2">
+                                <Link href="/managerial-economics-assignment-help">
                                   Managerial Economics
                                 </Link>
                               </li>
                               <li className="  hover:text-orange-600 transition-all pt-2 text-left">
-                                <Link href="#subitem2">
+                                <Link href="/managerial-accounting-assignment-help">
                                   Managerial Accounting
                                 </Link>
                               </li>
@@ -442,7 +442,7 @@ const Navbar = () => {
                         
                         }}
                       >
-                        <Link href="#item1" className="flex items-center">
+                        <Link href="#" className="flex items-center">
                           Case Study
                           <svg
                             className="w-2.5 h-2.5 ml-2.5"
@@ -464,7 +464,7 @@ const Navbar = () => {
                           <div className="sub-dropdown2 top-4 mt-[63px]">
                             <ul className=" bg-gray-800 rounded-tr-lg rounded-br-lg text-white font-normal min-w-[240px] items-center py-2 pl-2">
                               <li className="  hover:text-orange-600 transition-all text-left py-2 ">
-                                <Link href="#subitem1">Case Study Writing</Link>
+                                <Link href="/best-case-study-writing-service">Case Study Writing</Link>
                               </li>
                             </ul>
                           </div>
@@ -481,7 +481,7 @@ const Navbar = () => {
                      
                         }}
                       >
-                        <Link href="#item1" className="flex items-center">
+                        <Link href="/best-coursework-writing-service" className="flex items-center">
                           Coursework
                           <svg
                             className="w-2.5 h-2.5 ml-2.5"
@@ -503,7 +503,7 @@ const Navbar = () => {
                           <div className="sub-dropdown2 top-6 mt-[92px]">
                             <ul className=" bg-gray-800 rounded-tr-lg rounded-br-lg text-white font-normal  min-w-[240px] py-2 pl-2">
                               <li className="  hover:text-orange-600 transition-all text-left py-2  ">
-                                <Link href="#subitem1">Coursework Writing</Link>
+                                <Link href="/best-coursework-writing-service">Coursework Writing</Link>
                               </li>
                             </ul>
                           </div>
@@ -521,7 +521,7 @@ const Navbar = () => {
                        
                         }}
                       >
-                        <Link href="#item1" className="flex items-center">
+                        <Link href="#" className="flex items-center">
                           Dissertation
                           <svg
                             className="w-2.5 h-2.5 ml-2.5"
@@ -543,7 +543,7 @@ const Navbar = () => {
                           <div className="sub-dropdown2 top-7 mt-32">
                             <ul className=" bg-gray-800 rounded-tr-lg rounded-br-lg text-white font-normal min-w-[240px] pb-2 pt-2 pl-2">
                               <li className="  hover:text-orange-600 transition-all text-left py-2  ">
-                                <Link href="#subitem1">
+                                <Link href="/best-dissertation-writing-service">
                                   Best Dissertation Writing
                                 </Link>
                               </li>
@@ -563,7 +563,7 @@ const Navbar = () => {
                        
                         }}
                       >
-                        <Link href="#item1" className="flex items-center">
+                        <Link href="#" className="flex items-center">
                           Report
                           <svg
                             className="w-2.5 h-2.5 ml-2.5"
@@ -585,7 +585,7 @@ const Navbar = () => {
                           <div className="sub-dropdown2 top-10 mt-40">
                             <ul className=" bg-gray-800 rounded-tr-lg rounded-br-lg text-white font-normal  min-w-[240px] pb-2 pt-2 pl-2">
                               <li className="  hover:text-orange-600 transition-all text-left py-2 ">
-                                <Link href="#subitem1">
+                                <Link href="/best-report-writing-service">
                                   Best Report Writing
                                 </Link>
                               </li>
@@ -594,16 +594,16 @@ const Navbar = () => {
                         )}
                       </li>
                       <li className="  transition-all hover:text-orange-600 py-2">
-                        <Link href="#item4">Proofreading</Link>
+                        <Link href="/best-proofreading-service">Proofreading</Link>
                       </li>
                       <li className="  transition-all hover:text-orange-600 py-2">
-                        <Link href="#item4">Referencing Styles</Link>
+                        <Link href="/academic-referencing-styles">Referencing Styles</Link>
                       </li>
                       <li className="  transition-all hover:text-orange-600 py-2">
-                        <Link href="#item4">PHD Thesis Writing</Link>
+                        <Link href="/phd-thesis-writing">PHD Thesis Writing</Link>
                       </li>
                       <li className="  transition-all hover:text-orange-600 py-2">
-                        <Link href="#item4">Team Paper Writing</Link>
+                        <Link href="/term-paper-writing">Team Paper Writing</Link>
                       </li>
                       {/* Add more items here */}
                     </ul>
@@ -759,7 +759,7 @@ const Navbar = () => {
                             }}
                           >
                             <Link
-                              href={`#${service.name}`}
+                              href={`${service.url}`}
                               className="flex items-center"
                             >
                               <p className="hover:text-orange-600">
@@ -891,14 +891,14 @@ const Navbar = () => {
 
                   <li
                     className={`font-poppins font-medium cursor-pointer text-[12px] hover:text-orange-600 transition-all p-2 ${
-                      liActive === "Countries" ? "text-white" : "text-dimWhite"
+                      liActive === "Reviews" ? "text-white" : "text-dimWhite"
                     } mb-4`}
                     onClick={() => {
-                      setLiActive("Countries");
+                      setLiActive("Reviews");
                     }}
                   >
-                    <Link href="#Countries" className="flex items-center">
-                      Countries
+                    <Link href="/review" className="flex items-center">
+                      Reviews
                     </Link>
                   </li>
 
