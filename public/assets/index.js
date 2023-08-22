@@ -24,7 +24,7 @@ import upload from './upload.gif';
 import experts from './experts.gif';
 import explain from './explain.svg';
 import give from './give.svg';
-import feedback from './Feedback.svg';
+import feedback from './feedback.svg';
 import sitejabber from './sitejabber.svg';
 import trustpilot from './trustpilot.svg';
 import stars from './stars.png';
