@@ -1,6 +1,9 @@
 "use client";
 import { useMemo, useState, useEffect } from "react";
 import { useDropzone } from "react-dropzone";
+import 'react-toastify/dist/ReactToastify.css'; // Import the CSS for styling
+import { ToastContainer, toast } from 'react-toastify';
+
 const acceptedFileTypes = {
   "image/jpeg": [".jpeg"],
   "image/jpg": [".jpg"],
@@ -58,28 +61,30 @@ export const Dragndrop = () => {
   };
 
   const handleUpload = async () => {
-    try {
-      const formData = new FormData();
+    const formData = new FormData();
 
-      // Append each file to the FormData object
-      files.forEach((file) => {
-        formData.append("files", file);
-        console.log(file);
-      });
-      console.log(email)
-      console.log(phoneNumber)
-      formData.append("email", email);
-      formData.append("phoneNumber", phoneNumber); // Include the phone number
-      console.log("running before post request")
+    // Append each file to the FormData object
+    files.forEach((file) => {
+      formData.append("files", file);
+    });
+    formData.append("email", email);
+    formData.append("phoneNumber", phoneNumber);
+
+    try {
       const response = await fetch("http://localhost:8080/api/upload", {
         method: "POST",
         body: formData,
+        cache: "no-store",
       });
-      console.log("running after post request")
+
       if (response.ok) {
-        console.log("Files uploaded successfully");
+        const data = await response.json();
+        // Show a success toast
+        toast.success(data.message);
       } else {
-        console.error("Error uploading files");
+        const data = await response.json();
+        // Show an error toast
+        toast.error(data.message);
       }
     } catch (error) {
       console.error("Error uploading files:", error);
@@ -102,7 +107,7 @@ export const Dragndrop = () => {
       }
       if (files.length >= 5) {
         setFileLimitExceeded(true);
-        return; 
+        return;
       }
       const updatedFiles = droppedFiles.map((file) => {
         // Create a mapping to keep track of filenames and their occurrences
@@ -259,7 +264,13 @@ export const Dragndrop = () => {
               <h2 className="text-2xl font-bold mb-4">
                 Enter your email address
               </h2>
-              <form>
+              <form
+                onSubmit={(e) => {
+                  e.preventDefault(); // Prevent the default form submission behavior
+                  handleUpload();
+                  setShowModal(false) // Call the handleUpload function
+                }}
+              >
                 <input
                   type="email" // Set input type to "email"
                   className="border border-gray-300 rounded-md p-2 mb-4 w-full"
@@ -280,8 +291,8 @@ export const Dragndrop = () => {
 
                 <div className="flex justify-end">
                   <button
+                    type="submit"
                     className="bg-orange-600 text-white px-4 py-2 mr-2 rounded-md hover:bg-orange-500 transition-colors"
-                    onClick={handleUpload}
                   >
                     Upload
                   </button>
@@ -298,6 +309,18 @@ export const Dragndrop = () => {
           </div>
         )}
       </div>
+      <ToastContainer
+            position="bottom-left"
+            autoClose={5000}
+            hideProgressBar
+            newestOnTop={false}
+            closeOnClick
+            rtl={false}
+            theme= "dark"
+            pauseOnFocusLoss
+            draggable
+            pauseOnHover
+          />
     </div>
   );
 };

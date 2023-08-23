@@ -6,17 +6,20 @@ const nodemailer = require("nodemailer");
 const path = require("path");
 const bodyParser = require("body-parser");
 const fs = require("fs");
-const cluster = require('cluster');
-const numCPUs = require('os').cpus().length;
 
-app.use(cors());
+const corsOptions = {
+  origin: 'http://localhost:3000', // Allow requests from your frontend
+  methods: ['GET', 'POST'],
+};
+
+app.use(cors(corsOptions));
 app.use(express.json()); // Middleware to parse JSON request body
 app.use("/public/temp", express.static(path.join(__dirname, "public/temp")));
 app.use(express.static("public"));
 
 const multer = require("multer");
 const storage = multer.diskStorage({
-  destination: function (req, file, cb) {
+  destination: function (req, file, cb) { 
     cb(null, "./public/temp");
   },
   filename: function (req, file, cb) {
@@ -38,7 +41,7 @@ app.get("/", (req, res) => {
 });
 
 app.post("/api/upload", (req, res) => {
-  
+ 
   upload(req, res, async (err) => {
     if (err) {
       return res.status(500).json({ error: "Error uploading files" });
@@ -84,10 +87,10 @@ app.post("/api/upload", (req, res) => {
 
       res
         .status(200)
-        .json({ message: "File upload and email sent successfully" });
+        .json({ message: "Email Sent" });
     } catch (error) {
       console.error("Error sending email:", error);
-      res.status(500).json({ error: "Error sending email" });
+      res.status(500).json({ error: "Error Sending Email" });
     }
   });
 });

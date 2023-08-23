@@ -18,7 +18,7 @@ export const POST = async (req, res) => {
     const mailOptions = {
       from: "arhambaig.amir@gmail.com",
       to: toEmail,
-      subject: `Query received from ${email}`,
+      subject: `CONTACT: Query received from ${email}`,
       text: `
         Name: ${name}
         Email: ${email}
