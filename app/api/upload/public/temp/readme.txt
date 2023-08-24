@@ -1,1 +1,1 @@
-This folder holds files temporarily. deez
+This folder holds files temporarily.
