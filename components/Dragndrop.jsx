@@ -15,7 +15,6 @@ const baseStyle = {
   display: "flex",
   flexDirection: "column",
   alignItems: "center",
-  padding: "20px",
   borderWidth: 4, // Increased border width
   borderRadius: 4, // Increased border radius
   borderColor: "rgb(148 163 184)",
@@ -173,7 +172,7 @@ export const Dragndrop = () => {
         Size: {(file.size / 1024 / 1024).toFixed(3)} MB
       </div>
       <button
-        className="text-red-500 hover:text-red-600 ml-2"
+        className="text-red-600 hover:text-red-700 ml-2"
         onClick={() => {
           const newFiles = files.filter((f) => f.name !== file.name);
           setFiles(newFiles); // Update the state
@@ -190,8 +189,8 @@ export const Dragndrop = () => {
   });
 
   return (
-    <div className="mx-auto grid mt-10 pt-10 grid-cols-1 sm:grid-cols-2  mb-10">
-      <div className="flex flex-col text-center justify-center pb-4 border-r-0 sm:border-r-2 sm:border-b-0 border-orange-500 border-b-2 m-2 p-4">
+    <div className="mx-auto grid mt-10 pt-10 grid-cols-1 md:grid-cols-2  mb-10" id="dragndroporder">
+      <div className="flex flex-col text-center justify-center pb-4 border-r-0 md:border-r-2 md:border-b-0 border-orange-500 border-b-2 m-2 p-4">
         <div className="container mx-auto w-fit">
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-center text-gray-800 mb-6 border-b-2 border-r-4 border-orange-600 shadow-md p-2">
             Introducing <span className="text-orange-600">Dropzone</span>
@@ -229,17 +228,17 @@ export const Dragndrop = () => {
         </div>
       </div>
 
-      <div className="flex flex-col items-center mx-auto w-fit m-2">
+      <div className="flex flex-col items-center mx-auto w-fit m-2 p-2">
         <h1 className="text-center text-2xl md:text-3xl lg:text-4xl font-bold text-gray-800 mb-4">
-          Upload your task sheet and get a free Consultation.
+          Upload your task sheet and get a free <span className="text-orange-600">Consultation</span>.
         </h1>
         <div
           {...getRootProps({ style })}
-          className="w-[300px] h-[200px] md:w-[350px] md:h-[300px] lg:w-[500px] lg:h-[400px] xl:w-[600px] xl:h-[450px] border-4 border-dashed border-gray-400 rounded-lg flex items-center justify-center "
+          className="p-20 :w-full h-[300px] lg:w-[500px] lg:h-[400px] xl:w-[600px] xl:h-[450px] border-4 border-dashed border-gray-400 rounded-lg flex items-center justify-center "
         >
           <input {...getInputProps()} />
           {fileLimitExceeded ? (
-            <p className="text-red-500">
+            <p className="text-red-600">
               File limit exceeded. You can&apos;t add more files.
             </p>
           ) : (
@@ -249,8 +248,9 @@ export const Dragndrop = () => {
               </p>
             </div>
           )}{" "}
-          <p className="text-red-600 mt-2">File size should be below 10MB</p>
+          
         </div>
+        <p className="text-orange-400 mt-2">File size should be below 10MB</p>
         <aside>{thumbs}</aside>
         <button
           onClick={handleUploadClick}

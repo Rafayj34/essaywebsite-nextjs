@@ -7,7 +7,7 @@ const Whatsapp = () => {
   return (
     <div className="z-50 fixed bottom-10 left-10 flex items-center group gap-3 max-w-fit">
     <a
-      href="http://wa.me/+923220227584"
+      href="http://wa.me/+447378489100"
       target="_blank"
       rel="noopener noreferrer"
     >

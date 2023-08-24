@@ -23,7 +23,7 @@ const HomeReviews = () => {
 
 const Homereviewcard = ({ review }) => {
   return (
-    <div className="flex flex-col justify-between border-2 rounded-xl p-4 w-72 h-48 border-slate-400 shadow-md ">
+    <div className="flex flex-col shadow-md justify-between border-2 shadow-orange-600 rounded-xl p-4 w-72 h-48 border-slate-400  ">
       <p className="text-gray-800 mb-2 line-clamp-5">{review.review}</p>
       <Box>
         <Rating name="read-only" value={review.value} readOnly />

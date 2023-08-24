@@ -2,8 +2,15 @@
 import Image from "next/image";
 import { heroimg } from "../public/assets";
 import { Typewriter } from "react-simple-typewriter";
-
+import Link from "next/link";
 export function Hero() {
+  const scrollToSection = (event) => {
+    event.preventDefault();
+    const section = document.getElementById("dragndroporder");
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  };
   return (
     <section>
       <div className="relative mt-[-55px] w-full h-[900px] mx-auto shadow-lg bg-slate-100 shadow-slate-400 text-center flex flex-col justify-center object-contain">
@@ -37,17 +44,17 @@ export function Hero() {
             Let Your Ideas Flourish, Our Specialists Bring Your Essays to Life!
           </p>
           <div className="flex flex-col mobile:flex-row items-center">
-          <button
+          <button onClick={scrollToSection}
             className="bg-orange-600 shadow-lg shadow-orange-400 mx-2 w-[200px] rounded-full font-medium my-2 mobile:my-6 py-3 text-white
           hover:bg-white transition-all hover:text-black border-orange-600 hover:ring-1 hover:ring-orange-600 hover:shadow-orange-500 hover:shadow-md"
           >
-            Place an order
+           Place an order
           </button>
           <button
             className="bg-white ring-1 mx-2 ring-orange-600 shadow-md shadow-slate-500 rounded-full w-[200px] font-medium my-2 mobile:my-6 py-3 text-black
           hover:bg-orange-600 transition-all hover:shadow-md hover:shadow-slate-500 hover:text-white "
           >
-            Get consultancy
+           <Link target="_blank" rel="noopener noreferrer" href="https://tawk.to/chat/61472e1d25797d7a89ffbc6c/1ffv0o9r4">Get consultancy</Link>
           </button>
           </div>
         </div>

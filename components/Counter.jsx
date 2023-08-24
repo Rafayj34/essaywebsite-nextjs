@@ -6,52 +6,42 @@ import Image from "next/image";
 const Counter = () => {
   return (
 <section>
-<div className="mx-8 sm:mx-16 mt-10 p-3  grid lg:grid-cols-3  grid-cols-1 gap-10">
-  <div className="  space-y-4 mx-auto sm:mx-0 md:col-span-2 col-span-1">
+<div className="mx-8 sm:mx-16 mt-10 p-3  grid grid-cols-1 lg:grid-cols-2">
+  <div className="space-y-4 mx-auto sm:mx-0 ">
     <h1 className="text-2xl mt-5 flex justify-center font-semibold mb-2 ">
       <span className="text-slate-800">Let the</span>
       <span className="text-orange-600">&nbsp;numbers </span>
       <span>&nbsp;talk.</span>
     </h1>
-    <div className="flex md:flex-row  flex-wrap items-center justify-center gap-4 my-6">
+    <div className="flex flex-wrap lg:flex-col items-center justify-center gap-4 my-6">
 
       <div className="flex flex-col w-[270px] items-center p-6 border-b-4 border-r-2 shadow-xl border-r-orange-600 border-orange-600 hover:scale-105 transition-all">
-        <Image src={assignment} alt="assignment" height={101} width={101}/>
-        <p className="text-lg font-semibold mt-2">Assignments delivered</p>
-        <CountUp className="text-orange-500 font-bold" end={8320} suffix="+" delay={0.75} duration={3} enableScrollSpy/>
+        <Image src={assignment} alt="Assignments done till now" height={101} width={101}/>
+        <p className="text-lg font-semibold mt-2">Assignments Done</p>
+        <CountUp className="text-orange-600 font-bold" end={8320} suffix="+" delay={0.75} duration={3} enableScrollSpy/>
       </div>
       
       <div className="flex flex-col w-[270px] items-center p-6 shadow-xl border-r-2 border-r-orange-600 border-b-4 border-orange-600 hover:scale-105 transition-all">
-        <Image src={client} alt="client" width={150} height={150} />
+        <Image src={client} alt="Clients served till now" width={150} height={150}></Image>
         <p className="text-lg font-semibold mt-2">Clients served</p>
-        <CountUp className="text-orange-500 font-bold" end={6300} suffix="+" delay={0.75} duration={3} enableScrollSpy/>
+        <CountUp className="text-orange-600 font-bold" end={6300} suffix="+" delay={0.75} duration={3} enableScrollSpy/>
       </div>
       
       <div className="flex flex-col w-[270px] items-center p-6 shadow-xl border-r-2 border-r-orange-600 border-b-4 border-orange-600 hover:scale-105 transition-all">
-      <Image src={rating} alt="rating" width={150} height={150}/>
+      <Image src={rating} alt="Client ratings of the assignment" width={150} height={150}/>
         <p className="text-lg font-semibold mt-2">Client ratings</p>
-        <CountUp className="text-orange-500 font-bold" end={4.8} decimal="." decimals={1} suffix="/5" delay={0.75} duration={5} enableScrollSpy/>
+        <CountUp className="text-orange-600 font-bold" end={4.8} decimal="." decimals={1} suffix="/5" delay={0.75} duration={5} enableScrollSpy/>
       </div>
     </div>
 
   </div>
-  <div className="w-full">
-  <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-center mt-4 border-b-4 border-orange-600 border-l-2 shadow-lg border-l-orange-600 mb-4 p-1">
-    How we managed to have such <span className="text-orange-600">nice numbers?</span>
-  </h2>
- 
-   
-      <p className="text-gray-600 text-md ">
-        Contrary to popular belief, Lorem Ipsum is not simply random text.
-        It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.
-        Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure
-        Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical
-        literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 
-      </p>
-   
-
-</div>
-
+  <div className="container my-10 lg:my-auto justify-center items-center">
+    <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-center mt-4 border-b-4 border-orange-600 border-l-2 shadow-lg border-l-orange-600 mb-4 p-1">
+        How we managed to have such <span className="text-orange-600">nice numbers?</span></h2>
+    <p className="text-gray-600 whitespace-normal mb-3">As most writers are already aware that the need for effective essay writing has expanded signiﬁcantly, the necessity for providing each essay writing task with full effectiveness and efficiency has also become crucial for students. Thus, the primary objective of our professional and best essay writers online is to supply each individual with a chance to offer best assignment writing service would be sure enough to provide the great impression.</p>
+    <p className="text-gray-600 whitespace-normal mb-3">However, all the online essay writer does not maintain the capabilities of providing what the people meant for; therefore, an individual has to connect with the greatest when they feel like hiring best essay writing service.Therefore,Bestessaywritter is the remarkable and best essay writing website that is incredibly powerful to supply each individual with greatest and best essay writing service.</p>
+    <p className="text-gray-600 whitespace-normal mb-3">Bestessaywriter has a sufficient grasp of delivering best essay writing service in UK and has supplied the top essay writers online for over a decade. Since our best essay writers at the service recognize that each essay needs clarity and consistency, they endeavor to achieve a great balance between suitable introduction and body. Apart from this, the most crucial point that differentiates the essay writers at the service of others is that all the best essay writers take it in total consideration to maintain the thoughts ordered and defined when working on an essay.</p>
+  </div>
 </div>
 </section>
 

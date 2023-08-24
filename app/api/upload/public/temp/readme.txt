@@ -1,1 +1,0 @@
-This folder holds files temporarily. Randi

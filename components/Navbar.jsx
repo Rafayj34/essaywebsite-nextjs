@@ -5,7 +5,7 @@ import { logo, menu, close, arrowdown, arrowUp } from "../public/assets";
 import { services } from "@/constants";
 import Image from "next/image";
 import Link from "next/link";
-
+import { whatsapp } from "../public/assets";
 const Navbar = () => {
   // Hooks
   const [nestedDropdownVisibility, setNestedDropdownVisibility] = useState({});
@@ -39,14 +39,14 @@ const Navbar = () => {
   };
 
   const handleDropdownMouseLeave = (...setStateFunctions) => {
-      setStateFunctions.forEach((setStateFunction) => {
-        setStateFunction(false);
-      });
+    setStateFunctions.forEach((setStateFunction) => {
+      setStateFunction(false);
+    });
   };
 
   const handleParentDropdownMouseLeave = (setStateFunction) => {
-      setStateFunction(false);
-  }
+    setStateFunction(false);
+  };
 
   useEffect(() => {
     const handleResize = () => {
@@ -86,7 +86,26 @@ const Navbar = () => {
           }`}
         >
           <Image src={logo} alt="logo" height={90} width={90} />
+          <div className="z-50 absolute right-10">
+            <Link
+              href="http://wa.me/+447378489100"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <button className="flex bg-green-600 px-3 py-2 hover:bg-green-700 transition-all rounded-xl text-white items-center">
+                <Image
+                  src={whatsapp}
+                  alt="whatsapp"
+                  height={25}
+                  width={25}
+                  className="mr-2"
+                />
+                +44 7378 489100
+              </button>
+            </Link>
+          </div>
         </div>
+
         {/* Navbar elements */}
         <nav
           className={`w-full pt-1 h-[40px] bg-gray-800 items-center fixed ${
@@ -145,10 +164,14 @@ const Navbar = () => {
                         : "dropdown-exit"
                     } bg-gray-800 text-white font-normal min-w-[220px] z-20 absolute rounded-bl-lg rounded-br-lg  top-full`}
                     onMouseEnter={() => {
-                      handleDropdownMouseEnter(setIsServicesDropdownVisible)
+                      handleDropdownMouseEnter(setIsServicesDropdownVisible);
                     }}
                     onMouseLeave={() => {
-                      handleDropdownMouseLeave(setIsServicesDropdownVisible,setIsEssaySubDropdownVisible,setIsAssignmentSubDropdownVisible)
+                      handleDropdownMouseLeave(
+                        setIsServicesDropdownVisible,
+                        setIsEssaySubDropdownVisible,
+                        setIsAssignmentSubDropdownVisible
+                      );
                     }}
                   >
                     {/* Add your dropdown menu items here */}
@@ -156,12 +179,15 @@ const Navbar = () => {
                       <li
                         className="flex justify-center py-2 hover:text-orange-600"
                         onMouseEnter={(e) => {
-                          handleDropdownMouseEnter(setIsEssaySubDropdownVisible) ;
+                          handleDropdownMouseEnter(
+                            setIsEssaySubDropdownVisible
+                          );
                           e.stopPropagation();
                         }}
                         onMouseLeave={() => {
-                          handleDropdownMouseLeave(setIsEssaySubDropdownVisible)
-                    
+                          handleDropdownMouseLeave(
+                            setIsEssaySubDropdownVisible
+                          );
                         }}
                       >
                         <Link href="#" className="flex items-center">
@@ -192,13 +218,19 @@ const Navbar = () => {
                               }`}
                             >
                               <li className="  hover:text-orange-600 transition-all pt-2 text-left">
-                                <Link href="/essay-editing-service">Essay Editing</Link>
+                                <Link href="/essay-editing-service">
+                                  Essay Editing
+                                </Link>
                               </li>
                               <li className="  hover:text-orange-600 transition-all pt-2  text-left">
-                                <Link href="/essay-editing-service">Buy an Essay</Link>
+                                <Link href="/essay-editing-service">
+                                  Buy an Essay
+                                </Link>
                               </li>
                               <li className="  hover:text-orange-600 transition-all pt-2  text-left">
-                                <Link href="/nursing-essay-writing-service">Nursing Essay</Link>
+                                <Link href="/nursing-essay-writing-service">
+                                  Nursing Essay
+                                </Link>
                               </li>
                               <li className="  hover:text-orange-600 transition-all pt-2  text-left">
                                 <Link href="/masters-essay-writing-service">
@@ -206,10 +238,14 @@ const Navbar = () => {
                                 </Link>
                               </li>
                               <li className="  hover:text-orange-600 transition-all pt-2  text-left">
-                                <Link href="/best-law-essay-writing-service-uk">Law Essay</Link>
+                                <Link href="/best-law-essay-writing-service-uk">
+                                  Law Essay
+                                </Link>
                               </li>
                               <li className="  hover:text-orange-600 transition-all pt-2 text-left">
-                                <Link href="/mba-essay-writing-service">MBA Essay</Link>
+                                <Link href="/mba-essay-writing-service">
+                                  MBA Essay
+                                </Link>
                               </li>
                               <li className="  hover:text-orange-600 transition-all pt-2 text-left">
                                 <Link href="#subitem2">University Essay</Link>
@@ -295,13 +331,16 @@ const Navbar = () => {
                       <li
                         className="py-2   transition-all flex justify-center hover:text-orange-600"
                         onMouseEnter={(e) => {
-                          handleDropdownMouseEnter(setIsAssignmentSubDropdownVisible)
-                      
+                          handleDropdownMouseEnter(
+                            setIsAssignmentSubDropdownVisible
+                          );
+
                           e.stopPropagation();
                         }}
                         onMouseLeave={() => {
-                          handleDropdownMouseLeave(setIsAssignmentSubDropdownVisible)
-                          
+                          handleDropdownMouseLeave(
+                            setIsAssignmentSubDropdownVisible
+                          );
                         }}
                       >
                         <Link href="#" className="flex items-center">
@@ -326,26 +365,34 @@ const Navbar = () => {
                           <div className="sub-dropdown2 top-9">
                             <ul className=" pt-1 pb-1 bg-gray-800 rounded-tr-lg rounded-br-lg text-white font-normal min-w-[240px] pl-4">
                               <li className="  hover:text-orange-600 transition-all text-left pt-2 ">
-                                <Link href="/best-assignment-writing-service">Assignment Writing</Link>
+                                <Link href="/best-assignment-writing-service">
+                                  Assignment Writing
+                                </Link>
                               </li>
                               <li className="  hover:text-orange-600 transition-all text-left pt-2 ">
-                                <Link href="/cookery-assignment-help">Cookery</Link>
+                                <Link href="/cookery-assignment-help">
+                                  Cookery
+                                </Link>
                               </li>
 
-                              <li className="  hover:text-orange-600 transition-all pt-2 text-left"
-                                  onMouseEnter={(e) => {
-                                    handleDropdownMouseEnter(setIsLawSubDropdownVisible)
-                                   
-                                    e.stopPropagation();
-                                  }}
-                                  onMouseLeave={() => {
-                                    handleDropdownMouseLeave(setIsLawSubDropdownVisible)
-                                   
-                                  }}>
+                              <li
+                                className="  hover:text-orange-600 transition-all pt-2 text-left"
+                                onMouseEnter={(e) => {
+                                  handleDropdownMouseEnter(
+                                    setIsLawSubDropdownVisible
+                                  );
+
+                                  e.stopPropagation();
+                                }}
+                                onMouseLeave={() => {
+                                  handleDropdownMouseLeave(
+                                    setIsLawSubDropdownVisible
+                                  );
+                                }}
+                              >
                                 <Link
                                   href="/law-assignment-help"
                                   className="flex items-center"
-                              
                                 >
                                   Law
                                   <svg
@@ -369,13 +416,16 @@ const Navbar = () => {
                                     <ul
                                       className=" top-10 bg-gray-800 text-white rounded-tr-lg rounded-br-lg rounded-bl-lg font-normal min-w-[240px] pl-4 py-2"
                                       onMouseEnter={(e) => {
-                                        handleDropdownMouseEnter(setIsLawSubDropdownVisible)
-                                      
+                                        handleDropdownMouseEnter(
+                                          setIsLawSubDropdownVisible
+                                        );
+
                                         e.stopPropagation();
                                       }}
                                       onMouseLeave={() => {
-                                        handleDropdownMouseLeave(setIsLawSubDropdownVisible)
-                                    
+                                        handleDropdownMouseLeave(
+                                          setIsLawSubDropdownVisible
+                                        );
                                       }}
                                     >
                                       <li className="  hover:text-orange-600 transition-all text-left pt-2 ">
@@ -404,17 +454,23 @@ const Navbar = () => {
                                         </Link>
                                       </li>
                                       <li className="  hover:text-orange-600 transition-all text-left pt-2 ">
-                                        <Link href="/civil-law-assignment-help">Civil Law</Link>
+                                        <Link href="/civil-law-assignment-help">
+                                          Civil Law
+                                        </Link>
                                       </li>
                                       <li className="  hover:text-orange-600 transition-all text-left pt-2 ">
-                                        <Link href="/tort-law-assignment-help">Tort Law</Link>
+                                        <Link href="/tort-law-assignment-help">
+                                          Tort Law
+                                        </Link>
                                       </li>
                                     </ul>
                                   </div>
                                 )}
                               </li>
                               <li className="  hover:text-orange-600 transition-all text-left pt-2 ">
-                                <Link href="/management-assignment-help">Management</Link>
+                                <Link href="/management-assignment-help">
+                                  Management
+                                </Link>
                               </li>
                               <li className="  hover:text-orange-600 transition-all pt-2 text-left">
                                 <Link href="/managerial-economics-assignment-help">
@@ -433,13 +489,16 @@ const Navbar = () => {
                       <li
                         className="  transition-all flex justify-center py-2 hover:text-orange-600"
                         onMouseEnter={(e) => {
-                          handleDropdownMouseEnter(setIsCaseStudySubDropdownVisible)
-                       
+                          handleDropdownMouseEnter(
+                            setIsCaseStudySubDropdownVisible
+                          );
+
                           e.stopPropagation();
                         }}
                         onMouseLeave={() => {
-                          handleDropdownMouseLeave(setIsCaseStudySubDropdownVisible)
-                        
+                          handleDropdownMouseLeave(
+                            setIsCaseStudySubDropdownVisible
+                          );
                         }}
                       >
                         <Link href="#" className="flex items-center">
@@ -464,7 +523,9 @@ const Navbar = () => {
                           <div className="sub-dropdown2 top-4 mt-[63px]">
                             <ul className=" bg-gray-800 rounded-tr-lg rounded-br-lg text-white font-normal min-w-[240px] items-center py-2 pl-2">
                               <li className="  hover:text-orange-600 transition-all text-left py-2 ">
-                                <Link href="/best-case-study-writing-service">Case Study Writing</Link>
+                                <Link href="/best-case-study-writing-service">
+                                  Case Study Writing
+                                </Link>
                               </li>
                             </ul>
                           </div>
@@ -473,15 +534,21 @@ const Navbar = () => {
                       <li
                         className="  transition-all flex justify-center hover:text-orange-600 py-2"
                         onMouseEnter={(e) => {
-                          handleDropdownMouseEnter(setisCourseworkSubDropdownVisible)
+                          handleDropdownMouseEnter(
+                            setisCourseworkSubDropdownVisible
+                          );
                           e.stopPropagation();
                         }}
                         onMouseLeave={() => {
-                          handleDropdownMouseLeave(setisCourseworkSubDropdownVisible)
-                     
+                          handleDropdownMouseLeave(
+                            setisCourseworkSubDropdownVisible
+                          );
                         }}
                       >
-                        <Link href="/best-coursework-writing-service" className="flex items-center">
+                        <Link
+                          href="/best-coursework-writing-service"
+                          className="flex items-center"
+                        >
                           Coursework
                           <svg
                             className="w-2.5 h-2.5 ml-2.5"
@@ -503,7 +570,9 @@ const Navbar = () => {
                           <div className="sub-dropdown2 top-6 mt-[92px]">
                             <ul className=" bg-gray-800 rounded-tr-lg rounded-br-lg text-white font-normal  min-w-[240px] py-2 pl-2">
                               <li className="  hover:text-orange-600 transition-all text-left py-2  ">
-                                <Link href="/best-coursework-writing-service">Coursework Writing</Link>
+                                <Link href="/best-coursework-writing-service">
+                                  Coursework Writing
+                                </Link>
                               </li>
                             </ul>
                           </div>
@@ -512,13 +581,16 @@ const Navbar = () => {
                       <li
                         className="  transition-all flex justify-center py-2 hover:text-orange-600"
                         onMouseEnter={(e) => {
-                          handleDropdownMouseEnter(setisDissertationSubDropdownVisible)
-               
+                          handleDropdownMouseEnter(
+                            setisDissertationSubDropdownVisible
+                          );
+
                           e.stopPropagation();
                         }}
                         onMouseLeave={() => {
-                          handleDropdownMouseLeave(setisDissertationSubDropdownVisible)
-                       
+                          handleDropdownMouseLeave(
+                            setisDissertationSubDropdownVisible
+                          );
                         }}
                       >
                         <Link href="#" className="flex items-center">
@@ -554,13 +626,16 @@ const Navbar = () => {
                       <li
                         className="  transition-all flex justify-center py-2 hover:text-orange-600"
                         onMouseEnter={(e) => {
-                          handleDropdownMouseEnter(setisReportSubDropdownVisible)
-                          
+                          handleDropdownMouseEnter(
+                            setisReportSubDropdownVisible
+                          );
+
                           e.stopPropagation();
                         }}
                         onMouseLeave={() => {
-                          handleDropdownMouseLeave(setisReportSubDropdownVisible)
-                       
+                          handleDropdownMouseLeave(
+                            setisReportSubDropdownVisible
+                          );
                         }}
                       >
                         <Link href="#" className="flex items-center">
@@ -594,16 +669,24 @@ const Navbar = () => {
                         )}
                       </li>
                       <li className="  transition-all hover:text-orange-600 py-2">
-                        <Link href="/best-proofreading-service">Proofreading</Link>
+                        <Link href="/best-proofreading-service">
+                          Proofreading
+                        </Link>
                       </li>
                       <li className="  transition-all hover:text-orange-600 py-2">
-                        <Link href="/academic-referencing-styles">Referencing Styles</Link>
+                        <Link href="/academic-referencing-styles">
+                          Referencing Styles
+                        </Link>
                       </li>
                       <li className="  transition-all hover:text-orange-600 py-2">
-                        <Link href="/phd-thesis-writing">PHD Thesis Writing</Link>
+                        <Link href="/phd-thesis-writing">
+                          PHD Thesis Writing
+                        </Link>
                       </li>
                       <li className="  transition-all hover:text-orange-600 py-2">
-                        <Link href="/term-paper-writing">Team Paper Writing</Link>
+                        <Link href="/term-paper-writing">
+                          Team Paper Writing
+                        </Link>
                       </li>
                       {/* Add more items here */}
                     </ul>
@@ -614,9 +697,9 @@ const Navbar = () => {
               <li className="relative">
                 <button
                   className={`font-poppins text-white font-semibold cursor-pointer text-[17px] hover:text-orange-600 transition-all rounded-lg px-5 `}
-                  onClick={() => setLiActive("Blogs")}
+                  onClick={() => setLiActive("Blog")}
                 >
-                  <Link href="#blogs">Blogs</Link>
+                  <Link href="blog">Blogs</Link>
                 </button>
               </li>
               <li className="relative">
@@ -707,21 +790,17 @@ const Navbar = () => {
                   >
                     <Link href="#Services" className="flex items-center">
                       Services
-                
-                        <div className="ml-2 mt-1">
-                          <Image
-                            src={
-                              isServicesDropdownVisible ? arrowUp : arrowdown
-                            }
-                            alt="Arrow Icon"
-                            className={`w-[11px] h-[11px] object-contain ${
-                              isServicesDropdownVisible
-                                ? "arrow-up"
-                                : "arrow-down"
-                            }`}
-                          />
-                        </div>
-                    
+                      <div className="ml-2 mt-1">
+                        <Image
+                          src={isServicesDropdownVisible ? arrowUp : arrowdown}
+                          alt="Arrow Icon"
+                          className={`w-[11px] h-[11px] object-contain ${
+                            isServicesDropdownVisible
+                              ? "arrow-up"
+                              : "arrow-down"
+                          }`}
+                        />
+                      </div>
                     </Link>
                   </li>
 
@@ -915,7 +994,6 @@ const Navbar = () => {
                     </Link>
                   </li>
 
-             
                   <li
                     className={`font-poppins font-medium cursor-pointer text-[12px]   hover:text-orange-600 transition-all p-2 ${
                       liActive === "About us" ? "text-white" : "text-dimWhite"

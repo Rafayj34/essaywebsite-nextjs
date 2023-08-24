@@ -15,16 +15,24 @@ const poppins = Poppins({
 export const metadata = {
   title: "Best Essay Writer",
   description: "UK's Best Essay Writers Offer the best Essay writing service at a cheap price. Order Now and get professional Essay help services.",
+  canonical: 'https://scriptersltd.com/bestessaywriters/essay-editing-service/',
   alternates: {
-    canonical: '/'
+    canonical: 'https://bestessaywriters.co.uk/essay-editing-service/'
   },
   openGraph: {
-    title:"Best Essay Writing Service UK at Cheap With Best Essay Writers",
-    description: "UK's Best Essay Writers Offer the best Essay writing service at a cheap price. Order Now and get professional Essay help services.",
-    siteName: "Best Essay Writer",
-    images: '/og-image.png',
+    title:"Top Rated Essay Editing Services by Top UK Nartive Essay Writers",
+    description: "Get your Essay edited and proofread by UK's top Essay Editing Service. Our Top Rated Essay Writers provide 110% satisfaction guaranteed.",
+    images: [
+      {
+        url: 'https://scriptersltd.com/bestessaywriters/wp-content/uploads/2023/02/Get-Essay-Editing-Service.jpg',
+        width: 1200,
+        height: 628,
+        type: 'image/jpeg'
+      }
+    ],
     locale: 'en_US',
-    type: 'website',
+    type: 'article',
+    url: 'https://bestessaywriters/essay-editing-service/'
   },
   robots: {
     index: true,
@@ -38,8 +46,17 @@ export const metadata = {
       'max-snippet': -1,
     },
   },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Best Essay Writer',
+    description: 'The React Framework for the Web',
+    creator: '@BestEssayWrit13',
+    site: '@BestEssayWrit13',
+    images: ['https://scriptersltd.com/bestessaywriters/wp-content/uploads/2023/02/Get-Essay-Editing-Service.jpg'],
+    label1: "Est. Reading time",
+    data1: "8 minutes",
+  },
 };
-
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
@@ -47,9 +64,7 @@ export default function RootLayout({ children }) {
         <div className="flex ">
           <Navbar />
         </div>
-
         {children}
-
         <Footer />
         <TawkToMessenger />
         <Whatsapp />

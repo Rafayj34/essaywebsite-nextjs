@@ -166,6 +166,17 @@ export async function generateMetadata(props) {
     return {
       title: post.title,
       description: post.description,
+      openGraph: {
+        title: post.openGraph.title,
+        description: post.openGraph.description,
+        images: post.openGraph.images,
+        url: post.openGraph.url,
+        locale: post.openGraph.locale,
+        type: post.openGraph.type,
+        site_name:post.openGraph.site_name,
+        publishedTime: post.openGraph.publishedTime,
+        authors: post.openGraph.authors,
+      },
     };
   } else {
     return {

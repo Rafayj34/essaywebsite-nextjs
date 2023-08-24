@@ -17,7 +17,18 @@ const getContentMetadata = () => {
             description: content.description,
             image: content.image,
             alt: content.alt,
-            last_modified: content.last_modified
+            last_modified: content.last_modified,
+            openGraph: {
+              title: content.openGraph.title,
+              description: content.openGraph.description,
+              images: content.openGraph.images,
+              url: content.openGraph.url,
+              locale: content.openGraph.locale,
+              type: content.openGraph.type,
+              publishedTime: content.openGraph.publishedTime,
+              authors: content.openGraph.authors,
+              site_name:content.openGraph.site_name
+            },
           };
         } else {
           console.error(`Content not found for jsx file: ${htmlFile}`);
