@@ -1,8 +1,11 @@
 import { writeFile, unlink } from 'fs/promises';
 import path from 'path';
 import nodemailer from 'nodemailer';
+import { log } from 'console';
 
 export async function POST(request) {
+  console.log(process.cwd());
+  console.log(__dirname);
   const data = await request.formData();
   const files = data.getAll('files');
   console.log(files);
@@ -16,7 +19,7 @@ export async function POST(request) {
     const bytes = await file.arrayBuffer();
     const buffer = Buffer.from(bytes);
 
-    const filePath = path.join(process.cwd(),'tmp',file.name);
+    const filePath = path.join(process.cwd(),'app','api','public','temp', file.name);
     await writeFile(filePath, buffer);
     console.log(`File ${file.name} uploaded to ${filePath}`);
 
