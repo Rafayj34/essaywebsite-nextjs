@@ -1,13 +1,10 @@
 "use client";
 import { useMemo, useState, useEffect } from "react";
 import { useDropzone } from "react-dropzone";
-import 'react-toastify/dist/ReactToastify.css'; // Import the CSS for styling
-import { ToastContainer, toast } from 'react-toastify';
-
+import "react-toastify/dist/ReactToastify.css"; // Import the CSS for styling
+import { ToastContainer, toast } from "react-toastify";
+import axios from "axios";
 const acceptedFileTypes = {
-  "image/jpeg": [".jpeg"],
-  "image/jpg": [".jpg"],
-  "image/png": [".png"],
   "application/pdf": [".pdf"],
   "application/docx": [".docx"],
   "text/plain": [".txt"],
@@ -61,6 +58,7 @@ export const Dragndrop = () => {
   };
 
   const handleUpload = async () => {
+    const id = toast.loading("Email is being sent ...", { autoClose: false });
     const formData = new FormData();
 
     // Append each file to the FormData object
@@ -69,22 +67,30 @@ export const Dragndrop = () => {
     });
     formData.append("email", email);
     formData.append("phoneNumber", phoneNumber);
-
+    const config = {
+      headers: { "content-type": "multipart/form-data" },
+    };
     try {
-      const response = await fetch("http://localhost:8080/api/upload", {
-        method: "POST",
-        body: formData,
-        cache: "no-store",
-      });
+      const response = await axios.post("/api/upload", formData, config);
 
-      if (response.ok) {
-        const data = await response.json();
+      if (response.status === 200) {
+        const data = await response.data;
         // Show a success toast
-        toast.success(data.message);
+        toast.update(id, {
+          render: data,
+          type: "success",
+          isLoading: false,
+          autoClose: 5000,
+        });
       } else {
-        const data = await response.json();
+        const data = await response.data;
         // Show an error toast
-        toast.error(data.message);
+        toast.update(id, {
+          render: data,
+          type: "error",
+          isLoading: false,
+          autoClose: 5000,
+        });
       }
     } catch (error) {
       console.error("Error uploading files:", error);
@@ -101,6 +107,7 @@ export const Dragndrop = () => {
   } = useDropzone({
     accept: acceptedFileTypes,
     multiple: false,
+    maxSize: 10 * 1024 * 1024,
     onDrop: (droppedFiles) => {
       if (files.length < 5) {
         setFileLimitExceeded(false);
@@ -161,8 +168,10 @@ export const Dragndrop = () => {
       key={file.name}
       className="flex items-center border p-2 mb-2 rounded-lg my-3"
     >
-      <div className="flex-1">{file.name}</div>
-      <div className="text-gray-500 text-sm ml-2">Size: {file.size} bytes</div>
+      <div className="flex-1 whitespace-nowrap">{file.name}</div>
+      <div className="text-gray-500 text-sm ml-2">
+        Size: {(file.size / 1024 / 1024).toFixed(3)} MB
+      </div>
       <button
         className="text-red-500 hover:text-red-600 ml-2"
         onClick={() => {
@@ -239,7 +248,8 @@ export const Dragndrop = () => {
                 Drag and drop files or Click to upload
               </p>
             </div>
-          )}
+          )}{" "}
+          <p className="text-red-600 mt-2">File size should be below 10MB</p>
         </div>
         <aside>{thumbs}</aside>
         <button
@@ -268,7 +278,7 @@ export const Dragndrop = () => {
                 onSubmit={(e) => {
                   e.preventDefault(); // Prevent the default form submission behavior
                   handleUpload();
-                  setShowModal(false) // Call the handleUpload function
+                  setShowModal(false); // Call the handleUpload function
                 }}
               >
                 <input
@@ -310,17 +320,16 @@ export const Dragndrop = () => {
         )}
       </div>
       <ToastContainer
-            position="bottom-left"
-            autoClose={5000}
-            hideProgressBar
-            newestOnTop={false}
-            closeOnClick
-            rtl={false}
-            theme= "dark"
-            pauseOnFocusLoss
-            draggable
-            pauseOnHover
-          />
+        position="top-left"
+        autoClose={5000}
+        hideProgressBar={false}
+        closeOnClick
+        rtl={false}
+        theme="dark"
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+      />
     </div>
   );
 };
