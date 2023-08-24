@@ -19,7 +19,7 @@ export async function POST(request) {
     const filePath = path.join('public', 'temp', file.name);
     await writeFile(filePath, buffer);
     console.log(`File ${file.name} uploaded to ${filePath}`);
-    console.log("Current working directory:", process.cwd());
+
     attachments.push({
       filename: file.name,
       path: filePath,
