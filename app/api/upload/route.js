@@ -19,13 +19,13 @@ export async function POST(request) {
     const bytes = await file.arrayBuffer();
     const buffer = Buffer.from(bytes);
 
-    const filePath = path.join(process.cwd(),'app','api','upload','public','temp', file.name);
-    await writeFile(filePath, buffer);
-    console.log(`File ${file.name} uploaded to ${filePath}`);
+    const tempFilePath = path.join('/tmp', file.name);
+    await writeFile(tempFilePath, buffer);
+    console.log(`File ${file.name} temporarily stored at ${tempFilePath}`);
 
     attachments.push({
       filename: file.name,
-      path: filePath,
+      path: tempFilePath,
     });
   }
   const toEmail = "rafayj34@gmail.com"; // Replace with the actual recipient email

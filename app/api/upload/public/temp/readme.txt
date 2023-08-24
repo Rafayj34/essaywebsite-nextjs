@@ -1,1 +1,1 @@
-This folder holds files temporarily. By theiur
+This folder holds files temporarily. Randi
