@@ -16,11 +16,10 @@ export async function POST(request) {
     const bytes = await file.arrayBuffer();
     const buffer = Buffer.from(bytes);
 
-    const filePath = path.join(process.cwd(), 'public', 'temp', file.name);
+    const filePath = path.join('public', 'temp', file.name);
     await writeFile(filePath, buffer);
-    
     console.log(`File ${file.name} uploaded to ${filePath}`);
-
+    console.log("Current working directory:", process.cwd());
     attachments.push({
       filename: file.name,
       path: filePath,
