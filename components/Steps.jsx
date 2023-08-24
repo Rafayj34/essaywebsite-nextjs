@@ -31,6 +31,7 @@ const Accordion = ({ title, description, imageSrc }) => {
         <h1>{title}</h1>
         <Image
           src={isHovered || isOpen ? arrowdown : accordionarrow}
+          alt="accordion arrow"
           height={15}
           width={15}
           className="ml-5 animate-pulse"
