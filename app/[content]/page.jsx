@@ -30,7 +30,7 @@ const getContent = async (slug) => {
     } catch (error) {
       console.log(error);
       return (
-        <div className="flex mt-52 flex-col items-center justify-center min-h-[500px] bg-gray-100">
+        <div className="flex mt-52 flex-col items-center justify-center min-h-[500px]">
           <h1 className="text-4xl font-semibold text-gray-800">
             Oops! Page not found
           </h1>
@@ -94,54 +94,50 @@ const ContentPage = async (props) => {
           <h1 className="text-4xl font-bold mb-2 text-center">
             {content_json.title}
           </h1>
-          <div className="flex justify-center mb-4">
-            <p className="text-orange-600">
-              Date Posted: {content_json.last_modified}
-            </p>
-          </div>
+      
           {content}
           </div>
         <div className="hidden lg:block px-10 mt-96 ">
           <h2 className="text-3xl text-slate-800 font-semibold mb-4 whitespace-nowrap">All Essays</h2>
           <ul className="space-y-2 content-list mb-20">
-            <UsefulLink name="Custom Essay Help" href="#"/>
-            <UsefulLink name="Admission Essay Help" href="#"/>
-            <UsefulLink name="Exploratory Essay Help" href="#"/>
-            <UsefulLink name="Law Essay Help" href="#"/>
-            <UsefulLink name="Deductive Essay Help" href="#"/>
-            <UsefulLink name="Scholarship Essays Help" href="#"/>
-            <UsefulLink name="Argumentive Essay Help" href="#"/>
-            <UsefulLink name="Urgent Essay Help" href="#"/>
-            <UsefulLink name="Student Essay Writing" href="#"/>
-            <UsefulLink name="Plagiarism Free Essays" href="#"/>
-            <UsefulLink name="Essay Help Online" href="#"/>
-            <UsefulLink name="Essay Homework Help" href="#"/>
-            <UsefulLink name="Need Help Writing Essay" href="#"/>
-            <UsefulLink name="Cheap Essay Writer" href="#"/>
-            <UsefulLink name="Perfect Essay Help" href="#"/>
-            <UsefulLink name="MBA Essay Writing Service" href="#"/>
-            <UsefulLink name="Professional Essay Writer" href="#"/>
-            <UsefulLink name="Cheap Essay Writing Services" href="#"/>
-            <UsefulLink name="Essay Writers Online" href="#"/>
+            <UsefulLink name="Custom Essay Help" href="/"/>
+            <UsefulLink name="Admission Essay Help" href="/"/>
+            <UsefulLink name="Exploratory Essay Help" href="/"/>
+            <UsefulLink name="Law Essay Help" href="/"/>
+            <UsefulLink name="Deductive Essay Help" href="/"/>
+            <UsefulLink name="Scholarship Essays Help" href="/"/>
+            <UsefulLink name="Argumentive Essay Help" href="/"/>
+            <UsefulLink name="Urgent Essay Help" href="/"/>
+            <UsefulLink name="Student Essay Writing" href="/"/>
+            <UsefulLink name="Plagiarism Free Essays" href="/"/>
+            <UsefulLink name="Essay Help Online" href="/"/>
+            <UsefulLink name="Essay Homework Help" href="/"/>
+            <UsefulLink name="Need Help Writing Essay" href="/"/>
+            <UsefulLink name="Cheap Essay Writer" href="/"/>
+            <UsefulLink name="Perfect Essay Help" href="/"/>
+            <UsefulLink name="MBA Essay Writing Service" href="/"/>
+            <UsefulLink name="Professional Essay Writer" href="/"/>
+            <UsefulLink name="Cheap Essay Writing Services" href="/"/>
+            <UsefulLink name="Essay Writers Online" href="/"/>
           </ul>
           <h2 className="text-3xl text-slate-800 font-semibold mb-4 whitespace-nowrap">Other Services</h2>
           <ul className="space-y-2 content-list">
-            <UsefulLink name="Assignment Writing" href="#"/>
-            <UsefulLink name="Cookery" href="#"/>
-            <UsefulLink name="Property Law" href="#"/>
-            <UsefulLink name="Constitutional Law" href="#"/>
-            <UsefulLink name="Administrative Law" href="#"/>
-            <UsefulLink name="Criminal Law" href="#"/>
-            <UsefulLink name="Human Rights Law" href="#"/>
-            <UsefulLink name="Civil Law" href="#"/>
-            <UsefulLink name="Tort Law" href="#"/>
-            <UsefulLink name="Management" href="#"/>
-            <UsefulLink name="Managerial Economics" href="#"/>
-            <UsefulLink name="Managerial Accounting" href="#"/>
-            <UsefulLink name="Case Study Writing" href="#"/>
-            <UsefulLink name="Coursework Writing" href="#"/>
-            <UsefulLink name="Best Dissertation Writing" href="#"/>
-            <UsefulLink name="Best Report Writing" href="#"/>
+            <UsefulLink name="Assignment Writing" href="/"/>
+            <UsefulLink name="Cookery" href="/"/>
+            <UsefulLink name="Property Law" href="/"/>
+            <UsefulLink name="Constitutional Law" href="/"/>
+            <UsefulLink name="Administrative Law" href="/"/>
+            <UsefulLink name="Criminal Law" href="/"/>
+            <UsefulLink name="Human Rights Law" href="/"/>
+            <UsefulLink name="Civil Law" href="/"/>
+            <UsefulLink name="Tort Law" href="/"/>
+            <UsefulLink name="Management" href="/"/>
+            <UsefulLink name="Managerial Economics" href="/"/>
+            <UsefulLink name="Managerial Accounting" href="/"/>
+            <UsefulLink name="Case Study Writing" href="/"/>
+            <UsefulLink name="Coursework Writing" href="/"/>
+            <UsefulLink name="Best Dissertation Writing" href="/"/>
+            <UsefulLink name="Best Report Writing" href="/"/>
          
 
           </ul>

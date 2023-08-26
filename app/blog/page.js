@@ -1,10 +1,9 @@
-"use client"
-import {React , useState} from 'react';
-import { blogging } from '@/public/assets';
-import Link from 'next/link';
-import Image from 'next/image';
-import { blogData } from '@/constants';
-
+"use client";
+import { React, useState } from "react";
+import { blogging } from "@/public/assets";
+import Link from "next/link";
+import Image from "next/image";
+import { blogData } from "@/constants";
 
 const BlogListPage = () => {
   const [searchTerm, setSearchTerm] = useState("");
@@ -15,7 +14,7 @@ const BlogListPage = () => {
   );
 
   return (
-    <div className="container mt-24 h-auto mx-auto ml-28 p-5">
+    <div className="container mt-24 h-auto mx-auto  p-5">
       <div className="flex justify-center">
         <Image src={blogging} alt="blog image" height={500} width={500} />
       </div>
@@ -47,14 +46,20 @@ const BlogListPage = () => {
               alt={blog.title}
               className="w-full h-40 object-cover mb-4 rounded-md"
             />
-            <h2 className="text-xl hover:text-orange-500 cursor-pointer font-semibold mb-2">{blog.title}</h2>
-            <p className="text-gray-600 mb-2">{blog.description}</p>
+            <Link href={`/blog/${blog.slug}`}>
+              <h2 className="sm:text-xl hover:text-orange-500 cursor-pointer font-semibold mb-2 text-lg">
+                {blog.title}
+              </h2>
+            </Link>
+            <p className="text-gray-600 mb-2 line-clamp-4 text-xs sm:text-base">
+              {blog.description}
+            </p>
             <p className="text-gray-400 text-sm">
               By {blog.author} - {blog.date}
             </p>
             <Link
-              className="text-cyan-600 hover:text-orange-600 font-semibold mt-4 inline-block"
-              href={`/blogs/${blog.slug}`}
+              className="text-slate-800 hover:text-orange-600 font-semibold mt-4 inline-block"
+              href={`/blog/${blog.slug}`}
             >
               Read More
             </Link>
@@ -65,6 +70,4 @@ const BlogListPage = () => {
   );
 };
 
-  
-  export default BlogListPage;
-  
+export default BlogListPage;

@@ -39,7 +39,8 @@ import reportimg from './reportwriting.webp';
 import essay30off3 from './essay30off3.webp';
 import casestudyimg from './casestudy.webp'
 import whatsapp from './whatsapp.png';
-import logo2 from './logo2.png'
+import logo2 from './logo2.png';
+import tipsandtricks from './tipsandtricks.webp';
 
 
 export {
@@ -84,6 +85,7 @@ export {
     reportimg,
     essay30off3,
     casestudyimg,
-    whatsapp
+    whatsapp,
+    tipsandtricks
 
 }

@@ -2,10 +2,10 @@ const Homecontent = () => {
   return (
     <div className="container mx-auto px-3 sm:px-5  md:px-20 py-5 sm:py-10  md:py-20">
       <div className="container mx-auto items-center mb-4 max-w-6xl">
-        <h1 className="text-2xl md:text-3xl text-slate-800 font-semibold my-5 border-b-2 border-l-4 border-orange-600 p-2">
+        <h2 className="text-lg sm:text-2xl md:text-3xl text-slate-800 font-semibold my-5 border-b-2 border-l-4 border-orange-600 p-2">
           Most <span className="text-orange-600">Authentic</span> and <span className="text-orange-600">Trusted Criteria</span> to Hire Exceptional Essay Writers
-        </h1>
-        <p className="my-2">
+        </h2>
+        <p className="my-2 text-xs sm:text-sm md:text-base">
           Do you want to hire well-qualified and best essay writer for your
           assignment? Don’t worry; our best essay writing service in UK will
           provide you with the most effective and high-quality essay writing
@@ -14,7 +14,7 @@ const Homecontent = () => {
           your essay writing, we will provide you with a realistic solution to
           all of your essay writing demands.
         </p>
-        <p className="my-2">
+        <p className="my-2 text-xs sm:text-sm md:text-base">
           Students turn to us for assistance when they need it, and our best
           essay writer will make certain that each essay is prepared from and
           satisfies all standards for the greatest essay help. We strive to
@@ -22,13 +22,13 @@ const Homecontent = () => {
           mistakes in our writings. We ensure that the essay will be written by
           top and best essay writers in the relevant area.
         </p>
-        <p className="my-2">
+        <p className="my-2 text-xs sm:text-sm md:text-base">
           Our best essay writers are among the finest in the industry. They are
           familiar with all of the formatting standards for essay writing that
           academic institutions have, such as APA, MLA, Chicago, and other
           university-specific forms.
         </p>
-        <p className="my-2">
+        <p className="my-2 text-xs sm:text-sm md:text-base">
           To work with the greatest essay writers online, one does not need to
           think too much. Our best essay writing service in Uk makes every
           attempt to meet the needs of students who are writing essays. The
@@ -60,11 +60,11 @@ const Homecontent = () => {
 
 const ContentCard = ({ heading, content }) => {
   return (
-    <div className="border border-orange-800 rounded-3xl shadow-inner h-[320px] w-[500px] m-5 p-2 sm:p-5 ">
-      <h1 className="text-xl font-semibold m-3 text-orange-600 text-center">
+    <div className="border border-orange-800 rounded-3xl shadow-inner h-[300px] sm:h-[320px] w-[500px] m-5 p-2 sm:p-5 ">
+      <h2 className="text-xl font-semibold m-3 text-orange-600 text-center">
         {heading}
-      </h1>
-      <p className="flex text-justify">{content}</p>
+      </h2>
+      <p className="flex text-justify text-xs sm:text-sm md:text-base">{content}</p>
     </div>
   );
 };

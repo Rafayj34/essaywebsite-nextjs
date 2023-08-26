@@ -16,17 +16,15 @@ export function Hero() {
       <div className="relative mt-[-55px] w-full h-[900px] mx-auto shadow-lg bg-slate-100 shadow-slate-400 text-center flex flex-col justify-center object-contain">
         {/* Text Content */}
         <div className="z-10 sm:max-w-4xl lg:max-w-4xl 2xl:max-w-5xl  mt-32 text-left px-8 ">
-          <div className="text-orange-600 text-lg font-bold p-2">
-          BEST ESSAY WRITING SERVICE UK
-          </div>
+       
 
-          <h1 className="md:text-6xl sm:text-5xl text-4xl font-bold md:py-6 text-slate-700">
+          <h1 className="md:text-5xl sm:text-4xl text-3xl font-bold md:py-6 text-slate-700">
           The Top-Rated and Best Essay Writing Service in UK to achieve A+ grade<span className="text-orange-600">.</span>
           </h1>
           <div className="flex">
             <p className="md:text-4xl sm:text-3xl text-xl font-bold py-4 text-slate-700">
               <span className='text-slate-800'>Best place to get your</span>
-              <span className='text-orange-600'>
+              <p className='text-orange-600'>
                 <Typewriter
                   words={[" Essays", " Reports", " Dissertations", " Assignments"]}
                   loop={Infinity}
@@ -36,7 +34,7 @@ export function Hero() {
                   deleteSpeed={50}
                   delaySpeed={1000}
                 />
-              </span>
+              </p>
             </p>
           </div>
 

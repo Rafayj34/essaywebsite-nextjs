@@ -43,14 +43,14 @@ const Reviews = () => {
     };
     return (
       <div>
-        <div className="w-full h-[600px] mx-auto shadow-lg bg-slate-100 shadow-slate-400 text-center flex flex-col justify-center object-contain">
+        <div className="w-full h-[600px] mx-auto shadow-lg bg-slate-100 shadow-slate-400  flex flex-col justify-center object-contain">
           {/* Text Content */}
-          <div className="z-10  mt-32 text-center px-8 ">
-            <div className="text-orange-600 text-lg font-bold p-2">
+          <div className="z-10  mt-32 ">
+            <div className="text-center text-orange-600 text-lg font-bold p-2">
               What our clients say about us
             </div>
   
-            <h1 className="md:text-6xl sm:text-5xl text-4xl font-bold md:py-6 text-slate-700">
+            <h1 className="text-center md:text-5xl sm:text-4xl text-3xl font-bold md:py-6 text-slate-700">
               BESTESSAYWRITER REVIEWS<span className="text-orange-600">.</span>
             </h1>
           </div>
@@ -113,7 +113,7 @@ const Reviews = () => {
   };
   const Reviewcard = ({ userid, review, value, date }) => {
     return (
-      <div className="mt-8 min-w-lg w-[330px] mobile:w-[500px] sm:w-[650px] md:w-[750px] p-5 border-2 rounded-lg bg-slate-100 border-slate-800 shadow-lg">
+      <div className="mt-8 w-[310px] mobile:w-[500px] sm:w-[650px] md:w-[750px] p-5 border-2 rounded-lg bg-slate-100 border-slate-800 shadow-lg">
         <div className="flex flex-col mobile:flex-row mobile:items-start"> {/* Remove justifyContent */}
   
           <div className="flex-grow ms-5 mt-2 md:mt-0"> {/* Add margin-top to adjust alignment */}

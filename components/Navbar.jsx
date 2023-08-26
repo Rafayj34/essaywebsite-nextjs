@@ -86,13 +86,13 @@ const Navbar = () => {
           }`}
         >
           <Image src={logo} alt="logo" height={90} width={90} />
-          <div className="z-50 absolute right-10">
+          <div className=" absolute right-10">
             <Link
               href="http://wa.me/+447378489100"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <button className="flex bg-green-600 px-3 py-2 hover:bg-green-700 transition-all rounded-xl text-white items-center">
+              <button className="hidden sm:flex  bg-green-600 px-3 py-2 hover:bg-green-700 transition-all rounded-xl text-white items-center">
                 <Image
                   src={whatsapp}
                   alt="whatsapp"
@@ -117,7 +117,7 @@ const Navbar = () => {
             <ul className="flex  items-center justify-center">
               <li
                 className="font-poppins text-white font-semibold cursor-pointer text-[17px] hover:text-orange-600 transition-all rounded-lg  px-5"
-                onClick={() => setLiActive("Home")}
+               
               >
                 <button>
                   <Link href="/">Home</Link>
@@ -723,7 +723,6 @@ const Navbar = () => {
 
           {/* -------------------------------------------------------------------------------------------------------- */}
 
-          {/* Mobile Menu Button */}
           <div className="normal-screen:hidden flex mt-2 z-40 justify-end mx-3">
             <Image
               src={menu}
@@ -737,42 +736,31 @@ const Navbar = () => {
         <div
           className={`${
             sidebarToggle ? "sidebar-visible" : "sidebar-hidden"
-          } p-6 bg-gray-800 text-white  right-0 top-0 h-full w-[320px] fixed z-20 transition-all`}
+          } p-6 bg-gray-800 text-white  right-0 top-0 h-full w-full fixed z-20 transition-all`}
         >
-          {/* Close Button inside Sidebar */}
-          <div className="flex justify-end  mb-4">
-            <Image
-              src={close}
-              alt="Close menu"
-              className="w-[28px] h-[28px] object-contain cursor-pointer"
-              onClick={() => setSidebarToggle(!sidebarToggle)}
-            />
-          </div>
-
           <div className="flex">
             <div
               className={`${
                 sidebarToggle ? "sidebar-visible" : "sidebar-hidden"
-              } ps-6 bg-gray-800 text-white right-0 top-0 h-full w-[320px] fixed z-20 transition-all`}
+              } ps-6 bg-gray-800 text-white right-0 top-0 h-full w-full fixed z-20 transition-all`}
             >
               {/* Close Button inside Sidebar */}
-              <div className="flex justify-end mb-4">
+              <div className="flex justify-end mt-6 mr-6">
                 <Image
                   src={close}
                   alt="Close menu"
-                  className="w-[28px] h-[28px] object-contain cursor-pointer"
+                  width={28}
+                  height={28}
+                  className=" object-contain cursor-pointer"
                   onClick={() => setSidebarToggle(!sidebarToggle)}
                 />
               </div>
 
-              <div className="flex flex-col h-full overflow-y-auto">
+              <div className="justify-start items-start flex flex-col h-screen overflow-y-scroll">
                 <ul className="list-none mt-10 flex flex-col">
                   <li
-                    className={`font-poppins font-medium cursor-pointer text-[12px]   hover:text-orange-600 transition-all p-2 ${
-                      liActive === "Home" ? "text-white" : "text-dimWhite"
-                    } mb-4`}
+                    className={`font-poppins text-lg cursor-pointer text-[12px]   hover:text-orange-600 transition-all p-2 mb-4`}
                     onClick={() => {
-                      setLiActive("Home");
                       setSidebarToggle(false); // Close the sidebar when a link is clicked
                     }}
                   >
@@ -780,7 +768,7 @@ const Navbar = () => {
                   </li>
 
                   <li
-                    className={`font-poppins font-medium cursor-pointer text-[12px] hover:text-orange-600 transition-all p-2 ${
+                    className={`font-poppins text-lg cursor-pointer text-[12px] hover:text-orange-600 transition-all p-2 ${
                       liActive === "Services" ? "text-white" : "text-dimWhite"
                     } mb-4`}
                     onClick={() => {
@@ -810,7 +798,7 @@ const Navbar = () => {
                         {services.map((service) => (
                           <li
                             key={service.id}
-                            className={`font-poppins font-medium cursor-pointer text-[12px] p-2 ${
+                            className={`font-poppins text-lg cursor-pointer text-[12px] p-2 ${
                               liActive === service.name
                                 ? "text-white"
                                 : "text-dimWhite"
@@ -866,13 +854,17 @@ const Navbar = () => {
                             {liActive === service.name &&
                               subDropdownVisibility[service.name] &&
                               Object.keys(service.subMenuItems).length > 0 && (
-                                <ul className="space-y-2 mt-4 ml-4 sidebar-subdropdown ">
+                                <ul className="space-y-3 mt-4 ml-4 sidebar-subdropdown ">
                                   {Object.entries(service.subMenuItems).map(
                                     ([subServiceName, subServiceValue]) => (
                                       <li
                                         key={subServiceName}
                                         onClick={(e) => {
                                           e.stopPropagation();
+                                          typeof subServiceValue !== "object"
+                                            ? setSidebarToggle(false)
+                                            : "";
+
                                           setNestedDropdownVisibility(
                                             (prevState) => ({
                                               ...prevState,
@@ -934,6 +926,7 @@ const Navbar = () => {
                                                     key={nestedSubServiceName}
                                                     onClick={(e) => {
                                                       e.stopPropagation();
+                                                      setSidebarToggle(false);
                                                       setNestedDropdownVisibility(
                                                         (prevState) => ({
                                                           ...prevState,
@@ -969,40 +962,40 @@ const Navbar = () => {
                   )}
 
                   <li
-                    className={`font-poppins font-medium cursor-pointer text-[12px] hover:text-orange-600 transition-all p-2 ${
+                    className={`font-poppins text-lg cursor-pointer text-[12px] hover:text-orange-600 transition-all p-2 ${
                       liActive === "Reviews" ? "text-white" : "text-dimWhite"
                     } mb-4`}
                     onClick={() => {
-                      setLiActive("Reviews");
+                      setSidebarToggle(false);
                     }}
                   >
-                    <Link href="/review" className="flex items-center">
+                    <Link href="/reviews" className="flex items-center">
                       Reviews
                     </Link>
                   </li>
 
                   <li
-                    className={`font-poppins font-medium cursor-pointer text-[12px] hover:text-orange-600 transition-all p-2 ${
+                    className={`font-poppins text-lg cursor-pointer text-[12px] hover:text-orange-600 transition-all p-2 ${
                       liActive === "Blogs" ? "text-white" : "text-dimWhite"
                     } mb-4`}
                     onClick={() => {
-                      setLiActive("Blogs");
+                      setSidebarToggle(false);
                     }}
                   >
-                    <Link href="#Blogs" className="flex items-center">
+                    <Link href="/blog" className="flex items-center">
                       Blogs
                     </Link>
                   </li>
 
                   <li
-                    className={`font-poppins font-medium cursor-pointer text-[12px]   hover:text-orange-600 transition-all p-2 ${
+                    className={`font-poppins text-lg cursor-pointer text-[12px]   hover:text-orange-600 transition-all p-2 ${
                       liActive === "About us" ? "text-white" : "text-dimWhite"
                     } mb-4`}
                     onClick={() => {
-                      setLiActive("Contact us");
+                      setSidebarToggle(false);
                     }}
                   >
-                    <Link href="#contactus">Contact us</Link>
+                    <Link href="/contact">Contact us</Link>
                   </li>
                 </ul>
               </div>

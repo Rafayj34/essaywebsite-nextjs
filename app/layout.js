@@ -1,7 +1,6 @@
 import Navbar from "@/components/Navbar";
 import dynamic from "next/dynamic";
 import { Footer } from "@/components/Footer";
-// import TawkToMessenger from "@/components/Tawkto";
 import { Poppins } from "next/font/google";
 import Whatsapp from "@/components/Whatsapp";
 import "./globals.css";
@@ -32,13 +31,13 @@ export const metadata = {
     ],
     locale: 'en_US',
     type: 'article',
-    url: 'https://bestessaywriters/essay-editing-service/'
+    url: 'https://bestessaywriters.co.uk/'
   },
   robots: {
     index: true,
     follow: true,
     googleBot: {
-      index: true,
+      index: false,
       follow: false,
       noimageindex: true,
       'max-video-preview': -1,
@@ -57,6 +56,7 @@ export const metadata = {
     data1: "8 minutes",
   },
 };
+
 export default function RootLayout({ children }) {
   return (
     <html lang="en">

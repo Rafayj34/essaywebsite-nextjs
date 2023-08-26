@@ -7,7 +7,7 @@ function BlogPost({ content }) {
   
   return (
     <div className="container mt-10">
-      <h1 className="text-3xl font-semibold mb-4">{content.title}</h1>
+      <h2 className="text-3xl font-semibold mb-4">{content.title}</h2>
       <div dangerouslySetInnerHTML={{ __html: content.content }} />
     </div>
   );

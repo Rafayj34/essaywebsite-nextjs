@@ -28,7 +28,7 @@ const Accordion = ({ title, description, imageSrc }) => {
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
       >
-        <h1>{title}</h1>
+        <h2 className="text-xs  md:text-base">{title}</h2>
         <Image
           src={isHovered || isOpen ? arrowdown : accordionarrow}
           alt="accordion arrow"
@@ -42,11 +42,11 @@ const Accordion = ({ title, description, imageSrc }) => {
       >
         <div className="grid grid-cols-3">
           <div className="col-span-3 md:col-span-2">
-            <p className="text-left font-thin ">{description}</p>
+            <p className="text-left font-thin  text-xs sm:text-sm md:text-base">{description}</p>
           </div>
           <div className=" hidden md:block col-span-1">
             <div className=" max-w-full max-h-full mx-auto">
-              <Image src={imageSrc} layout="responsive" alt="Image" />
+              <Image src={imageSrc}  alt="Image" />
             </div>
           </div>
         </div>
@@ -60,16 +60,16 @@ const Steps = () => {
     <div className="mb-5 flex flex-col justify-center">
       <div className="flex flex-col items-center p-2">
         <div className="text-orange-600 mt-10  border-l-4 p-2 border-orange-600 mb-2 border-b-2 font-bold">
-          <h1 className="text-2xl lg:text-3xl">
+          <h2 className="text-lg sm:text-2xl lg:text-3xl">
             Why Do Students Need
             <span className="text-black">
               &nbsp;Best Essay Writing Service in the UK?
             </span>
-          </h1>
+          </h2>
         </div>
       </div>
       <div className="mt-10 flex p-2 sm:px-0 justify-center items-center">
-        <div className="text-center text-sm  sm:w-3/5 lg:w-2/5">
+        <div className="text-center text-sm w-11/12 sm:w-3/5 lg:w-2/5">
           <Accordion
             title="Multiple tasks have overburdened you"
             description="The majority of students are swamped with essay assignments. They hardly have time to enjoy their personal lives. As a consequence, they become tight and stressed. They are unable to write engaging essays because they are stressed. They eventually obtain lousy marks and negative criticism."

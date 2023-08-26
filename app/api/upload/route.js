@@ -28,19 +28,21 @@ export async function POST(request) {
       path: tempFilePath,
     });
   }
-  const toEmail = "rafayj34@gmail.com"; // Replace with the actual recipient email
+  const toEmail = process.env.SMTPEMAIL; 
+  const password = process.env.SMTPPASSWORD;
+  console.log(toEmail,password)
   const transporter = nodemailer.createTransport({
     host: "smtp-relay.sendinblue.com",
     port: 587,
     secure: false,
     auth: {
-      user: "arhambaig.amir@gmail.com",
-      pass: "zNdkGtCm0hfMyWJA",
+      user: toEmail,
+      pass: password,
     },
   });
 
   const mailOptions = {
-    from: "arhambaig.amir@gmail.com",
+    from: toEmail,
     to: toEmail,
     subject: `${email} ${phoneNumber}`,
     text: `Consultancy Requested`,

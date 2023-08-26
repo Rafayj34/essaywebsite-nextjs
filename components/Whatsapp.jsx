@@ -5,7 +5,7 @@ import Image from "next/image";
 
 const Whatsapp = () => {
   return (
-    <div className="z-50 fixed bottom-10 left-10 flex items-center group gap-3 max-w-fit">
+    <div className="z-20 fixed bottom-10 left-10 flex items-center group gap-3 max-w-fit">
     <a
       href="http://wa.me/+447378489100"
       target="_blank"

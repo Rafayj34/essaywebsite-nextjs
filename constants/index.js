@@ -32,7 +32,7 @@ export const services = [
   {
     id: 1,
     name: "Essay",
-    subMenuItems: {"Essay Editing":"/essay-editing-service", "Buy an Essay":"/essay-editing-service", "Nursing Essay":"/nursing-essay-writing-service","Master's Essay":"/masters-essay-writing-service", "Law Essay":"/best-law-essay-writing-service-uk", "MBA Essay":"/mba-essay-writing-service", "University Essay":"/", "Write My Essay":"/","Make My Essay":"/","Do My Essay":"/","Narrative Essay":"/","Argumentative Essay":"/","Expository Essay":"/","Descriptive Essay":"/","Custom Essay":"/", "Admission Essay":"/","Urgent Essay":"/","Critical Essay":"/","Scholarship Essay":"/","Student Essay":"/","Persuasive Essay":"/","Process Essay":"/","Literature Essay":"/","Informal Essay":"/","Classification Essay":"/", "Cause and Effect Essay":"/","Compare and Contrast Essay":"/"},
+    subMenuItems: {"Essay Editing":"/essay-editing-service", "Buy an Essay":"/buy-an-essay", "Nursing Essay":"/nursing-essay-writing-service","Master's Essay":"/masters-essay-writing-service", "Law Essay":"/best-law-essay-writing-service-uk", "MBA Essay":"/mba-essay-writing-service", "University Essay":"/", "Write My Essay":"/","Make My Essay":"/","Do My Essay":"/","Narrative Essay":"/","Argumentative Essay":"/","Expository Essay":"/","Descriptive Essay":"/","Custom Essay":"/", "Admission Essay":"/","Urgent Essay":"/","Critical Essay":"/","Scholarship Essay":"/","Student Essay":"/","Persuasive Essay":"/","Process Essay":"/","Literature Essay":"/","Informal Essay":"/","Classification Essay":"/", "Cause and Effect Essay":"/","Compare and Contrast Essay":"/"},
     url: "#"
   },
   {
@@ -247,7 +247,7 @@ export const contentData = [
           publishedTime: '2023-08-08T00:00:00.000Z',
     authors: "https://www.facebook.com/bestessaywriter.co.uk",
       site_name: "Best Essay Writer",
-      url: 'https://scriptersltd.com/bestessaywriters/essay-editing-service/',
+      url: 'https://bestessaywriters.co.uk/essay-editing-service/',
       images: [
         {
           url: 'https://scriptersltd.com/bestessaywriters/wp-content/uploads/2023/02/Get-Essay-Editing-Service.jpg',
@@ -274,7 +274,7 @@ export const contentData = [
           publishedTime: '2023-08-08T00:00:00.000Z',
     authors: "https://www.facebook.com/bestessaywriter.co.uk",
       site_name: "Best Essay Writer",
-      url: 'https://scriptersltd.com/bestessaywriters/buy-an-essay/',
+      url: 'https://bestessaywriters.co.uk/buy-an-essay/',
       images: [
         {
           url: 'https://scriptersltd.com/bestessaywriters/wp-content/uploads/2023/02/Buy-an-Essay-Online-with-Top-Rated-Exprts.jpg',
@@ -301,7 +301,7 @@ export const contentData = [
           publishedTime: '2023-08-08T00:00:00.000Z',
     authors: "https://www.facebook.com/bestessaywriter.co.uk",
       site_name: "Best Essay Writer",
-      url: 'https://scriptersltd.com/bestessaywriters/nursing-essay-writing-service/',
+      url: 'https://bestessaywriters.co.uk/nursing-essay-writing-service/',
       images: [
         {
           url: 'https://scriptersltd.com/bestessaywriters/wp-content/uploads/2023/02/Nursing-Essay-Writing-Service.jpg',
@@ -328,7 +328,7 @@ export const contentData = [
           publishedTime: '2023-08-08T00:00:00.000Z',
     authors: "https://www.facebook.com/bestessaywriter.co.uk",
       site_name: "Best Essay Writer",
-      url: 'https://scriptersltd.com/bestessaywriters/masters-essay-writing-service/',
+      url: 'https://bestessaywriters.co.uk/masters-essay-writing-service/',
       images: [
         {
           url: 'https://scriptersltd.com/bestessaywriters/wp-content/uploads/2023/02/Avail-30-OFF-best-essay-writer-1024x256.jpg',
@@ -355,7 +355,7 @@ export const contentData = [
           publishedTime: '2023-08-08T00:00:00.000Z',
     authors: "https://www.facebook.com/bestessaywriter.co.uk",
       site_name: "Best Essay Writer",
-      url: 'https://scriptersltd.com/bestessaywriters/masters-essay-writing-service/',
+      url: 'https://bestessaywriters.co.uk/masters-essay-writing-service/',
       images: [
         {
           url: 'https://scriptersltd.com/bestessaywriters/wp-content/uploads/2022/09/Law-Essay-Help.jpg',
@@ -382,7 +382,7 @@ export const contentData = [
           publishedTime: '2023-08-08T00:00:00.000Z',
     authors: "https://www.facebook.com/bestessaywriter.co.uk",
       site_name: "Best Essay Writer",
-      url: 'https://scriptersltd.com/bestessaywriters/mba-essay-writing-service/',
+      url: 'https://bestessaywriters.co.uk/mba-essay-writing-service/',
       images: [
         {
           url: 'https://scriptersltd.com/bestessaywriters/wp-content/uploads/2022/12/big-discount-offer-1024x256.jpg',
@@ -409,7 +409,7 @@ export const contentData = [
           publishedTime: '2023-08-08T00:00:00.000Z',
     authors: "https://www.facebook.com/bestessaywriter.co.uk",
       site_name: "Best Essay Writer",
-      url: 'https://scriptersltd.com/bestessaywriters/best-proofreading-service/',
+      url: 'https://bestessaywriters.co.uk/best-proofreading-service/',
       images: [
         {
           url: 'https://scriptersltd.com/bestessaywriters/wp-content/uploads/2022/02/Best-Proofreading-Service.jpg',
@@ -436,7 +436,7 @@ export const contentData = [
           publishedTime: '2023-08-08T00:00:00.000Z',
     authors: "https://www.facebook.com/bestessaywriter.co.uk",
       site_name: "Best Essay Writer",
-      url: 'https://scriptersltd.com/bestessaywriters/academic-referencing-styles/',
+      url: 'https://bestessaywriters.co.uk/academic-referencing-styles/',
       images: [
         {
           url: 'https://scriptersltd.com/bestessaywriters/wp-content/uploads/2022/03/Academic-Referencing-Styles.jpg',
@@ -463,7 +463,7 @@ export const contentData = [
           publishedTime: '2023-08-08T00:00:00.000Z',
     authors: "https://www.facebook.com/bestessaywriter.co.uk",
       site_name: "Best Essay Writer",
-      url: 'https://scriptersltd.com/bestessaywriters/phd-thesis-writing/',
+      url: 'https://bestessaywriters.co.uk/phd-thesis-writing/',
       images: [
         {
           url: 'https://scriptersltd.com/bestessaywriters/wp-content/uploads/2023/03/Dr-Hazel-proifle-she-is-phd-in-philosophy-in-nursing.jpg',
@@ -490,7 +490,7 @@ export const contentData = [
           publishedTime: '2023-08-08T00:00:00.000Z',
     authors: "https://www.facebook.com/bestessaywriter.co.uk",
       site_name: "Best Essay Writer",
-      url: 'https://scriptersltd.com/bestessaywriters/term-paper-writing/',
+      url: 'https://bestessaywriters.co.uk/term-paper-writing/',
       images: [
         {
           url: 'https://scriptersltd.com/bestessaywriters/wp-content/uploads/2022/04/Term-Paper-Writing.jpg',
@@ -517,7 +517,7 @@ export const contentData = [
           publishedTime: '2023-08-08T00:00:00.000Z',
     authors: "https://www.facebook.com/bestessaywriter.co.uk",
       site_name: "Best Essay Writer",
-      url: 'https://scriptersltd.com/bestessaywriters/best-report-writing-service/',
+      url: 'https://bestessaywriters.co.uk/best-report-writing-service/',
       images: [
         {
           url: 'https://scriptersltd.com/bestessaywriters/wp-content/uploads/2022/02/Best-Report-Writing-Service.jpg',
@@ -544,7 +544,7 @@ export const contentData = [
           publishedTime: '2023-08-08T00:00:00.000Z',
     authors: "https://www.facebook.com/bestessaywriter.co.uk",
       site_name: "Best Essay Writer",
-      url: 'https://scriptersltd.com/bestessaywriters/best-dissertation-writing-service/',
+      url: 'https://bestessaywriters.co.uk/best-dissertation-writing-service/',
       images: [
         {
           url: 'https://scriptersltd.com/bestessaywriters/wp-content/uploads/2022/02/Best-Dissertation-Writing-Service.jpg',
@@ -571,7 +571,7 @@ export const contentData = [
           publishedTime: '2023-08-08T00:00:00.000Z',
     authors: "https://www.facebook.com/bestessaywriter.co.uk",
       site_name: "Best Essay Writer",
-      url: 'https://scriptersltd.com/bestessaywriters/best-coursework-writing-service/',
+      url: 'https://bestessaywriters.co.uk/best-coursework-writing-service/',
       images: [
         {
           url: 'https://scriptersltd.com/bestessaywriters/wp-content/uploads/2022/02/Best-Coursework-Writing-Service.jpg',
@@ -598,7 +598,7 @@ export const contentData = [
           publishedTime: '2023-08-08T00:00:00.000Z',
     authors: "https://www.facebook.com/bestessaywriter.co.uk",
       site_name: "Best Essay Writer",
-      url: 'https://scriptersltd.com/bestessaywriters/best-case-study-writing-service/',
+      url: 'https://bestessaywriters.co.uk/best-case-study-writing-service/',
       images: [
         {
           url: 'https://scriptersltd.com/bestessaywriters/wp-content/uploads/2022/02/Best-Case-Study-Writing-Service.jpg',
@@ -625,7 +625,7 @@ export const contentData = [
           publishedTime: '2023-08-08T00:00:00.000Z',
     authors: "https://www.facebook.com/bestessaywriter.co.uk",
       site_name: "Best Essay Writer",
-      url: 'https://scriptersltd.com/bestessaywriters/best-assignment-writing-service/',
+      url: 'https://bestessaywriters.co.uk/best-assignment-writing-service/',
       images: [
         {
           url: 'https://scriptersltd.com/bestessaywriters/wp-content/uploads/2022/02/Best-Assignment-Writing-Service.jpg',
@@ -652,7 +652,7 @@ export const contentData = [
           publishedTime: '2023-08-08T00:00:00.000Z',
     authors: "https://www.facebook.com/bestessaywriter.co.uk",
       site_name: "Best Essay Writer",
-      url: 'https://scriptersltd.com/bestessaywriters/cookery-assignment-help/',
+      url: 'https://bestessaywriters.co.uk/cookery-assignment-help/',
       images: [
         {
           url: 'https://scriptersltd.com/bestessaywriters/wp-content/uploads/2023/02/Cookery-Assignment-Help.webp',
@@ -679,7 +679,7 @@ export const contentData = [
           publishedTime: '2023-08-08T00:00:00.000Z',
     authors: "https://www.facebook.com/bestessaywriter.co.uk",
       site_name: "Best Essay Writer",
-      url: 'https://scriptersltd.com/bestessaywriters/managerial-economics-assignment-help/',
+      url: 'https://bestessaywriters.co.uk/managerial-economics-assignment-help/',
       images: [
         {
           url: 'https://scriptersltd.com/bestessaywriters/wp-content/uploads/2023/02/big-discount-offer-1024x256.jpg',
@@ -706,7 +706,7 @@ export const contentData = [
           publishedTime: '2023-08-08T00:00:00.000Z',
     authors: "https://www.facebook.com/bestessaywriter.co.uk",
       site_name: "Best Essay Writer",
-      url: 'https://scriptersltd.com/bestessaywriters/managerial-accounting-assignment-help/',
+      url: 'https://bestessaywriters.co.uk/managerial-accounting-assignment-help/',
       images: [
         {
           url: 'https://scriptersltd.com/bestessaywriters/wp-content/uploads/2023/02/offer-banner-with-a-writing-art-Managerial-Accounting-Assignment-Help.jpg',
@@ -733,7 +733,7 @@ export const contentData = [
           publishedTime: '2023-08-08T00:00:00.000Z',
     authors: "https://www.facebook.com/bestessaywriter.co.uk",
       site_name: "Best Essay Writer",
-      url: 'https://scriptersltd.com/bestessaywriters/administrative-law-assignment-help/',
+      url: 'https://bestessaywriters.co.uk/administrative-law-assignment-help/',
       images: [
         {
           url: 'https://scriptersltd.com/bestessaywriters/wp-content/uploads/2023/02/Administrative-Law-Assignment-Help-and-writing-service.jpg',
@@ -760,7 +760,7 @@ export const contentData = [
           publishedTime: '2023-08-08T00:00:00.000Z',
     authors: "https://www.facebook.com/bestessaywriter.co.uk",
       site_name: "Best Essay Writer",
-      url: 'https://scriptersltd.com/bestessaywriters/property-law-assignment-help/',
+      url: 'https://bestessaywriters.co.uk/property-law-assignment-help/',
       images: [
         {
           url: 'https://scriptersltd.com/bestessaywriters/wp-content/uploads/2023/02/Property-Law-Assignment-Help.jpg',
@@ -787,7 +787,7 @@ export const contentData = [
           publishedTime: '2023-08-08T00:00:00.000Z',
     authors: "https://www.facebook.com/bestessaywriter.co.uk",
       site_name: "Best Essay Writer",
-      url: 'https://scriptersltd.com/bestessaywriters/constitutional-law-assignment-help/',
+      url: 'https://bestessaywriters.co.uk/constitutional-law-assignment-help/',
       images: [
         {
           url: 'https://scriptersltd.com/bestessaywriters/wp-content/uploads/2023/02/Constitutional-Law-Assignment-Help.jpg',
@@ -814,7 +814,7 @@ export const contentData = [
           publishedTime: '2023-08-08T00:00:00.000Z',
     authors: "https://www.facebook.com/bestessaywriter.co.uk",
       site_name: "Best Essay Writer",
-      url: 'https://scriptersltd.com/bestessaywriters/criminal-law-assignment-help/',
+      url: 'https://bestessaywriters.co.uk/criminal-law-assignment-help/',
       images: [
         {
           url: 'https://scriptersltd.com/bestessaywriters/wp-content/uploads/2023/02/Criminal-Law-Assignment-Help.jpg',
@@ -841,7 +841,7 @@ export const contentData = [
           publishedTime: '2023-08-08T00:00:00.000Z',
     authors: "https://www.facebook.com/bestessaywriter.co.uk",
       site_name: "Best Essay Writer",
-      url: 'https://scriptersltd.com/bestessaywriters/human-right-law-assignment-help/',
+      url: 'https://bestessaywriters.co.uk/human-right-law-assignment-help/',
       images: [
         {
           url: 'https://scriptersltd.com/bestessaywriters/wp-content/uploads/2022/12/Dr.-Henry-1024x256.jpg',
@@ -868,7 +868,7 @@ export const contentData = [
           publishedTime: '2023-08-08T00:00:00.000Z',
     authors: "https://www.facebook.com/bestessaywriter.co.uk",
       site_name: "Best Essay Writer",
-      url: 'https://scriptersltd.com/bestessaywriters/civil-law-assignment-help/',
+      url: 'https://bestessaywriters.co.uk/civil-law-assignment-help/',
       images: [
         {
           url: 'https://scriptersltd.com/bestessaywriters/wp-content/uploads/2022/12/Dr.-Henry-1024x256.jpg',
@@ -895,7 +895,7 @@ export const contentData = [
       publishedTime: '2023-08-08T00:00:00.000Z',
       authors: "https://www.facebook.com/bestessaywriter.co.uk",
       site_name: "Best Essay Writer",
-      url: 'https://scriptersltd.com/bestessaywriters/tort-law-assignment-help/',
+      url: 'https://bestessaywriters.co.uk/tort-law-assignment-help/',
       images: [
         {
           url: 'https://scriptersltd.com/bestessaywriters/wp-content/uploads/2023/02/Tort-Law-Assignment-Help.jpg',
@@ -922,7 +922,7 @@ export const contentData = [
           publishedTime: '2023-08-08T00:00:00.000Z',
     authors: "https://www.facebook.com/bestessaywriter.co.uk",
       site_name: "Best Essay Writer",
-      url: 'https://scriptersltd.com/bestessaywriters/law-assignment-help/',
+      url: 'https://bestessaywriters.co.uk/law-assignment-help/',
       images: [
         {
           url: 'https://scriptersltd.com/bestessaywriters/wp-content/uploads/2023/02/law-Assignment-Help.jpg',
@@ -949,10 +949,226 @@ export const contentData = [
           publishedTime: '2023-08-08T00:00:00.000Z',
     authors: "https://www.facebook.com/bestessaywriter.co.uk",
       site_name: "Best Essay Writer",
-      url: 'https://scriptersltd.com/bestessaywriters/management-assignment-help/',
+      url: 'https://bestessaywriters.co.uk/management-assignment-help/',
       images: [
         {
           url: 'https://scriptersltd.com/bestessaywriters/wp-content/uploads/2023/02/law-Assignment-Help.jpg',
+          width: 1200,
+          height: 628,
+          type: 'image/jpeg'
+        }
+      ],
+    },
+  },
+  {
+    slug: 'university-essay-writing-help',
+    path: '/university-essay-writing-help',
+    title: "Avail High Quality University Essay Writing Help | Best Essay Writer",
+    description:"Our Top Notch Essay Writers provide university essay writing help to students with 110% satisfaction. Our Experts are available 24*7 Live.",
+    image: logo2,
+    alt: 'main image for content section',
+    last_modified: '23/8/2023',
+    openGraph: {
+      title:"Avail High Quality University Essay Writing Help | Best Essay Writer",
+      description: "Our Top Notch Essay Writers provide university essay writing help to students with 110% satisfaction. Our Experts are available 24*7 Live.",
+      locale: 'en_US',
+      type: 'article',
+          publishedTime: '2023-08-08T00:00:00.000Z',
+    authors: "https://www.facebook.com/bestessaywriter.co.uk",
+      site_name: "Best Essay Writer",
+      url: 'https://bestessaywriters.co.uk/wp-content/uploads/2023/02/Get-the-top-class-University-Essay-Writing-Help.jpg',
+      images: [
+        {
+          url: 'https://scriptersltd.com/bestessaywriters/wp-content/uploads/2023/02/law-Assignment-Help.jpg',
+          width: 1950,
+          height: 942,
+          type: 'image/jpeg'
+        }
+      ],
+    },
+  },
+  {
+    slug: 'write-my-essay-for-me',
+    path: '/write-my-essay-for-me',
+    title: "Write My Essay for Me | Get the Best Essay Help with @30% OFF",
+    description:"Looking for exclusive help with essay writing? Get an A+ in every subject with our &quot;write my essay for me&quot; service. Our certified writers provide affordably.",
+    image: logo2,
+    alt: 'main image for content section',
+    last_modified: '23/8/2023',
+    openGraph: {
+      title:"Write My Essay for Me | Get the Best Essay Help with @30% OFF",
+      description: "Looking for exclusive help with essay writing? Get an A+ in every subject with our &quot;write my essay for me&quot; service. Our certified writers provide affordably.",
+      locale: 'en_US',
+      type: 'article',
+          publishedTime: '2023-08-08T00:00:00.000Z',
+    authors: "https://www.facebook.com/bestessaywriter.co.uk",
+      site_name: "Best Essay Writer",
+      url: 'https://bestessaywriters.co.uk/write-my-essay-for-me/',
+      images: [
+        {
+          url: 'https://scriptersltd.com/bestessaywriters/wp-content/uploads/2023/02/Write-my-essay-for-me.jpg',
+          width: 1300,
+          height: 628,
+          type: 'image/jpeg'
+        }
+      ],
+    },
+  },
+  {
+    slug: 'make-my-essay',
+    path: '/make-my-essay',
+    title: "Can anyone Make My Essay for me UK | Best Essay Writer",
+    description:"Get expert 'make my essay' help from Best Essay Writer UK - top-notch online writing service offering essay, dissertation, research paper, and assignment writing help.",
+    image: logo2,
+    alt: 'main image for content section',
+    last_modified: '23/8/2023',
+    openGraph: {
+      title:"Can anyone Make My Essay for me UK | Best Essay Writer",
+      description: "Get expert 'make my essay' help from Best Essay Writer UK - top-notch online writing service offering essay, dissertation, research paper, and assignment writing help.",
+      locale: 'en_US',
+      type: 'article',
+          publishedTime: '2023-08-08T00:00:00.000Z',
+    authors: "https://www.facebook.com/bestessaywriter.co.uk",
+      site_name: "Best Essay Writer",
+      url: 'https://bestessaywriters.co.uk/make-my-essay/',
+      images: [
+        {
+          url: 'https://scriptersltd.com/bestessaywriters/wp-content/uploads/2023/02/Make-my-essay.jpg',
+          width: 1300,
+          height: 628,
+          type: 'image/jpeg'
+        }
+      ],
+    },
+  },
+  {
+    slug: 'do-my-essay-for-me',
+    path: '/do-my-essay-for-me',
+    title: "Get Fast Essay Writing with Our Affordable Do My Essay for Me Service | Best Essay Writer",
+    description:"Looking for affordable essay-writing services? Best Essay Writer UK offers &quot;do my essay for me&quot; services worldwide. Our experts are qualified and available 24*7 Live.",
+    image: logo2,
+    alt: 'main image for content section',
+    last_modified: '23/8/2023',
+    openGraph: {
+      title:"Get Fast Essay Writing with Our Affordable Do My Essay for Me Service | Best Essay Writer",
+      description: "Looking for affordable essay-writing services? Best Essay Writer UK offers &quot;do my essay for me&quot; services worldwide. Our experts are qualified and available 24*7 Live.",
+      locale: 'en_US',
+      type: 'article',
+          publishedTime: '2023-08-08T00:00:00.000Z',
+    authors: "https://www.facebook.com/bestessaywriter.co.uk",
+      site_name: "Best Essay Writer",
+      url: 'https://bestessaywriters.co.uk/do-my-essay-for-me/',
+      images: [
+        {
+          url: 'https://scriptersltd.com/bestessaywriters/wp-content/uploads/2023/02/Get-Fast-Essay-Writing-with-Our-Affordable-Do-My-Essay-for-Me-Service.jpg',
+          width: 1200,
+          height: 628,
+          type: 'image/jpeg'
+        }
+      ],
+    },
+  },
+  {
+    slug: 'narrative-essay-writing-help',
+    path: '/narrative-essay-writing-help',
+    title: "Top Narrative Essay Writing Help in the UK by UK Native Experts | Best Essay Writer",
+    description:"Need Top Narrative Essay Writing Help in the UK? So you are at the right place. We have a team of Ph.D. experts who help the students 24/7.",
+    image: logo2,
+    alt: 'main image for content section',
+    last_modified: '23/8/2023',
+    openGraph: {
+      title:"Top Narrative Essay Writing Help in the UK by UK Native Experts | Best Essay Writer",
+      description: "Need Top Narrative Essay Writing Help in the UK? So you are at the right place. We have a team of Ph.D. experts who help the students 24/7.",
+      locale: 'en_US',
+      type: 'article',
+          publishedTime: '2023-08-08T00:00:00.000Z',
+    authors: "https://www.facebook.com/bestessaywriter.co.uk",
+      site_name: "Best Essay Writer",
+      url: 'https://bestessaywriters.co.uk/narrative-essay-writing-help/',
+      images: [
+        {
+          url: 'https://scriptersltd.com/bestessaywriters/wp-content/uploads/2022/08/Narrative-Essay-Writing-Help.jpg',
+          width: 1200,
+          height: 628,
+          type: 'image/jpeg'
+        }
+      ],
+    },
+  },
+  {
+    slug: 'argumentative-essay-writing-service',
+    path: '/argumentative-essay-writing-service',
+    title: "Get Argumentative Essay Writing Service UK to be Done your Task | Best Essay Writer",
+    description:"Want to Get an Argumentative Essay Writing Service in the UK? We offer all your academic essay help. 24/7 Support 1000+ top-notch Experts.",
+    image: logo2,
+    alt: 'main image for content section',
+    last_modified: '23/8/2023',
+    openGraph: {
+      title:"Get Argumentative Essay Writing Service UK to be Done your Task | Best Essay Writer",
+      description: "Want to Get an Argumentative Essay Writing Service in the UK? We offer all your academic essay help. 24/7 Support 1000+ top-notch Experts.",
+      locale: 'en_US',
+      type: 'article',
+          publishedTime: '2023-08-08T00:00:00.000Z',
+    authors: "https://www.facebook.com/bestessaywriter.co.uk",
+      site_name: "Best Essay Writer",
+      url: 'https://bestessaywriters.co.uk/argumentative-essay-writing-help/',
+      images: [
+        {
+          url: 'https://scriptersltd.com/bestessaywriters/wp-content/uploads/2021/11/Argumentative-Essay-Writing-Service.jpg',
+          width: 1200,
+          height: 628,
+          type: 'image/jpeg'
+        }
+      ],
+    },
+  },
+  {
+    slug: 'descriptive-essay-writing-help',
+    path: '/expository-essay-writing-service',
+    title: "Trusted Expostory Essay Writing Service UK | Best Essay Writer",
+    description:"Need help with expository essay writing? Our service can assist you! We offer expository essay writing services to help you write a well-structured and informative essay.",
+    image: logo2,
+    alt: 'main image for content section',
+    last_modified: '23/8/2023',
+    openGraph: {
+      title:"Trusted Expostory Essay Writing Service UK | Best Essay Writer",
+      description: "Need help with expository essay writing? Our service can assist you! We offer expository essay writing services to help you write a well-structured and informative essay.",
+      locale: 'en_US',
+      type: 'article',
+          publishedTime: '2023-08-08T00:00:00.000Z',
+    authors: "https://www.facebook.com/bestessaywriter.co.uk",
+      site_name: "Best Essay Writer",
+      url: 'https://bestessaywriters.co.uk/expository-essay-writing-help/',
+      images: [
+        {
+          url: 'https://scriptersltd.com/bestessaywriters/wp-content/uploads/2022/09/Expository-Essay-Writing-Service.jpg',
+          width: 1200,
+          height: 628,
+          type: 'image/jpeg'
+        }
+      ],
+    },
+  },
+  {
+    slug: 'expository-essay-writing-service',
+    path: '/expository-essay-writing-service',
+    title: "Trusted Expostory Essay Writing Service UK | Best Essay Writer",
+    description:"Need help with expository essay writing? Our service can assist you! We offer expository essay writing services to help you write a well-structured and informative essay.",
+    image: logo2,
+    alt: 'main image for content section',
+    last_modified: '23/8/2023',
+    openGraph: {
+      title:"Trusted Expostory Essay Writing Service UK | Best Essay Writer",
+      description: "Need help with expository essay writing? Our service can assist you! We offer expository essay writing services to help you write a well-structured and informative essay.",
+      locale: 'en_US',
+      type: 'article',
+          publishedTime: '2023-08-08T00:00:00.000Z',
+    authors: "https://www.facebook.com/bestessaywriter.co.uk",
+      site_name: "Best Essay Writer",
+      url: 'https://bestessaywriters.co.uk/expository-essay-writing-help/',
+      images: [
+        {
+          url: 'https://scriptersltd.com/bestessaywriters/wp-content/uploads/2022/09/Expository-Essay-Writing-Service.jpg',
           width: 1200,
           height: 628,
           type: 'image/jpeg'

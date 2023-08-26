@@ -5,9 +5,9 @@ import { feedback, sitejabber, trustpilot, stars } from '@/public/assets';
 const Feedback = () => {
   return (
     <div className="flex flex-col items-center mt-4">
-      <h1 className="text-3xl md:text-4xl border-b-4  border-orange-600 border-r-2 text-center  font-bold p-2 shadow-md">
+      <h2 className="text-3xl md:text-4xl border-b-4  border-orange-600 border-r-2 text-center  font-bold p-2 shadow-md">
         Trust is<span className="text-orange-600">&nbsp;our win</span>
-      </h1>
+      </h2>
       <div className="flex flex-col lg:flex-row justify-center md:justify-start gap-6">
         <div className='flex gap-6 justify-center'>
         <div className=" max-h-64 md:mt-32   bg-white p-6 rounded-lg shadow-md  hover:-translate-y-1 hover:ring-2 hover:ring-orange-600 hover:shadow-orange-600 transition-transform duration-300 relative ">

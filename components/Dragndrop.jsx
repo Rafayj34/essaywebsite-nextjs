@@ -229,9 +229,9 @@ export const Dragndrop = () => {
       </div>
 
       <div className="flex flex-col items-center mx-auto w-fit m-2 p-2">
-        <h1 className="text-center text-2xl md:text-3xl lg:text-4xl font-bold text-gray-800 mb-4">
+        <h2 className="text-center text-2xl md:text-3xl lg:text-4xl font-bold text-gray-800 mb-4">
           Upload your task sheet and get a free <span className="text-orange-600">Consultation</span>.
-        </h1>
+        </h2>
         <div
           {...getRootProps({ style })}
           className="p-20 :w-full h-[300px] lg:w-[500px] lg:h-[400px] xl:w-[600px] xl:h-[450px] border-4 border-dashed border-gray-400 rounded-lg flex items-center justify-center "
