@@ -2,13 +2,14 @@
 import { Hero } from "@/components/Hero";
 import { Guarantee } from "@/components/Guarantee";
 import Counter from '@/components/Counter';
-import Blogs from "@/components/Blogs";
-import Steps from "@/components/Steps";
 import Feedback from "@/components/Feedback";
 import { Dragndrop } from "@/components/Dragndrop";
 import Homecontent from "@/components/Homecontent";
 import Homecontent2 from "@/components/Homecontent2";
 import HomeReviews from "@/components/HomeReviews";
+import Professors from "@/components/Professors";
+import Accordion from "@/components/Accordion"
+
 export default function Home() {
   return (
     <div className="bg-primary">
@@ -20,9 +21,9 @@ export default function Home() {
         </div>
         <div className="shadow-lg shadow-slate-400">
         </div>
-        <Blogs />
+        <Professors />
         <div className="shadow-t-lg shadow-slate-400">
-        <Steps /> 
+        <Accordion /> 
         </div>
         <div className="shadow-lg shadow-slate-400">
           <Homecontent />

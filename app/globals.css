@@ -3,9 +3,10 @@
 @tailwind utilities;
 
 
-/* CSS for the dropdown */
-/* CSS for the dropdown */
 
+.ReactCollapse--collapse {
+  transition: height 400ms;
+}
 
 /* Add these styles to your CSS file */
 .accordion-description-open {

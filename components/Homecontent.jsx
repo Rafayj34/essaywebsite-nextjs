@@ -35,8 +35,8 @@ const Homecontent = () => {
           service implements a four-step approach to provide a simplified essay
           writing process. Our four-step procedure consists of
         </p>
-      </div>
-      <div className="flex flex-wrap items-center justify-center ">
+      
+      <div className="grid grid-cols-1 sm:grid-cols-2  gap-6 justify-between">
         <ContentCard
           heading=" Understanding the expectations of students"
           content="When a student requests the help of an essay writer, we commit the specifics for the essay writing help request to us. We thoroughly examine each key component of essay writing and thoroughly assess the requirements of each component of writing. We then monitor the best essay writers who are available to provide best essay writing service for the specific essay."
@@ -53,15 +53,15 @@ const Homecontent = () => {
           heading="Examining essay writers' work"
           content="We cannot supply essay writing service to our customers without putting in some work; consequently, we devote ourselves to reviewing each essay writing of our essay helpers before offering it to our clients to ensure that all of the requirements are met by the writer or not. We provide the best essay writing service to our customers after we are happy with it."
         />
-      </div>
+      </div></div>
     </div>
   );
 };
 
 const ContentCard = ({ heading, content }) => {
   return (
-    <div className="border border-orange-800 rounded-3xl shadow-inner h-[300px] sm:h-[320px] w-[500px] m-5 p-2 sm:p-5 ">
-      <h2 className="text-xl font-semibold m-3 text-orange-600 text-center">
+    <div>
+      <h2 className="text-lg sm:text-xl font-semibold my-3 mt-2 text-orange-600 line-clamp-2">
         {heading}
       </h2>
       <p className="flex text-justify text-xs sm:text-sm md:text-base">{content}</p>

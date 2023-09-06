@@ -24,7 +24,7 @@ export function Hero() {
           <div className="flex">
             <p className="md:text-4xl sm:text-3xl text-xl font-bold py-4 text-slate-700">
               <span className='text-slate-800'>Best place to get your</span>
-              <p className='text-orange-600'>
+              <span className='text-orange-600'>
                 <Typewriter
                   words={[" Essays", " Reports", " Dissertations", " Assignments"]}
                   loop={Infinity}
@@ -34,7 +34,7 @@ export function Hero() {
                   deleteSpeed={50}
                   delaySpeed={1000}
                 />
-              </p>
+              </span>
             </p>
           </div>
 
